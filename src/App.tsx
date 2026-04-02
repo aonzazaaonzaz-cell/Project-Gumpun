@@ -54,7 +54,7 @@ const Navbar = ({ setCurrentPage }: PageProps) => {
             onClick={(e) => handleNavClick(e, 'home')}
           >
             <img
-              src="/logo.png"
+              src="/gumpunmuaythailogo.png"
               alt="Gumpun Muay Thai Logo"
               className="h-12 w-12 object-contain transition-transform group-hover:scale-105"
               onError={(e) => {
@@ -169,7 +169,7 @@ const Hero = () => {
           >
             <div className="aspect-video bg-black rounded-lg overflow-hidden border border-white/10 shadow-2xl relative">
               <video
-                src="/video.mp4"
+                src="/gumpunmuaythaivideo.mp4"
                 className="w-full h-full object-cover"
                 controls
                 autoPlay
@@ -687,7 +687,7 @@ const Footer = ({ setCurrentPage }: PageProps) => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex flex-col items-center gap-3">
             <img
-              src="/logo.png"
+              src="/gumpunmuaythailogo.png"
               alt="Gumpun Muay Thai Logo"
               className="h-16 w-16 object-contain"
               onError={(e) => {
