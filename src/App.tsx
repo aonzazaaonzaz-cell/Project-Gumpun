@@ -53,7 +53,6 @@ const Navbar = ({ setCurrentPage }: PageProps) => {
             className="flex items-center gap-3 cursor-pointer group"
             onClick={(e) => handleNavClick(e, 'home')}
           >
-            {/* 💡 จุดที่ 1: เปลี่ยนเป็นไฟล์ /logo.png ของคุณ */}
             <img
               src="/logo.png"
               alt="Gumpun Muay Thai Logo"
@@ -67,6 +66,7 @@ const Navbar = ({ setCurrentPage }: PageProps) => {
             </span>
           </div>
 
+          {/* ลำดับเมนูที่ถูกต้อง: Home -> ED/DTV -> Visa Process -> Partner Camps -> Contact */}
           <div className="hidden md:flex items-center space-x-8">
             <a href="#home" onClick={(e) => handleNavClick(e, 'home')} className="text-[#e9c349] font-bold uppercase text-sm tracking-widest hover:text-white transition-colors">Home</a>
             <a href="#visa-comparison" onClick={(e) => handleNavClick(e, 'visa-comparison')} className="text-white/80 hover:text-white transition-colors font-bold uppercase text-sm tracking-widest">ED Visa vs. DTV</a>
@@ -168,7 +168,6 @@ const Hero = () => {
             className="relative group"
           >
             <div className="aspect-video bg-black rounded-lg overflow-hidden border border-white/10 shadow-2xl relative">
-              {/* 💡 จุดที่ 2: เปลี่ยนเป็นไฟล์ /video.mp4 ของคุณ */}
               <video
                 src="/video.mp4"
                 className="w-full h-full object-cover"
@@ -179,7 +178,6 @@ const Hero = () => {
                 playsInline
               />
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none group-hover:opacity-0 transition-opacity">
-                {/* เอา PlayCircle ออกได้เลยถ้าวิดีโอเล่นอัตโนมัติ (autoPlay) หรือปล่อยไว้ก็ได้ครับ */}
               </div>
               <div className="absolute bottom-4 left-4">
                 <p className="text-white font-bold uppercase text-xs tracking-[0.3em] bg-black/50 px-2 py-1 rounded">Train Muay Thai in Thailand</p>
@@ -687,9 +685,7 @@ const Footer = ({ setCurrentPage }: PageProps) => {
     <footer className="bg-[#0e0e0e] border-t border-white/5 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-          {/* 💡 ลบ md:items-start ออกเพื่อให้จัดกลางเสมอ */}
           <div className="flex flex-col items-center gap-3">
-            {/* 💡 จุดที่ 3: เปลี่ยนเป็นไฟล์ /logo.png ของคุณ */}
             <img
               src="/logo.png"
               alt="Gumpun Muay Thai Logo"
