@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  Menu, 
-  X, 
-  CheckCircle2, 
-  PlayCircle, 
-  ShieldCheck, 
-  FileText, 
-  Gavel, 
-  Map as MapIcon, 
+import {
+  Menu,
+  X,
+  CheckCircle2,
+  PlayCircle,
+  ShieldCheck,
+  FileText,
+  Gavel,
+  Map as MapIcon,
   MapPin,
-  Clock, 
+  Clock,
   ChevronRight,
   MessageSquare,
   Mail,
@@ -34,7 +34,7 @@ const Navbar = ({ setCurrentPage }: PageProps) => {
     e.preventDefault();
     setCurrentPage('home');
     setIsOpen(false);
-    
+
     setTimeout(() => {
       const element = document.getElementById(targetId);
       if (element) {
@@ -49,14 +49,14 @@ const Navbar = ({ setCurrentPage }: PageProps) => {
     <nav className="fixed top-0 w-full z-50 bg-[#131313]/90 backdrop-blur-md border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
-          <div 
-            className="flex items-center gap-3 cursor-pointer group" 
+          <div
+            className="flex items-center gap-3 cursor-pointer group"
             onClick={(e) => handleNavClick(e, 'home')}
           >
             {/* 💡 จุดที่ 1: เปลี่ยนเป็นไฟล์ /logo.png ของคุณ */}
-            <img 
-              src="/logo.png" 
-              alt="Gumpun Muay Thai Logo" 
+            <img
+              src="/logo.png"
+              alt="Gumpun Muay Thai Logo"
               className="h-12 w-12 object-contain transition-transform group-hover:scale-105"
               onError={(e) => {
                 e.currentTarget.src = "https://ui-avatars.com/api/?name=GMT&background=e60000&color=fff&rounded=true";
@@ -66,12 +66,12 @@ const Navbar = ({ setCurrentPage }: PageProps) => {
               GUMPUN MUAY THAI
             </span>
           </div>
-          
+
           <div className="hidden md:flex items-center space-x-8">
             <a href="#home" onClick={(e) => handleNavClick(e, 'home')} className="text-[#e9c349] font-bold uppercase text-sm tracking-widest hover:text-white transition-colors">Home</a>
             <a href="#visa-comparison" onClick={(e) => handleNavClick(e, 'visa-comparison')} className="text-white/80 hover:text-white transition-colors font-bold uppercase text-sm tracking-widest">ED Visa vs. DTV</a>
-            <a href="#partner-camps" onClick={(e) => handleNavClick(e, 'partner-camps')} className="text-white/80 hover:text-white transition-colors font-bold uppercase text-sm tracking-widest">Partner Camps</a>
             <a href="#visa-process" onClick={(e) => handleNavClick(e, 'visa-process')} className="text-white/80 hover:text-white transition-colors font-bold uppercase text-sm tracking-widest">Visa Process</a>
+            <a href="#partner-camps" onClick={(e) => handleNavClick(e, 'partner-camps')} className="text-white/80 hover:text-white transition-colors font-bold uppercase text-sm tracking-widest">Partner Camps</a>
             <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="text-white/80 hover:text-white transition-colors font-bold uppercase text-sm tracking-widest">Contact</a>
           </div>
 
@@ -87,8 +87,8 @@ const Navbar = ({ setCurrentPage }: PageProps) => {
         <div className="md:hidden bg-[#131313] border-b border-white/10 px-4 py-6 space-y-4">
           <a href="#home" onClick={(e) => handleNavClick(e, 'home')} className="block text-[#e9c349] font-bold uppercase text-sm">Home</a>
           <a href="#visa-comparison" onClick={(e) => handleNavClick(e, 'visa-comparison')} className="block text-white/80 font-bold uppercase text-sm">ED Visa vs. DTV</a>
-          <a href="#partner-camps" onClick={(e) => handleNavClick(e, 'partner-camps')} className="block text-white/80 font-bold uppercase text-sm">Partner Camps</a>
           <a href="#visa-process" onClick={(e) => handleNavClick(e, 'visa-process')} className="block text-white/80 font-bold uppercase text-sm">Visa Process</a>
+          <a href="#partner-camps" onClick={(e) => handleNavClick(e, 'partner-camps')} className="block text-white/80 font-bold uppercase text-sm">Partner Camps</a>
           <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="block text-white/80 font-bold uppercase text-sm">Contact</a>
         </div>
       )}
@@ -105,9 +105,9 @@ const Hero = () => {
   return (
     <section id="home" className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <img 
-          src="https://images.unsplash.com/photo-1555597673-b21d5c935865?q=80&w=2072&auto=format&fit=crop" 
-          alt="Muay Thai Background" 
+        <img
+          src="https://images.unsplash.com/photo-1555597673-b21d5c935865?q=80&w=2072&auto=format&fit=crop"
+          alt="Muay Thai Background"
           className="w-full h-full object-cover opacity-20 grayscale"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#131313] via-transparent to-[#131313]"></div>
@@ -115,7 +115,7 @@ const Hero = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -136,7 +136,7 @@ const Hero = () => {
             <p className="text-white/60 text-lg mb-8 max-w-xl">
               Now you can extend your stay in Thailand by training Muay Thai at Sports Authority of Thailand (SAT) certified camps located across the country. From Bangkok to the mountains of the North and the beaches of the South.
             </p>
-            
+
             <div className="space-y-4 mb-10">
               {[
                 "TRAIN WITH EXPERIENCED THAI TRAINERS",
@@ -160,7 +160,7 @@ const Hero = () => {
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -169,8 +169,8 @@ const Hero = () => {
           >
             <div className="aspect-video bg-black rounded-lg overflow-hidden border border-white/10 shadow-2xl relative">
               {/* 💡 จุดที่ 2: เปลี่ยนเป็นไฟล์ /video.mp4 ของคุณ */}
-              <video 
-                src="/video.mp4" 
+              <video
+                src="/video.mp4"
                 className="w-full h-full object-cover"
                 controls
                 autoPlay
@@ -229,7 +229,7 @@ const WhatWeDo = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((s, i) => (
-            <motion.div 
+            <motion.div
               key={i}
               whileHover={{ y: -10 }}
               className="bg-[#222] p-8 border-l-4 border-[#e60000] hover:bg-[#2a2a2a] transition-all"
@@ -314,7 +314,7 @@ const VisaComparison = () => {
           <div className="grid md:grid-cols-2 gap-12">
             <div>
               <h3 className="text-2xl font-black text-white uppercase mb-8 flex items-center gap-3">
-                <span className="bg-[#e60000] text-white w-8 h-8 flex items-center justify-center rounded-full text-lg">?</span> 
+                <span className="bg-[#e60000] text-white w-8 h-8 flex items-center justify-center rounded-full text-lg">?</span>
                 Frequently Asked Questions
               </h3>
               <div className="space-y-6">
@@ -380,7 +380,7 @@ const ProcessTimeline = () => {
           {steps.map((s, i) => (
             <div key={i} className="bg-[#222] p-8 relative border-l-4 border-[#e60000]">
               <span className="absolute top-4 right-4 text-4xl font-black text-white/5">{s.num}</span>
-              <p className="text-[#e9c349] font-bold text-xs tracking-widest mb-2">STEP {i+1}</p>
+              <p className="text-[#e9c349] font-bold text-xs tracking-widest mb-2">STEP {i + 1}</p>
               <h3 className="text-xl font-black text-white uppercase mb-4">{s.title}</h3>
               <p className="text-white/50 text-sm mb-6">{s.desc}</p>
               <p className="text-white/30 font-bold text-xs uppercase tracking-widest">{s.time}</p>
@@ -461,12 +461,12 @@ const Locations = () => {
         <p className="text-white/60 max-w-3xl mx-auto mb-16">
           We work with partner Muay Thai camps across all regions of Thailand — from city gyms to authentic provincial training environments. Choose your training location here:
         </p>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
           {regions.map((r, i) => (
             <div key={i} className="bg-[#1a1a1a] p-6 border-t-4 border-[#e60000] hover:bg-[#1f1f1f] transition-all rounded-b-md shadow-lg flex flex-col h-[420px]">
               <h4 className="font-black uppercase tracking-widest mb-4 text-[#e9c349] text-xl border-b border-white/5 pb-3 flex-shrink-0">{r.title}</h4>
-              
+
               <ul className="space-y-3 overflow-y-auto flex-grow pr-2 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-black/20 [&::-webkit-scrollbar-thumb]:bg-[#e60000]/50 hover:[&::-webkit-scrollbar-thumb]:bg-[#e60000] [&::-webkit-scrollbar-thumb]:rounded-full">
                 {r.camps.map((camp, j) => (
                   <li key={j} className="bg-[#222] p-4 rounded-md flex flex-col justify-between border border-white/5 hover:border-white/10 transition-colors">
@@ -568,7 +568,7 @@ const Contact = () => {
               <p className="text-white group-hover:text-black font-black text-xl transition-colors">@gumpunmuaythai</p>
             </div>
           </a>
-          
+
           <a href="mailto:gumpun@gumpunmuaythai.club" className="flex flex-col items-center justify-center gap-3 bg-white/10 p-8 rounded-xl backdrop-blur-sm hover:bg-white hover:-translate-y-1 transition-all border border-white/20 group shadow-lg">
             <Mail className="text-white group-hover:text-[#e60000] transition-colors" size={44} />
             <div className="text-center mt-2">
@@ -576,7 +576,7 @@ const Contact = () => {
               <p className="text-white group-hover:text-black font-black text-lg sm:text-xl transition-colors truncate w-full px-2">gumpun@gumpunmuaythai.club</p>
             </div>
           </a>
-          
+
           <a href="https://www.instagram.com/gumpun_visa" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center gap-3 bg-white/10 p-8 rounded-xl backdrop-blur-sm hover:bg-white hover:-translate-y-1 transition-all border border-white/20 group shadow-lg">
             <Instagram className="text-white group-hover:text-[#E1306C] transition-colors" size={44} />
             <div className="text-center mt-2">
@@ -584,7 +584,7 @@ const Contact = () => {
               <p className="text-white group-hover:text-black font-black text-xl transition-colors">@gumpun_visa</p>
             </div>
           </a>
-          
+
           <a href="https://www.facebook.com/61588289336687/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center gap-3 bg-white/10 p-8 rounded-xl backdrop-blur-sm hover:bg-white hover:-translate-y-1 transition-all border border-white/20 group shadow-lg">
             <Facebook className="text-white group-hover:text-[#1877F2] transition-colors" size={44} />
             <div className="text-center mt-2">
@@ -602,31 +602,31 @@ const PrivacyPolicy = ({ setCurrentPage }: PageProps) => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
   return (
     <section className="pt-32 pb-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-white">
-      <button 
-        onClick={() => setCurrentPage('home')} 
+      <button
+        onClick={() => setCurrentPage('home')}
         className="flex items-center gap-2 text-[#e9c349] hover:text-white transition-colors mb-8 font-bold uppercase tracking-widest text-sm"
       >
         <ArrowLeft size={16} /> Back to Home
       </button>
-      
+
       <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-8 border-b border-white/10 pb-6">Privacy Policy</h1>
-      
+
       <div className="space-y-8 text-white/70 leading-relaxed">
         <div>
           <h2 className="text-xl font-bold text-white mb-3 uppercase tracking-wide">1. Information Collection</h2>
           <p>We collect information you provide directly to us when you request visa coordination services, including but not limited to your name, contact information, passport details, current visa status, and preferred training locations. This information is strictly used for the purpose of assessing your eligibility and facilitating the Muay Thai ED/DTV visa process.</p>
         </div>
-        
+
         <div>
           <h2 className="text-xl font-bold text-white mb-3 uppercase tracking-wide">2. Use of Information</h2>
           <p>The information collected is used solely to coordinate with partner Muay Thai camps and prepare necessary documentation for the Sports Authority of Thailand (SAT) and respective Royal Thai Embassies or Consulates. We do not sell, rent, or share your personal data with unrelated third parties.</p>
         </div>
-        
+
         <div>
           <h2 className="text-xl font-bold text-white mb-3 uppercase tracking-wide">3. Data Security</h2>
           <p>We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, please be aware that no method of transmission over the internet or electronic storage is 100% secure.</p>
         </div>
-        
+
         <div>
           <h2 className="text-xl font-bold text-white mb-3 uppercase tracking-wide">4. Contact Us</h2>
           <p>If you have any questions about this Privacy Policy, please contact us via our official email at gumpun@gumpunmuaythai.club.</p>
@@ -640,15 +640,15 @@ const TermsOfService = ({ setCurrentPage }: PageProps) => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
   return (
     <section className="pt-32 pb-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-white">
-      <button 
-        onClick={() => setCurrentPage('home')} 
+      <button
+        onClick={() => setCurrentPage('home')}
         className="flex items-center gap-2 text-[#e9c349] hover:text-white transition-colors mb-8 font-bold uppercase tracking-widest text-sm"
       >
         <ArrowLeft size={16} /> Back to Home
       </button>
 
       <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-8 border-b border-white/10 pb-6">Terms of Service</h1>
-      
+
       <div className="space-y-8 text-white/70 leading-relaxed">
         <div>
           <h2 className="text-xl font-bold text-white mb-3 uppercase tracking-wide">1. Service Description</h2>
@@ -690,9 +690,9 @@ const Footer = ({ setCurrentPage }: PageProps) => {
           {/* 💡 ลบ md:items-start ออกเพื่อให้จัดกลางเสมอ */}
           <div className="flex flex-col items-center gap-3">
             {/* 💡 จุดที่ 3: เปลี่ยนเป็นไฟล์ /logo.png ของคุณ */}
-            <img 
-              src="/logo.png" 
-              alt="Gumpun Muay Thai Logo" 
+            <img
+              src="/logo.png"
+              alt="Gumpun Muay Thai Logo"
               className="h-16 w-16 object-contain"
               onError={(e) => {
                 e.currentTarget.src = "https://ui-avatars.com/api/?name=GMT&background=e60000&color=fff&rounded=true";
@@ -700,11 +700,11 @@ const Footer = ({ setCurrentPage }: PageProps) => {
             />
             <span className="text-[#e9c349] font-black uppercase tracking-tighter text-lg">GUMPUN MUAY THAI</span>
           </div>
-          
+
           <p className="text-white/30 text-xs font-bold uppercase tracking-widest text-center">
             © {new Date().getFullYear()} GUMPUN MUAY THAI. ALL RIGHTS RESERVED.
           </p>
-          
+
           <div className="flex flex-wrap justify-center gap-6 md:gap-8">
             <a href="#faq" onClick={handleScrollToFaq} className="text-white/40 hover:text-white transition-colors text-[10px] md:text-xs font-bold uppercase tracking-widest cursor-pointer">FAQ</a>
             <span onClick={() => setCurrentPage('privacy')} className="text-white/40 hover:text-white transition-colors text-[10px] md:text-xs font-bold uppercase tracking-widest cursor-pointer">Privacy Policy</span>
@@ -718,8 +718,8 @@ const Footer = ({ setCurrentPage }: PageProps) => {
 
 const FloatingContact = () => {
   return (
-    <a 
-      href="#contact" 
+    <a
+      href="#contact"
       className="fixed bottom-6 right-6 z-50 bg-[#e60000] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform duration-300 flex items-center justify-center group"
       aria-label="Contact Us"
     >
@@ -741,7 +741,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#131313] font-sans selection:bg-[#e60000] selection:text-white scroll-smooth">
       <Navbar setCurrentPage={setCurrentPage} />
-      
+
       {currentPage === 'home' && (
         <main>
           <Hero />
@@ -759,7 +759,7 @@ export default function App() {
       {currentPage === 'terms' && <TermsOfService setCurrentPage={setCurrentPage} />}
 
       <Footer setCurrentPage={setCurrentPage} />
-      
+
       {currentPage === 'home' && <FloatingContact />}
     </div>
   );
