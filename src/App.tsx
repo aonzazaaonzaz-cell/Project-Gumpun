@@ -70,8 +70,8 @@ const Navbar = ({ setCurrentPage }: PageProps) => {
           <div className="hidden md:flex items-center space-x-8">
             <a href="#home" onClick={(e) => handleNavClick(e, 'home')} className="text-[#e9c349] font-bold uppercase text-sm tracking-widest hover:text-white transition-colors">Home</a>
             <a href="#visa-comparison" onClick={(e) => handleNavClick(e, 'visa-comparison')} className="text-white/80 hover:text-white transition-colors font-bold uppercase text-sm tracking-widest">ED Visa vs. DTV</a>
-            <a href="#visa-process" onClick={(e) => handleNavClick(e, 'visa-process')} className="text-white/80 hover:text-white transition-colors font-bold uppercase text-sm tracking-widest">Visa Process</a>
             <a href="#partner-camps" onClick={(e) => handleNavClick(e, 'partner-camps')} className="text-white/80 hover:text-white transition-colors font-bold uppercase text-sm tracking-widest">Partner Camps</a>
+            <a href="#visa-process" onClick={(e) => handleNavClick(e, 'visa-process')} className="text-white/80 hover:text-white transition-colors font-bold uppercase text-sm tracking-widest">Visa Process</a>
             <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="text-white/80 hover:text-white transition-colors font-bold uppercase text-sm tracking-widest">Contact</a>
           </div>
 
@@ -87,8 +87,8 @@ const Navbar = ({ setCurrentPage }: PageProps) => {
         <div className="md:hidden bg-[#131313] border-b border-white/10 px-4 py-6 space-y-4">
           <a href="#home" onClick={(e) => handleNavClick(e, 'home')} className="block text-[#e9c349] font-bold uppercase text-sm">Home</a>
           <a href="#visa-comparison" onClick={(e) => handleNavClick(e, 'visa-comparison')} className="block text-white/80 font-bold uppercase text-sm">ED Visa vs. DTV</a>
-          <a href="#visa-process" onClick={(e) => handleNavClick(e, 'visa-process')} className="block text-white/80 font-bold uppercase text-sm">Visa Process</a>
           <a href="#partner-camps" onClick={(e) => handleNavClick(e, 'partner-camps')} className="block text-white/80 font-bold uppercase text-sm">Partner Camps</a>
+          <a href="#visa-process" onClick={(e) => handleNavClick(e, 'visa-process')} className="block text-white/80 font-bold uppercase text-sm">Visa Process</a>
           <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="block text-white/80 font-bold uppercase text-sm">Contact</a>
         </div>
       )}
