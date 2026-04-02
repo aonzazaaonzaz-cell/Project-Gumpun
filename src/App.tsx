@@ -1,0 +1,766 @@
+import React, { useState, useEffect } from 'react';
+import { 
+  Menu, 
+  X, 
+  CheckCircle2, 
+  PlayCircle, 
+  ShieldCheck, 
+  FileText, 
+  Gavel, 
+  Map as MapIcon, 
+  MapPin,
+  Clock, 
+  ChevronRight,
+  MessageSquare,
+  Mail,
+  Instagram,
+  Facebook,
+  Award,
+  Zap,
+  CreditCard,
+  Headphones,
+  ArrowLeft
+} from 'lucide-react';
+import { motion } from 'framer-motion';
+
+interface PageProps {
+  setCurrentPage: (page: string) => void;
+}
+
+const Navbar = ({ setCurrentPage }: PageProps) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleNavClick = (e: React.MouseEvent, targetId: string) => {
+    e.preventDefault();
+    setCurrentPage('home');
+    setIsOpen(false);
+    
+    setTimeout(() => {
+      const element = document.getElementById(targetId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      } else if (targetId === 'home') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }, 100);
+  };
+
+  return (
+    <nav className="fixed top-0 w-full z-50 bg-[#131313]/90 backdrop-blur-md border-b border-white/10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-20 items-center">
+          <div 
+            className="flex items-center gap-3 cursor-pointer group" 
+            onClick={(e) => handleNavClick(e, 'home')}
+          >
+            {/* 💡 จุดที่ 1: เปลี่ยนเป็นไฟล์ /logo.png ของคุณ */}
+            <img 
+              src="/logo.png" 
+              alt="Gumpun Muay Thai Logo" 
+              className="h-12 w-12 object-contain transition-transform group-hover:scale-105"
+              onError={(e) => {
+                e.currentTarget.src = "https://ui-avatars.com/api/?name=GMT&background=e60000&color=fff&rounded=true";
+              }}
+            />
+            <span className="text-xl font-black tracking-tighter text-white uppercase hidden sm:block group-hover:text-[#e9c349] transition-colors">
+              GUMPUN MUAY THAI
+            </span>
+          </div>
+          
+          <div className="hidden md:flex items-center space-x-8">
+            <a href="#home" onClick={(e) => handleNavClick(e, 'home')} className="text-[#e9c349] font-bold uppercase text-sm tracking-widest hover:text-white transition-colors">Home</a>
+            <a href="#visa-comparison" onClick={(e) => handleNavClick(e, 'visa-comparison')} className="text-white/80 hover:text-white transition-colors font-bold uppercase text-sm tracking-widest">ED Visa vs. DTV</a>
+            <a href="#visa-process" onClick={(e) => handleNavClick(e, 'visa-process')} className="text-white/80 hover:text-white transition-colors font-bold uppercase text-sm tracking-widest">Visa Process</a>
+            <a href="#partner-camps" onClick={(e) => handleNavClick(e, 'partner-camps')} className="text-white/80 hover:text-white transition-colors font-bold uppercase text-sm tracking-widest">Partner Camps</a>
+            <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="text-white/80 hover:text-white transition-colors font-bold uppercase text-sm tracking-widest">Contact</a>
+          </div>
+
+          <div className="md:hidden">
+            <button onClick={() => setIsOpen(!isOpen)} className="text-white">
+              {isOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {isOpen && (
+        <div className="md:hidden bg-[#131313] border-b border-white/10 px-4 py-6 space-y-4">
+          <a href="#home" onClick={(e) => handleNavClick(e, 'home')} className="block text-[#e9c349] font-bold uppercase text-sm">Home</a>
+          <a href="#visa-comparison" onClick={(e) => handleNavClick(e, 'visa-comparison')} className="block text-white/80 font-bold uppercase text-sm">ED Visa vs. DTV</a>
+          <a href="#visa-process" onClick={(e) => handleNavClick(e, 'visa-process')} className="block text-white/80 font-bold uppercase text-sm">Visa Process</a>
+          <a href="#partner-camps" onClick={(e) => handleNavClick(e, 'partner-camps')} className="block text-white/80 font-bold uppercase text-sm">Partner Camps</a>
+          <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="block text-white/80 font-bold uppercase text-sm">Contact</a>
+        </div>
+      )}
+    </nav>
+  );
+};
+
+const Hero = () => {
+  const handleScroll = (e: React.MouseEvent, targetId: string) => {
+    e.preventDefault();
+    document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  return (
+    <section id="home" className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1555597673-b21d5c935865?q=80&w=2072&auto=format&fit=crop" 
+          alt="Muay Thai Background" 
+          className="w-full h-full object-cover opacity-20 grayscale"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#131313] via-transparent to-[#131313]"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="font-black uppercase mb-8 flex flex-col">
+              <span className="text-3xl md:text-5xl text-white/80 tracking-[0.2em] mb-2">Train</span>
+              <span className="text-7xl md:text-[7.5rem] lg:text-[8.5rem] text-[#e60000] tracking-tighter leading-[0.85] mb-4" style={{ textShadow: '0 0 40px rgba(230,0,0,0.5)' }}>
+                Muay Thai
+              </span>
+              <span className="text-5xl md:text-6xl lg:text-7xl text-white tracking-tighter">
+                In <span className="text-[#e9c349]">Thailand.</span>
+              </span>
+            </h1>
+            <p className="text-[#e9c349] font-bold text-xl uppercase tracking-tight mb-8">
+              ED & DTV VISA TRAINING SUPPORT WITH CERTIFIED MUAY THAI CAMPS ACROSS THAILAND.
+            </p>
+            <p className="text-white/60 text-lg mb-8 max-w-xl">
+              Now you can extend your stay in Thailand by training Muay Thai at Sports Authority of Thailand (SAT) certified camps located across the country. From Bangkok to the mountains of the North and the beaches of the South.
+            </p>
+            
+            <div className="space-y-4 mb-10">
+              {[
+                "TRAIN WITH EXPERIENCED THAI TRAINERS",
+                "DISCOVER MUAY THAI CULTURE",
+                "CAMPS LOCATED ACROSS THAILAND"
+              ].map((item, i) => (
+                <div key={i} className="flex items-center gap-3">
+                  <CheckCircle2 className="text-[#e60000]" size={20} />
+                  <span className="text-white font-bold uppercase text-sm tracking-widest">{item}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex flex-wrap gap-4">
+              <a href="#partner-camps" onClick={(e) => handleScroll(e, 'partner-camps')} className="bg-[#e60000] text-white px-8 py-4 font-black uppercase tracking-tighter text-lg flex items-center gap-2 hover:bg-red-700 transition-all">
+                Choose Your Training City <ChevronRight size={24} />
+              </a>
+              <a href="#contact" onClick={(e) => handleScroll(e, 'contact')} className="border border-white/20 text-white px-8 py-4 font-black uppercase tracking-tighter text-lg hover:bg-white/10 transition-all flex items-center justify-center">
+                Check Eligibility
+              </a>
+            </div>
+          </motion.div>
+
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="relative group"
+          >
+            <div className="aspect-video bg-black rounded-lg overflow-hidden border border-white/10 shadow-2xl relative">
+              {/* 💡 จุดที่ 2: เปลี่ยนเป็นไฟล์ /video.mp4 ของคุณ */}
+              <video 
+                src="/video.mp4" 
+                className="w-full h-full object-cover"
+                controls
+                autoPlay
+                muted
+                loop
+                playsInline
+              />
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none group-hover:opacity-0 transition-opacity">
+                {/* เอา PlayCircle ออกได้เลยถ้าวิดีโอเล่นอัตโนมัติ (autoPlay) หรือปล่อยไว้ก็ได้ครับ */}
+              </div>
+              <div className="absolute bottom-4 left-4">
+                <p className="text-white font-bold uppercase text-xs tracking-[0.3em] bg-black/50 px-2 py-1 rounded">Train Muay Thai in Thailand</p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const WhatWeDo = () => {
+  const services = [
+    {
+      icon: <ShieldCheck className="text-[#e60000]" size={40} />,
+      title: "CERTIFIED CAMP COORDINATION",
+      desc: "Direct access to SAT-certified gyms that meet all legal requirements for visa sponsorship."
+    },
+    {
+      icon: <FileText className="text-[#e60000]" size={40} />,
+      title: "TRAINING CONFIRMATION DOCUMENTS",
+      desc: "Expedited preparation of enrollment letters and gym certificates for your application."
+    },
+    {
+      icon: <Gavel className="text-[#e60000]" size={40} />,
+      title: "SAT SUBMISSION COORDINATION",
+      desc: "Management of documentation required for Sports Authority of Thailand approval seals."
+    },
+    {
+      icon: <MapIcon className="text-[#e60000]" size={40} />,
+      title: "STEP-BY-STEP GUIDANCE",
+      desc: "Comprehensive support from choosing your city to your final embassy appointment."
+    }
+  ];
+
+  return (
+    <section className="py-24 bg-[#1a1a1a]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-16">
+          <p className="text-[#e9c349] font-bold uppercase text-xs tracking-[0.3em] mb-2">THE FOUNDATION</p>
+          <h2 className="text-5xl font-black text-white uppercase tracking-tighter">WHAT WE DO</h2>
+          <p className="text-white/60 mt-4 max-w-2xl">
+            We coordinate Muay Thai training programs with eligible partner camps across Thailand and support the documentation workflow for ED and DTV visa applications.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {services.map((s, i) => (
+            <motion.div 
+              key={i}
+              whileHover={{ y: -10 }}
+              className="bg-[#222] p-8 border-l-4 border-[#e60000] hover:bg-[#2a2a2a] transition-all"
+            >
+              <div className="mb-6">{s.icon}</div>
+              <h3 className="text-lg font-black text-white uppercase mb-4 leading-tight">{s.title}</h3>
+              <p className="text-white/50 text-sm leading-relaxed">{s.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const VisaComparison = () => {
+  const handleScroll = (e: React.MouseEvent, targetId: string) => {
+    e.preventDefault();
+    document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  return (
+    <section id="visa-comparison" className="py-24 bg-[#131313] scroll-mt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter text-center mb-16">
+          WHICH VISA SUITS YOUR TRAINING JOURNEY?
+        </h2>
+
+        <div className="grid md:grid-cols-2 gap-8 mb-10">
+          <div className="bg-[#1a1a1a] rounded-xl overflow-hidden border border-white/5">
+            <div className="bg-[#e60000] p-8 text-center">
+              <h3 className="text-3xl font-black text-white uppercase">ED VISA</h3>
+              <p className="text-white/70 font-bold text-xs tracking-widest mt-1">EDUCATION VISA</p>
+            </div>
+            <div className="p-8 space-y-6">
+              {[
+                ["STAY PERIOD", "90 Days - 1 Year"],
+                ["RE-APPLICATION", "Renewable In-Country"],
+                ["LOCATION", "Single Base Recommended"],
+                ["TRAINING ATTENDANCE", "Mandatory (Check-ins)"],
+                ["DOCUMENTS", "SAT Letter, Passport"],
+                ["TIMELINE", "~30 Days"]
+              ].map(([label, value], i) => (
+                <div key={i} className="flex justify-between items-center border-b border-white/10 pb-4">
+                  <span className="text-white/40 font-bold text-xs uppercase tracking-widest">{label}</span>
+                  <span className="text-white font-bold">{value}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="bg-[#1a1a1a] rounded-xl overflow-hidden border border-[#e9c349]/20">
+            <div className="bg-[#e9c349] p-8 text-center">
+              <h3 className="text-3xl font-black text-black uppercase">DTV VISA</h3>
+              <p className="text-black/70 font-bold text-xs tracking-widest mt-1">DESTINATION THAILAND VISA</p>
+            </div>
+            <div className="p-8 space-y-6">
+              {[
+                ["STAY PERIOD", "5 Years (180 days/entry)"],
+                ["RE-APPLICATION", "Multi-Entry"],
+                ["LOCATION", "Flexible / Remote Work Friendly"],
+                ["TRAINING ATTENDANCE", "Activity-Based"],
+                ["DOCUMENTS", "Proof of Funds + Enrollment"],
+                ["TIMELINE", "~15-30 Days"]
+              ].map(([label, value], i) => (
+                <div key={i} className="flex justify-between items-center border-b border-white/10 pb-4">
+                  <span className="text-white/40 font-bold text-xs uppercase tracking-widest">{label}</span>
+                  <span className="text-white font-bold">{value}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="flex justify-center mb-16">
+          <a href="#contact" onClick={(e) => handleScroll(e, 'contact')} className="bg-[#e60000] text-white px-10 py-5 font-black uppercase tracking-tighter text-xl hover:bg-red-700 transition-all flex items-center gap-2">
+            Consult Us For Visa Options <ChevronRight size={24} />
+          </a>
+        </div>
+
+        <div id="faq" className="mt-8 bg-[#1a1a1a] p-8 md:p-12 rounded-xl border border-white/5 scroll-mt-20">
+          <div className="grid md:grid-cols-2 gap-12">
+            <div>
+              <h3 className="text-2xl font-black text-white uppercase mb-8 flex items-center gap-3">
+                <span className="bg-[#e60000] text-white w-8 h-8 flex items-center justify-center rounded-full text-lg">?</span> 
+                Frequently Asked Questions
+              </h3>
+              <div className="space-y-6">
+                <div className="border-b border-white/10 pb-4">
+                  <p className="text-[#e9c349] font-bold mb-2">Can I change from a tourist visa to an ED Muay Thai visa inside Thailand?</p>
+                  <p className="text-white/70 text-sm">No. The ED visa must be applied for outside Thailand.</p>
+                </div>
+                <div className="border-b border-white/10 pb-4">
+                  <p className="text-[#e9c349] font-bold mb-2">Can I apply for a DTV visa while in Thailand?</p>
+                  <p className="text-white/70 text-sm">No. The application must be submitted through the Thai e-Visa system and completed outside Thailand, where you will collect your visa.</p>
+                </div>
+                <div>
+                  <p className="text-[#e9c349] font-bold mb-2">Can I train in multiple cities?</p>
+                  <p className="text-white/70 text-sm">Yes, but you must maintain attendance with your registered gym.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-col justify-center">
+              <div className="bg-[#222] p-8 rounded-lg border-l-4 border-[#e9c349] mb-8">
+                <h4 className="font-black text-white uppercase mb-4 flex items-center gap-2">
+                  <ShieldCheck size={20} className="text-[#e9c349]" /> Important Notice
+                </h4>
+                <ul className="text-white/60 text-sm space-y-3 list-disc list-inside">
+                  <li>Visa approval is determined solely by the Royal Thai Embassy or Consulate.</li>
+                  <li>Processing times are estimates and may vary.</li>
+                  <li>We provide coordination and documentation support only.</li>
+                </ul>
+              </div>
+
+              <div className="bg-[#e60000] p-8 rounded-lg text-center">
+                <h4 className="font-black text-white uppercase mb-2 text-xl">Want us to review your case?</h4>
+                <p className="text-white/90 text-sm mb-6">Send us your: Current visa status, Current location, Preferred embassy/consulate, Desired training city, and Target start date.</p>
+                <a href="#contact" onClick={(e) => handleScroll(e, 'contact')} className="inline-flex items-center justify-center gap-2 bg-white text-black font-black uppercase py-4 px-8 hover:bg-[#e9c349] hover:scale-[1.02] transition-all w-full rounded shadow-lg">
+                  Contact Us For Review <ChevronRight size={20} />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const ProcessTimeline = () => {
+  const steps = [
+    { num: "01", title: "INITIAL SCREENING", desc: "Evaluation of your eligibility and choice of training camp.", time: "TIME: 1-2 DAYS" },
+    { num: "02", title: "CAMP ENROLLMENT", desc: "Deposit payment and receipt of official invitation documents from gym.", time: "TIME: 3-5 DAYS" },
+    { num: "03", title: "SAT CERTIFICATION", desc: "Submission to the Sports Authority of Thailand for official visa endorsement.", time: "TIME: 10-14 DAYS" },
+    { num: "04", title: "DOCUMENT COURIER", desc: "Physical documents sent to your home address for embassy submission.", time: "TIME: 3-5 DAYS" },
+    { num: "05", title: "EMBASSY STAGE", desc: "Appointment at your local Thai Embassy/Consulate for visa processing.", time: "TIME: 5-7 DAYS" },
+  ];
+
+  return (
+    <section id="visa-process" className="py-24 bg-[#1a1a1a] scroll-mt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter max-w-3xl mb-16">
+          MUAY THAI ED / DTV VISA PROCESS: COMPLETE OVERVIEW & TIMELINE
+        </h2>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {steps.map((s, i) => (
+            <div key={i} className="bg-[#222] p-8 relative border-l-4 border-[#e60000]">
+              <span className="absolute top-4 right-4 text-4xl font-black text-white/5">{s.num}</span>
+              <p className="text-[#e9c349] font-bold text-xs tracking-widest mb-2">STEP {i+1}</p>
+              <h3 className="text-xl font-black text-white uppercase mb-4">{s.title}</h3>
+              <p className="text-white/50 text-sm mb-6">{s.desc}</p>
+              <p className="text-white/30 font-bold text-xs uppercase tracking-widest">{s.time}</p>
+            </div>
+          ))}
+          <div className="bg-[#e60000] p-8 flex flex-col items-center justify-center text-center">
+            <Clock size={48} className="text-white mb-4" />
+            <h3 className="text-2xl font-black text-white uppercase">ESTIMATED TOTAL TIMELINE</h3>
+            <p className="text-4xl font-black text-[#e9c349] mt-2">30-45 days</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const Locations = () => {
+  const regions = [
+    {
+      title: "CENTRAL THAILAND",
+      camps: [
+        { city: "Bangkok", gym: "Nok Jeans Ladkrabang Muay Thai", fbUrl: "https://www.facebook.com/p/%E0%B8%84%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B8%A1%E0%B8%A7%E0%B8%A2-%E0%B8%99%E0%B8%81%E0%B8%A2%E0%B8%B5%E0%B8%99%E0%B8%AA%E0%B9%8C%E0%B8%A5%E0%B8%B2%E0%B8%94%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%B1%E0%B8%87-%E0%B8%A1%E0%B8%A7%E0%B8%A2%E0%B9%84%E0%B8%97%E0%B8%A2-100054528276685/?locale=th_TH", mapUrl: "https://maps.app.goo.gl/q5Gd4CLeH2HDXRKV9" },
+        { city: "Chai Nat", gym: "Chaopraya Muay Thai", fbUrl: "https://www.facebook.com/share/187zuSVXcJ/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/YvqdAmG4Ge1Ez5cy8" },
+        { city: "Nonthaburi", gym: "Sor. Suwannaran Muay Thai", fbUrl: "https://www.facebook.com/krugunmuaythai/?locale=th_TH", mapUrl: "https://maps.app.goo.gl/4aVyGdAmZrotJHGf7" },
+        { city: "Pathum Thani", gym: "Singmanasak Gym", fbUrl: "https://www.facebook.com/share/1CQq7rQ1td/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/qWr6fuYe8MR47uHz6" },
+        { city: "Samut Prakan", gym: "Sor. Songtham Muay Thai", fbUrl: "https://www.facebook.com/share/1861pHYrjX/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/by5PVZSABQSFSpgRA" }
+      ]
+    },
+    {
+      title: "EASTERN THAILAND",
+      camps: [
+        { city: "Chonburi", gym: "Por. Chimplee Muay Thai", fbUrl: "https://www.facebook.com/share/1QmKNUgJcH/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/19ES2pNCbRXwVVhD7" },
+        { city: "Chonburi", gym: "Ha Payak Muay Thai Gym", fbUrl: "https://sites.google.com/view/hapayak", mapUrl: "https://maps.app.goo.gl/NSbiftLiYu9rnK297" },
+        { city: "Prachin Buri", gym: "Sor. Meeanan Muay Thai", fbUrl: "https://www.facebook.com/s.meeanan", mapUrl: "https://maps.app.goo.gl/xnZLXAe1aNsZ3Enn9" }
+      ]
+    },
+    {
+      title: "NORTHEASTERN (ISAN)",
+      camps: [
+        { city: "Nakhon Ratchasima", gym: "Gumpun Muay Thai Korat", mapUrl: "https://maps.app.goo.gl/STKT94mZnXZky6sx9" },
+        { city: "Khon Kaen", gym: "Gumpun Muay Thai Khon Kaen", mapUrl: "https://maps.app.goo.gl/CXrEdiMnfgZVZzxC6" },
+        { city: "Buriram", gym: "Phet Nong Ki Muay Thai", fbUrl: "https://www.facebook.com/share/1C1iiXmw24/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/SW9hrhnvj56u6F446" },
+        { city: "Maha Sarakham", gym: "Sit Phananchoeng Muay Thai", fbUrl: "https://www.facebook.com/share/1Dhz9rtpvx/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/hqzVauahhMvoyp8U6" },
+        { city: "Yasothon", gym: "Aor. Phet Khunsuek Muay Thai", mapUrl: "https://maps.app.goo.gl/M8bungkCSg5cfuYv6" },
+        { city: "Yasothon", gym: "Sor. Ninthai Muay Thai", mapUrl: "https://maps.app.goo.gl/Hkxth15Pp7PfjA9X8" },
+        { city: "Sakon Nakhon", gym: "Jackie Gyms Muay Thai", fbUrl: "https://www.facebook.com/share/1DMrW8YT2x/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/MpGNeyAvpc5z5JAr9" },
+        { city: "Nong Khai", gym: "Sor. Sophon Muay Thai", fbUrl: "https://www.facebook.com/share/1ENe4GZGVX/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/duhPJoo3iZDEJCiw8" },
+        { city: "Udon Thani", gym: "Kaen Norsing Muay Thai", fbUrl: "https://www.facebook.com/share/1DWLHfYKkP/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/ZarKLaRmSH3cEnkJ6" },
+        { city: "Ubon Ratchathani", gym: "Sor. Sak Ubon Muay Thai", fbUrl: "https://www.facebook.com/share/1JhFzeTt4B/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/Yh5yuUGKQZCgvbAXA" },
+        { city: "Surin", gym: "Pakorn Porn Muay Thai", fbUrl: "https://www.facebook.com/share/1DR1EZ1zYg/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/knb6sk62nduuEDdi7" },
+        { city: "Kalasin", gym: "Sor. Rodjarin Muay Thai", mapUrl: "https://maps.app.goo.gl/BC3xtexhSkoFKJNm6" }
+      ]
+    },
+    {
+      title: "SOUTHERN THAILAND",
+      camps: [
+        { city: "Chumphon", gym: "Kiat Yodying", fbUrl: "https://www.facebook.com/share/1CHdJpAbm9/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/cUdo2DC2K4qMKxPN7" },
+        { city: "Songkhla", gym: "Saenrak Muay Thai", fbUrl: "https://www.facebook.com/share/1Dqz3nkE9V/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/krGAJqKrTXwpAQSk8" }
+      ]
+    },
+    {
+      title: "NORTHERN THAILAND",
+      camps: [
+        { city: "Kamphaeng Phet", gym: "Kiat Chatchai", fbUrl: "https://www.facebook.com/share/17nrStp76x/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/pt13S7JBUSw8VkVm9" },
+        { city: "Kamphaeng Phet", gym: "Look Thap Ong Dam", fbUrl: "https://www.facebook.com/share/1ASrR8K2yN/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/TU2PGtHTd4zti6Mo6" },
+        { city: "Phitsanulok", gym: "JP Boxing Gym", fbUrl: "https://www.facebook.com/share/1FisaF6BWB/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/jWx1HQUYJzAEjxSE9" },
+        { city: "Phitsanulok", gym: "Suwanno Muay Thai", fbUrl: "https://www.facebook.com/share/1FqFhLX6Lm/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/97q6y8QaSGmqtJ8x7?g_st=ipc" },
+        { city: "Lamphun", gym: "Aor. Sanitpan", fbUrl: "https://www.facebook.com/share/1DCtA3AF1h/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/pcnzdgwemuTD1vB76" }
+      ]
+    }
+  ];
+
+  return (
+    <section id="partner-camps" className="py-24 bg-[#131313] scroll-mt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p className="text-[#e60000] font-bold uppercase text-xs tracking-[0.3em] mb-2">PARTNER CAMPS</p>
+        <h2 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter mb-4">CERTIFIED MUAY THAI CAMPS ACROSS THAILAND</h2>
+        <p className="text-white/60 max-w-3xl mx-auto mb-16">
+          We work with partner Muay Thai camps across all regions of Thailand — from city gyms to authentic provincial training environments. Choose your training location here:
+        </p>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
+          {regions.map((r, i) => (
+            <div key={i} className="bg-[#1a1a1a] p-6 border-t-4 border-[#e60000] hover:bg-[#1f1f1f] transition-all rounded-b-md shadow-lg flex flex-col h-[420px]">
+              <h4 className="font-black uppercase tracking-widest mb-4 text-[#e9c349] text-xl border-b border-white/5 pb-3 flex-shrink-0">{r.title}</h4>
+              
+              <ul className="space-y-3 overflow-y-auto flex-grow pr-2 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-black/20 [&::-webkit-scrollbar-thumb]:bg-[#e60000]/50 hover:[&::-webkit-scrollbar-thumb]:bg-[#e60000] [&::-webkit-scrollbar-thumb]:rounded-full">
+                {r.camps.map((camp, j) => (
+                  <li key={j} className="bg-[#222] p-4 rounded-md flex flex-col justify-between border border-white/5 hover:border-white/10 transition-colors">
+                    <div>
+                      <span className="text-white/40 text-[10px] font-bold uppercase tracking-widest flex items-center gap-1 mb-1.5">
+                        <MapIcon size={12} /> {camp.city}
+                      </span>
+                      <span className="text-white/90 font-bold block text-sm leading-tight mb-2">{camp.gym}</span>
+                    </div>
+                    <div className="flex items-center gap-4 mt-1 border-t border-white/5 pt-3">
+                      {camp.mapUrl && (
+                        <a href={camp.mapUrl} target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-[#e60000] flex items-center gap-1.5 text-xs font-medium transition-colors">
+                          <MapPin size={12} /> Maps
+                        </a>
+                      )}
+                      {camp.fbUrl && (
+                        <a href={camp.fbUrl} target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-[#1877F2] flex items-center gap-1.5 text-xs font-medium transition-colors">
+                          <Facebook size={12} /> Facebook
+                        </a>
+                      )}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const WhyChooseUs = () => {
+  const reasons = [
+    { icon: <Award size={24} />, title: "VERIFIED PARTNER GYMS" },
+    { icon: <Zap size={24} />, title: "STRUCTURED PROCESS" },
+    { icon: <ShieldCheck size={24} />, title: "COMPLIANCE-FOCUSED" },
+    { icon: <CreditCard size={24} />, title: "CLEAR PAYMENT" },
+    { icon: <Headphones size={24} />, title: "ONGOING SUPPORT" },
+  ];
+
+  return (
+    <section className="py-24 bg-[#1a1a1a]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter mb-4">WHY CHOOSE GUMPUN MUAY THAI</h2>
+        <div className="w-24 h-1 bg-[#e60000] mx-auto mb-16"></div>
+
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+          {reasons.map((r, i) => (
+            <div key={i} className="bg-[#222] p-8 flex flex-col items-center gap-4 hover:bg-[#2a2a2a] transition-all">
+              <div className="text-[#e9c349]">{r.icon}</div>
+              <h4 className="text-white font-bold uppercase text-xs tracking-widest leading-tight">{r.title}</h4>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const ImportantNotice = () => {
+  return (
+    <section className="py-16 bg-[#1a1a1a] border-t border-b border-white/5">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-2xl font-black text-white uppercase tracking-tighter mb-6 flex items-center justify-center gap-3">
+          <ShieldCheck className="text-[#e60000]" size={32} /> IMPORTANT INFORMATION
+        </h2>
+        <div className="space-y-4 text-white/50 text-sm md:text-base max-w-3xl mx-auto">
+          <p>Gumpun Muay Thai provides coordination and documentation support for Muay Thai training programs in Thailand.</p>
+          <p>We do not provide legal or immigration advice, and we do not have authority over visa decisions. All visa approvals are determined solely by the Royal Thai Embassy or Consulate where the application is submitted.</p>
+          <p>Processing timelines provided are estimates based on typical procedures and may vary depending on the Sports Authority of Thailand (SAT) and the embassy or consulate.</p>
+          <p>Applicants are responsible for ensuring that all submitted information and documents are accurate and complete.</p>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const Contact = () => {
+  return (
+    <section id="contact" className="py-24 bg-[#e60000] relative overflow-hidden scroll-mt-20">
+      <div className="absolute right-0 bottom-0 opacity-10 pointer-events-none select-none">
+        <h2 className="text-[20rem] font-black text-black leading-none -mb-20">MUAY</h2>
+      </div>
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <h2 className="text-5xl md:text-7xl font-black text-white uppercase leading-[0.9] tracking-tighter mb-6">
+          START YOUR <span className="text-black">MUAY THAI</span> JOURNEY.
+        </h2>
+        <p className="text-white font-bold text-xl md:text-2xl uppercase mb-12">
+          REACH OUT TO US DIRECTLY VIA ANY OF OUR CHANNELS BELOW TO GET STARTED.
+        </p>
+
+        <div className="grid sm:grid-cols-2 gap-4 max-w-4xl mx-auto">
+          <a href="https://line.me/R/ti/p/@gumpunmuaythai" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center gap-3 bg-white/10 p-8 rounded-xl backdrop-blur-sm hover:bg-white hover:-translate-y-1 transition-all border border-white/20 group shadow-lg">
+            <MessageSquare className="text-white group-hover:text-[#00B900] transition-colors" size={44} />
+            <div className="text-center mt-2">
+              <p className="text-white/60 group-hover:text-black/50 font-bold text-[10px] uppercase tracking-widest mb-1 transition-colors">LINE OFFICIAL</p>
+              <p className="text-white group-hover:text-black font-black text-xl transition-colors">@gumpunmuaythai</p>
+            </div>
+          </a>
+          
+          <a href="mailto:gumpun@gumpunmuaythai.club" className="flex flex-col items-center justify-center gap-3 bg-white/10 p-8 rounded-xl backdrop-blur-sm hover:bg-white hover:-translate-y-1 transition-all border border-white/20 group shadow-lg">
+            <Mail className="text-white group-hover:text-[#e60000] transition-colors" size={44} />
+            <div className="text-center mt-2">
+              <p className="text-white/60 group-hover:text-black/50 font-bold text-[10px] uppercase tracking-widest mb-1 transition-colors">EMAIL</p>
+              <p className="text-white group-hover:text-black font-black text-lg sm:text-xl transition-colors truncate w-full px-2">gumpun@gumpunmuaythai.club</p>
+            </div>
+          </a>
+          
+          <a href="https://www.instagram.com/gumpun_visa" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center gap-3 bg-white/10 p-8 rounded-xl backdrop-blur-sm hover:bg-white hover:-translate-y-1 transition-all border border-white/20 group shadow-lg">
+            <Instagram className="text-white group-hover:text-[#E1306C] transition-colors" size={44} />
+            <div className="text-center mt-2">
+              <p className="text-white/60 group-hover:text-black/50 font-bold text-[10px] uppercase tracking-widest mb-1 transition-colors">INSTAGRAM</p>
+              <p className="text-white group-hover:text-black font-black text-xl transition-colors">@gumpun_visa</p>
+            </div>
+          </a>
+          
+          <a href="https://www.facebook.com/61588289336687/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center gap-3 bg-white/10 p-8 rounded-xl backdrop-blur-sm hover:bg-white hover:-translate-y-1 transition-all border border-white/20 group shadow-lg">
+            <Facebook className="text-white group-hover:text-[#1877F2] transition-colors" size={44} />
+            <div className="text-center mt-2">
+              <p className="text-white/60 group-hover:text-black/50 font-bold text-[10px] uppercase tracking-widest mb-1 transition-colors">FACEBOOK</p>
+              <p className="text-white group-hover:text-black font-black text-xl transition-colors">Gumpun Muay Thai</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const PrivacyPolicy = ({ setCurrentPage }: PageProps) => {
+  useEffect(() => { window.scrollTo(0, 0); }, []);
+  return (
+    <section className="pt-32 pb-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-white">
+      <button 
+        onClick={() => setCurrentPage('home')} 
+        className="flex items-center gap-2 text-[#e9c349] hover:text-white transition-colors mb-8 font-bold uppercase tracking-widest text-sm"
+      >
+        <ArrowLeft size={16} /> Back to Home
+      </button>
+      
+      <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-8 border-b border-white/10 pb-6">Privacy Policy</h1>
+      
+      <div className="space-y-8 text-white/70 leading-relaxed">
+        <div>
+          <h2 className="text-xl font-bold text-white mb-3 uppercase tracking-wide">1. Information Collection</h2>
+          <p>We collect information you provide directly to us when you request visa coordination services, including but not limited to your name, contact information, passport details, current visa status, and preferred training locations. This information is strictly used for the purpose of assessing your eligibility and facilitating the Muay Thai ED/DTV visa process.</p>
+        </div>
+        
+        <div>
+          <h2 className="text-xl font-bold text-white mb-3 uppercase tracking-wide">2. Use of Information</h2>
+          <p>The information collected is used solely to coordinate with partner Muay Thai camps and prepare necessary documentation for the Sports Authority of Thailand (SAT) and respective Royal Thai Embassies or Consulates. We do not sell, rent, or share your personal data with unrelated third parties.</p>
+        </div>
+        
+        <div>
+          <h2 className="text-xl font-bold text-white mb-3 uppercase tracking-wide">3. Data Security</h2>
+          <p>We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, please be aware that no method of transmission over the internet or electronic storage is 100% secure.</p>
+        </div>
+        
+        <div>
+          <h2 className="text-xl font-bold text-white mb-3 uppercase tracking-wide">4. Contact Us</h2>
+          <p>If you have any questions about this Privacy Policy, please contact us via our official email at gumpun@gumpunmuaythai.club.</p>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const TermsOfService = ({ setCurrentPage }: PageProps) => {
+  useEffect(() => { window.scrollTo(0, 0); }, []);
+  return (
+    <section className="pt-32 pb-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-white">
+      <button 
+        onClick={() => setCurrentPage('home')} 
+        className="flex items-center gap-2 text-[#e9c349] hover:text-white transition-colors mb-8 font-bold uppercase tracking-widest text-sm"
+      >
+        <ArrowLeft size={16} /> Back to Home
+      </button>
+
+      <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-8 border-b border-white/10 pb-6">Terms of Service</h1>
+      
+      <div className="space-y-8 text-white/70 leading-relaxed">
+        <div>
+          <h2 className="text-xl font-bold text-white mb-3 uppercase tracking-wide">1. Service Description</h2>
+          <p>Gumpun Muay Thai operates strictly as a coordination and documentation support agency. We connect prospective trainees with SAT-certified Muay Thai camps and assist in gathering and organizing the paperwork required for ED and DTV visa applications.</p>
+        </div>
+
+        <div>
+          <h2 className="text-xl font-bold text-white mb-3 uppercase tracking-wide">2. Limitation of Liability</h2>
+          <p>We do not provide legal or immigration advice. Gumpun Muay Thai has no authority over visa issuance. All decisions regarding visa approvals, denials, or delays rest entirely with the Royal Thai Embassy or Consulate. We are not liable for any financial loss, travel disruptions, or rejected applications.</p>
+        </div>
+
+        <div>
+          <h2 className="text-xl font-bold text-white mb-3 uppercase tracking-wide">3. Applicant Responsibilities</h2>
+          <p>It is the applicant's responsibility to ensure that all personal information, financial proofs, and submitted documents are genuine, accurate, and meet the specific requirements of their local Thai Embassy. Applicants must also adhere to the attendance rules and regulations set by their chosen Muay Thai camp once the visa is granted.</p>
+        </div>
+
+        <div>
+          <h2 className="text-xl font-bold text-white mb-3 uppercase tracking-wide">4. Payments and Refunds</h2>
+          <p>Coordination fees and gym deposits are subject to the individual policies of the partner camps. Please review the specific payment and refund terms provided during your enrollment process before making any financial commitments.</p>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const Footer = ({ setCurrentPage }: PageProps) => {
+  const handleScrollToFaq = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setCurrentPage('home');
+    setTimeout(() => {
+      document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  };
+
+  return (
+    <footer className="bg-[#0e0e0e] border-t border-white/5 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+          {/* 💡 ลบ md:items-start ออกเพื่อให้จัดกลางเสมอ */}
+          <div className="flex flex-col items-center gap-3">
+            {/* 💡 จุดที่ 3: เปลี่ยนเป็นไฟล์ /logo.png ของคุณ */}
+            <img 
+              src="/logo.png" 
+              alt="Gumpun Muay Thai Logo" 
+              className="h-16 w-16 object-contain"
+              onError={(e) => {
+                e.currentTarget.src = "https://ui-avatars.com/api/?name=GMT&background=e60000&color=fff&rounded=true";
+              }}
+            />
+            <span className="text-[#e9c349] font-black uppercase tracking-tighter text-lg">GUMPUN MUAY THAI</span>
+          </div>
+          
+          <p className="text-white/30 text-xs font-bold uppercase tracking-widest text-center">
+            © {new Date().getFullYear()} GUMPUN MUAY THAI. ALL RIGHTS RESERVED.
+          </p>
+          
+          <div className="flex flex-wrap justify-center gap-6 md:gap-8">
+            <a href="#faq" onClick={handleScrollToFaq} className="text-white/40 hover:text-white transition-colors text-[10px] md:text-xs font-bold uppercase tracking-widest cursor-pointer">FAQ</a>
+            <span onClick={() => setCurrentPage('privacy')} className="text-white/40 hover:text-white transition-colors text-[10px] md:text-xs font-bold uppercase tracking-widest cursor-pointer">Privacy Policy</span>
+            <span onClick={() => setCurrentPage('terms')} className="text-white/40 hover:text-white transition-colors text-[10px] md:text-xs font-bold uppercase tracking-widest cursor-pointer">Terms of Service</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+const FloatingContact = () => {
+  return (
+    <a 
+      href="#contact" 
+      className="fixed bottom-6 right-6 z-50 bg-[#e60000] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform duration-300 flex items-center justify-center group"
+      aria-label="Contact Us"
+    >
+      <MessageSquare size={28} />
+      <span className="absolute right-16 bg-white text-black text-xs font-bold uppercase px-3 py-2 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+        Contact Us
+      </span>
+    </a>
+  );
+};
+
+export default function App() {
+  const [currentPage, setCurrentPage] = useState('home');
+
+  useEffect(() => {
+    // Scroll handling is done inside components now for smoother transitions
+  }, [currentPage]);
+
+  return (
+    <div className="min-h-screen bg-[#131313] font-sans selection:bg-[#e60000] selection:text-white scroll-smooth">
+      <Navbar setCurrentPage={setCurrentPage} />
+      
+      {currentPage === 'home' && (
+        <main>
+          <Hero />
+          <WhatWeDo />
+          <VisaComparison />
+          <ProcessTimeline />
+          <Locations />
+          <WhyChooseUs />
+          <ImportantNotice />
+          <Contact />
+        </main>
+      )}
+
+      {currentPage === 'privacy' && <PrivacyPolicy setCurrentPage={setCurrentPage} />}
+      {currentPage === 'terms' && <TermsOfService setCurrentPage={setCurrentPage} />}
+
+      <Footer setCurrentPage={setCurrentPage} />
+      
+      {currentPage === 'home' && <FloatingContact />}
+    </div>
+  );
+}

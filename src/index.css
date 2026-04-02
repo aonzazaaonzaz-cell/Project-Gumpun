@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  background-color: #131313;
+  color: #ffffff;
+  /* ป้องกันการเลื่อนหน้าจอแนวนอน */
+  overflow-x: hidden; 
+}
+
+/* ปรับแต่ง Scrollbar ให้สวยงามสำหรับหน้าต่างหลัก */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #131313;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e60000;
+}
