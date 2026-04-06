@@ -849,16 +849,18 @@ const Footer = ({ setCurrentPage }: PageProps) => {
     <footer className="bg-[#0e0e0e] border-t border-white/5 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="flex flex-col items-center md:items-start gap-3">
+
+          {/* 💡 ปรับให้โลโก้อยู่ด้านบนของชื่อเว็บไซต์ */}
+          <div className="flex flex-col items-center gap-2">
             <img
               src="/gumpunmuaythailogo.png"
               alt="Gumpun Muay Thai Logo"
-              className="h-16 w-16 object-contain"
+              className="h-14 w-14 md:h-16 md:w-16 object-contain"
               onError={(e) => {
                 e.currentTarget.src = "https://ui-avatars.com/api/?name=GMT&background=e60000&color=fff&rounded=true";
               }}
             />
-            <span className="text-[#e9c349] font-black uppercase tracking-tighter text-lg">GUMPUN MUAY THAI</span>
+            <span className="text-[#e9c349] font-black uppercase tracking-tighter text-xl md:text-2xl">GUMPUN MUAY THAI</span>
           </div>
 
           <p className="text-white/30 text-xs font-bold uppercase tracking-widest text-center">
