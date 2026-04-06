@@ -54,7 +54,7 @@ const Navbar = ({ setCurrentPage }: PageProps) => {
             onClick={(e) => handleNavClick(e, 'home')}
           >
             <img
-              src="/logo.png"
+              src="/gumpunmuaythailogo.png"
               alt="Gumpun Muay Thai Logo"
               className="h-12 w-12 object-contain transition-transform group-hover:scale-105"
               onError={(e) => {
@@ -168,7 +168,7 @@ const Hero = () => {
           >
             <div className="aspect-video bg-black rounded-lg overflow-hidden border border-white/10 shadow-2xl relative">
               <video
-                src="/video.mp4"
+                src="/gumpunmuaythaivideo.mp4"
                 className="w-full h-full object-cover"
                 controls
                 autoPlay
@@ -584,8 +584,8 @@ const Locations = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                           className={`flex items-center gap-1.5 text-xs font-medium transition-colors ${camp.fbUrl.includes("instagram.com")
-                              ? "text-white/50 hover:text-[#E1306C]" // สี IG
-                              : "text-white/50 hover:text-[#1877F2]" // สี FB
+                            ? "text-white/50 hover:text-[#E1306C]" // สี IG
+                            : "text-white/50 hover:text-[#1877F2]" // สี FB
                             }`}
                         >
                           {camp.fbUrl.includes("instagram.com") ? (
@@ -851,7 +851,7 @@ const Footer = ({ setCurrentPage }: PageProps) => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex flex-col items-center md:items-start gap-3">
             <img
-              src="/logo.png"
+              src="/gumpunmuaythailogo.png"
               alt="Gumpun Muay Thai Logo"
               className="h-16 w-16 object-contain"
               onError={(e) => {
