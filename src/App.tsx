@@ -253,7 +253,7 @@ const VisaComparison = () => {
     { label: "RE-APPLICATION", values: ["Renewable Outside Thailand"] },
     { label: "LOCATION", values: ["Single Base Recommended"] },
     { label: "TRAINING ATTENDANCE", values: ["Structured"] },
-    { label: "DOCUMENTS", values: ["Passport, Enrollment,", "Proof of Funds at least 500,000THB"] },
+    { label: "DOCUMENTS", values: ["Passport, Enrollment,", "Proof of Funds at least $1,000"] },
     { label: "TIMELINE", values: ["~30-45 days"] }
   ];
 
@@ -262,7 +262,7 @@ const VisaComparison = () => {
     { label: "RE-APPLICATION", values: ["Multiple-Entry"] },
     { label: "LOCATION", values: ["Flexible / Remote Work Friendly"] },
     { label: "TRAINING ATTENDANCE", values: ["Flexible / Remote Work Friendly"] },
-    { label: "DOCUMENTS", values: ["Passport, Enrollment,", "Proof of Funds at least $1,000"] },
+    { label: "DOCUMENTS", values: ["Passport, Enrollment,", "Proof of Funds at least 500,000 THB"] },
     { label: "TIMELINE", values: ["~30-45 days"] }
   ];
 
