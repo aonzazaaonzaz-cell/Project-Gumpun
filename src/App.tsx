@@ -269,7 +269,7 @@ const VisaComparison = () => {
   return (
     <section id="visa-comparison" className="py-24 bg-[#131313] scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter text-center mb-10">
           WHICH VISA SUITS YOUR TRAINING JOURNEY?
         </h2>
 
@@ -328,6 +328,21 @@ const VisaComparison = () => {
           <a href="#contact" onClick={(e) => handleScroll(e, 'contact')} className="bg-[#e60000] text-white px-10 py-5 font-black uppercase tracking-tighter text-xl hover:bg-red-700 transition-all flex items-center gap-2">
             Consult Us For Visa Options <ChevronRight size={24} />
           </a>
+        </div>
+
+        {/* 💡 ย้ายรูปภาพ Infographic Visa Guide (Pic 2) มาไว้ตรงนี้ (ใต้ปุ่ม) */}
+        <div className="max-w-5xl mx-auto mb-16 relative group mt-16">
+          <div className="absolute -inset-1 bg-gradient-to-r from-[#e60000] to-[#e9c349] rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+          <div className="relative rounded-xl overflow-hidden border border-white/10 bg-white">
+            <img
+              src="/visa-guide.jpg"
+              alt="ED vs DTV Visa Guide"
+              className="w-full h-auto"
+              onError={(e) => {
+                e.currentTarget.parentElement!.style.display = 'none';
+              }}
+            />
+          </div>
         </div>
 
         {/* FAQ & Review Case Section */}
@@ -393,11 +408,11 @@ const ProcessTimeline = () => {
   return (
     <section id="visa-process" className="py-24 bg-[#1a1a1a] scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter max-w-3xl mb-16">
+        <h2 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter max-w-3xl mb-10">
           MUAY THAI ED / DTV VISA PROCESS: COMPLETE OVERVIEW & TIMELINE
         </h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {steps.map((s, i) => (
             <div key={i} className="bg-[#222] p-8 relative border-l-4 border-[#e60000]">
               <span className="absolute top-4 right-4 text-4xl font-black text-white/5">{s.num}</span>
@@ -415,6 +430,22 @@ const ProcessTimeline = () => {
             <p className="text-4xl font-black text-[#e9c349] mt-2">30-45 days</p>
           </div>
         </div>
+
+        {/* 💡 ย้ายรูปภาพ Infographic Roadmap (Pic 1) มาไว้ตรงนี้ (ใต้ Grid ขั้นตอนการทำงาน) */}
+        <div className="max-w-6xl mx-auto relative group">
+          <div className="absolute -inset-1 bg-gradient-to-r from-[#e9c349] to-[#e60000] rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+          <div className="relative rounded-xl overflow-hidden border border-white/10 bg-white">
+            <img
+              src="/roadmap.jpg"
+              alt="Visa Process Roadmap"
+              className="w-full h-auto"
+              onError={(e) => {
+                e.currentTarget.parentElement!.style.display = 'none';
+              }}
+            />
+          </div>
+        </div>
+
       </div>
     </section>
   );
@@ -746,7 +777,6 @@ const Contact = () => {
           </a>
 
           {/* FACEBOOK */}
-          {/* 💡 อัปเดตลิงก์ Facebook ตรงนี้ให้เป็นลิงก์ใหม่ที่คุณต้องการแล้วครับ */}
           <a href="https://www.facebook.com/people/Muay-Thai-ED-DTV-Visa-Support/61588289336687/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center gap-3 bg-white/10 p-8 rounded-xl backdrop-blur-sm hover:bg-white hover:-translate-y-1 transition-all border border-white/20 group shadow-lg">
             <Facebook className="text-white group-hover:text-[#1877F2] transition-colors" size={44} />
             <div className="text-center mt-2">
@@ -850,7 +880,6 @@ const Footer = ({ setCurrentPage }: PageProps) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
 
-          {/* 💡 ปรับให้โลโก้อยู่ด้านบนของชื่อเว็บไซต์ */}
           <div className="flex flex-col items-center gap-2">
             <img
               src="/gumpunmuaythailogo.png"
