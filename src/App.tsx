@@ -781,7 +781,7 @@ const Contact = () => {
             <Facebook className="text-white group-hover:text-[#1877F2] transition-colors" size={44} />
             <div className="text-center mt-2">
               <p className="text-white/60 group-hover:text-black/50 font-bold text-[10px] uppercase tracking-widest mb-1 transition-colors">FACEBOOK</p>
-              <p className="text-white group-hover:text-black font-black text-xl transition-colors">Muay Thai ED&DTV Visa support</p>
+              <p className="text-white group-hover:text-black font-black text-xl transition-colors">Muay Thai ED & DTV Visa support</p>
             </div>
           </a>
         </div>
