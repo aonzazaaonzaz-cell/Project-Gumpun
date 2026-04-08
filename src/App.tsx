@@ -105,7 +105,7 @@ const Hero = () => {
     <section id="home" className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1555597673-b21d5c935865?q=80&w=2072&auto=format&fit=crop"
+          src="/background.png"
           alt="Muay Thai Background"
           className="w-full h-full object-cover opacity-20 grayscale"
         />
@@ -781,7 +781,7 @@ const Contact = () => {
             <Facebook className="text-white group-hover:text-[#1877F2] transition-colors" size={44} />
             <div className="text-center mt-2">
               <p className="text-white/60 group-hover:text-black/50 font-bold text-[10px] uppercase tracking-widest mb-1 transition-colors">FACEBOOK</p>
-              <p className="text-white group-hover:text-black font-black text-xl transition-colors">Gumpun Muay Thai</p>
+              <p className="text-white group-hover:text-black font-black text-xl transition-colors">Muay Thai ED&DTV Visa support</p>
             </div>
           </a>
         </div>
