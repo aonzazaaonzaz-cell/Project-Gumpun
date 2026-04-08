@@ -105,7 +105,7 @@ const Hero = () => {
     <section id="home" className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
-          src="/background.png"
+          src="/background.jpg"
           alt="Muay Thai Background"
           className="w-full h-full object-cover opacity-20 grayscale"
         />
