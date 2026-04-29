@@ -902,6 +902,25 @@ const Footer = ({ setCurrentPage }: PageProps) => {
             <span onClick={() => setCurrentPage('terms')} className="text-white/40 hover:text-white transition-colors text-[10px] md:text-xs font-bold uppercase tracking-widest cursor-pointer">Terms of Service</span>
           </div>
         </div>
+
+        {/* --- ส่วนที่เพิ่มใหม่: DBD Registered Badge --- */}
+        <div className="mt-12 pt-8 border-t border-white/5 flex justify-center">
+          <a
+            href="https://dbdregistered.dbd.go.th/api/public/shopinfo?param=DE3212CC0233CA342A5B584E4B9989F4F55A270FCE81D64F8DEB471F797C33F5"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="opacity-60 hover:opacity-100 transition-opacity"
+          >
+            <img
+              src="https://dbdregistered.dbd.go.th/api/public/banner?param=DE3212CC0233CA342A5B584E4B9989F4F55A270FCE81D64F8DEB471F797C33F5"
+              alt="DBD Registered"
+              className="h-12 md:h-14 w-auto grayscale brightness-200 hover:grayscale-0 hover:brightness-100 transition-all duration-300"
+              style={{ filter: 'drop-shadow(0 0 10px rgba(255,255,255,0.05))' }}
+            />
+          </a>
+        </div>
+        {/* ------------------------------------------- */}
+
       </div>
     </footer>
   );
