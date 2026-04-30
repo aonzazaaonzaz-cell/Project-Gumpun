@@ -909,13 +909,12 @@ const Footer = ({ setCurrentPage }: PageProps) => {
             href="https://dbdregistered.dbd.go.th/api/public/shopinfo?param=DE3212CC0233CA342A5B584E4B9989F4F55A270FCE81D64F8DEB471F797C33F5"
             target="_blank"
             rel="noopener noreferrer"
-            className="opacity-60 hover:opacity-100 transition-opacity"
+            className="bg-white/95 p-3 rounded-lg hover:bg-white transition-all shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_25px_rgba(255,255,255,0.2)]"
           >
             <img
               src="https://dbdregistered.dbd.go.th/api/public/banner?param=DE3212CC0233CA342A5B584E4B9989F4F55A270FCE81D64F8DEB471F797C33F5"
               alt="DBD Registered"
-              className="h-12 md:h-14 w-auto grayscale brightness-200 hover:grayscale-0 hover:brightness-100 transition-all duration-300"
-              style={{ filter: 'drop-shadow(0 0 10px rgba(255,255,255,0.05))' }}
+              className="h-10 md:h-12 w-auto object-contain"
             />
           </a>
         </div>
