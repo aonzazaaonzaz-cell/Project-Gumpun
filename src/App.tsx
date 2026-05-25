@@ -451,77 +451,483 @@ const ProcessTimeline = () => {
   );
 };
 
+// 1. เพิ่ม Interface บอก TypeScript ว่าข้อมูลของเรามีโครงสร้างแบบไหน
+interface CampInfo {
+  city: string;
+  gym: string;
+  gymThai: string;
+  fbUrl?: string;
+  mapUrl?: string;
+  highlightUrl?: string;
+}
+
+interface RegionInfo {
+  title: string;
+  camps: CampInfo[];
+}
+
 const Locations = () => {
-  const regions = [
+  const regions: RegionInfo[] = [
     {
       title: "CENTRAL THAILAND",
       camps: [
-        { city: "Bangkok", gym: "KaewSamrit Gym", gymThai: "แก้วสัมฤทธิ์", fbUrl: "https://www.facebook.com/kaewsamritgym", mapUrl: "https://maps.app.goo.gl/35EawV1W38YfK5p68" },
-        { city: "Bangkok", gym: "Nok Jeans Ladkrabang Muay Thai", gymThai: "นกยีนส์ลาดกระบัง", fbUrl: "https://www.facebook.com/p/%E0%B8%84%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B8%A1%E0%B8%A7%E0%B8%A2-%E0%B8%99%E0%B8%81%E0%B8%A2%E0%B8%B5%E0%B8%99%E0%B8%AA%E0%B9%8C%E0%B8%A5%E0%B8%B2%E0%B8%94%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%B1%E0%B8%87-%E0%B8%A1%E0%B8%A7%E0%B8%A2%E0%B9%84%E0%B8%97%E0%B8%A2-100054528276685/?locale=th_TH", mapUrl: "https://maps.app.goo.gl/q5Gd4CLeH2HDXRKV9" },
-        { city: "Bangkok", gym: "Wor.Auracha MuayThai Gym", gymThai: "ว.อุรชา", fbUrl: "https://www.facebook.com/Wor.Auracha/?locale=th_TH", mapUrl: "https://maps.app.goo.gl/ghXToKWTTJZZrTTc8" },
-        { city: "Chai Nat", gym: "Chaopraya Muay Thai", gymThai: "เจ้าพระยามวยไทย", fbUrl: "https://www.facebook.com/share/187zuSVXcJ/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/YvqdAmG4Ge1Ez5cy8" },
-        { city: "Nonthaburi", gym: "Sor. Suwannaran Muay Thai", gymThai: "ศ.สุวรรณารัณย์", fbUrl: "https://www.facebook.com/krugunmuaythai/?locale=th_TH", mapUrl: "https://maps.app.goo.gl/4aVyGdAmZrotJHGf7" },
-        { city: "Pathum Thani", gym: "Singmanasak Gym", gymThai: "สิงห์มนัสศักดิ์", fbUrl: "https://www.facebook.com/share/1CQq7rQ1td/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/qWr6fuYe8MR47uHz6" },
-        { city: "Samut Prakan", gym: "Sor. Songtham Muay Thai", gymThai: "ศ.ทรงธรรม", fbUrl: "https://www.facebook.com/share/1861pHYrjX/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/by5PVZSABQSFSpgRA" },
-        { city: "Saraburi", gym: "Kiat Chamroon", gymThai: "เกียรติจำรูญ", fbUrl: "https://www.facebook.com/p/%E0%B8%84%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B8%A1%E0%B8%A7%E0%B8%A2%E0%B9%80%E0%B8%81%E0%B8%B5%E0%B8%A2%E0%B8%A3%E0%B8%95%E0%B8%B4%E0%B8%88%E0%B8%B3%E0%B8%A3%E0%B8%B9%E0%B8%8D-100057305454164/?locale=th_TH", mapUrl: "maps.app.goo.gl/c4cZMwLic2kD7iFHA" },
-        { city: "Sing Buri", gym: "J.Apichat MuayThai Gym", gymThai: "จ.อภิชาติมวยไทยยิม", fbUrl: "https://www.facebook.com/share/1HsQB6nLSz/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/RN6aEqP5EpoYuNmB7" }
+        {
+          city: "Bangkok",
+          gym: "KaewSamrit Gym",
+          gymThai: "แก้วสัมฤทธิ์",
+          fbUrl: "https://www.facebook.com/kaewsamritgym",
+          mapUrl: "https://maps.app.goo.gl/35EawV1W38YfK5p68",
+          highlightUrl: "https://www.facebook.com/share/p/14cqubdP7uB/"
+        },
+        {
+          city: "Bangkok",
+          gym: "Nok Jeans Ladkrabang Muay Thai",
+          gymThai: "นกยีนส์ลาดกระบัง",
+          fbUrl: "https://www.facebook.com/p/%E0%B8%84%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B8%A1%E0%B8%A7%E0%B8%A2-%E0%B8%99%E0%B8%81%E0%B8%A2%E0%B8%B5%E0%B8%99%E0%B8%AA%E0%B9%8C%E0%B8%A5%E0%B8%B2%E0%B8%94%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%B1%E0%B8%87-%E0%B8%A1%E0%B8%A7%E0%B8%A2%E0%B9%84%E0%B8%97%E0%B8%A2-100054528276685/?locale=th_TH",
+          mapUrl: "https://maps.app.goo.gl/q5Gd4CLeH2HDXRKV9",
+          highlightUrl: "https://www.facebook.com/share/p/18TsAb2U1N/"
+        },
+        {
+          city: "Bangkok",
+          gym: "Wor.Auracha MuayThai Gym",
+          gymThai: "ว.อุรชา",
+          fbUrl: "https://www.facebook.com/Wor.Auracha/?locale=th_TH",
+          mapUrl: "https://maps.app.goo.gl/ghXToKWTTJZZrTTc8",
+          highlightUrl: ""
+        },
+        {
+          city: "Chai Nat",
+          gym: "Chaopraya Muay Thai",
+          gymThai: "เจ้าพระยามวยไทย",
+          fbUrl: "https://www.facebook.com/share/187zuSVXcJ/?mibextid=wwXIfr",
+          mapUrl: "https://maps.app.goo.gl/YvqdAmG4Ge1Ez5cy8",
+          highlightUrl: ""
+        },
+        {
+          city: "Nonthaburi",
+          gym: "Sor. Suwannaran Muay Thai",
+          gymThai: "ศ.สุวรรณารัณย์",
+          fbUrl: "https://www.facebook.com/krugunmuaythai/?locale=th_TH",
+          mapUrl: "https://maps.app.goo.gl/4aVyGdAmZrotJHGf7",
+          highlightUrl: "https://www.facebook.com/share/p/1Y7wFTesUf/"
+        },
+        {
+          city: "Pathum Thani",
+          gym: "Singmanasak Gym",
+          gymThai: "สิงห์มนัสศักดิ์",
+          fbUrl: "https://www.facebook.com/share/1CQq7rQ1td/?mibextid=wwXIfr",
+          mapUrl: "https://maps.app.goo.gl/qWr6fuYe8MR47uHz6",
+          highlightUrl: "https://www.facebook.com/share/p/1Tws2Ntehu/"
+        },
+        {
+          city: "Samut Prakan",
+          gym: "Sor. Songtham Muay Thai",
+          gymThai: "ศ.ทรงธรรม",
+          fbUrl: "https://www.facebook.com/share/1861pHYrjX/?mibextid=wwXIfr",
+          mapUrl: "https://maps.app.goo.gl/by5PVZSABQSFSpgRA",
+          highlightUrl: "https://www.facebook.com/share/p/1CxfVbLTHp/"
+        },
+        {
+          city: "Saraburi",
+          gym: "Kiat Chamroon",
+          gymThai: "เกียรติจำรูญ",
+          fbUrl: "https://www.facebook.com/p/%E0%B8%84%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B8%A1%E0%B8%A7%E0%B8%A2%E0%B9%80%E0%B8%81%E0%B8%B5%E0%B8%A2%E0%B8%A3%E0%B8%95%E0%B8%B4%E0%B8%88%E0%B8%B3%E0%B8%A3%E0%B8%B9%E0%B8%8D-100057305454164/?locale=th_TH",
+          mapUrl: "maps.app.goo.gl/c4cZMwLic2kD7iFHA",
+          highlightUrl: "https://www.facebook.com/share/p/1Fd9tcFdur/"
+        },
+        {
+          city: "Sing Buri",
+          gym: "J.Apichat MuayThai Gym",
+          gymThai: "จ.อภิชาติมวยไทยยิม",
+          fbUrl: "https://www.facebook.com/share/1HsQB6nLSz/?mibextid=wwXIfr",
+          mapUrl: "https://maps.app.goo.gl/RN6aEqP5EpoYuNmB7",
+          highlightUrl: ""
+        },
+        {
+          city: "Suphan Buri",
+          gym: "Yod WanLop Muaythai",
+          gymThai: "ยอดวัลภมวยไทย",
+          fbUrl: "https://www.facebook.com/%E0%B8%A2%E0%B8%AD%E0%B8%94%E0%B8%A7%E0%B8%B1%E0%B8%A5%E0%B8%A5%E0%B8%A0%E0%B8%A1%E0%B8%A7%E0%B8%A2%E0%B9%84%E0%B8%97%E0%B8%A2%E0%B8%A2%E0%B8%B4%E0%B8%A1-100079242512041/",
+          mapUrl: "https://maps.app.goo.gl/4hzTSP2bhq99nTd76",
+          highlightUrl: ""
+        }
       ]
     },
     {
       title: "EASTERN THAILAND",
       camps: [
-        { city: "Chonburi", gym: "Ha Payak Muay Thai Gym", gymThai: "ห้าพยัคฆ์มวยไทย", fbUrl: "https://sites.google.com/view/hapayak", mapUrl: "https://maps.app.goo.gl/NSbiftLiYu9rnK297" },
-        { city: "Chonburi", gym: "Por. Chimplee Muay Thai", gymThai: "ป.ฉิมพลี", fbUrl: "https://www.facebook.com/share/1QmKNUgJcH/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/19ES2pNCbRXwVVhD7" },
-        { city: "Prachin Buri", gym: "Sor. Meeanan Muay Thai", gymThai: "ส.มีอนันต์", fbUrl: "https://www.facebook.com/s.meeanan", mapUrl: "https://maps.app.goo.gl/xnZLXAe1aNsZ3Enn9" },
-        { city: "Rayong", gym: "Sor.Ninthai Muaythai Gym", gymThai: "ส.นิลทัย", fbUrl: "https://www.facebook.com/share/1XkrKXWvNy/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/vH9dBWH6fJMvKm1C9" }
+        {
+          city: "Chonburi",
+          gym: "Ha Payak Muay Thai Gym",
+          gymThai: "ห้าพยัคฆ์มวยไทย",
+          fbUrl: "https://sites.google.com/view/hapayak",
+          mapUrl: "https://maps.app.goo.gl/NSbiftLiYu9rnK297",
+          highlightUrl: "https://www.facebook.com/share/p/17rPgAHWGC/"
+        },
+        {
+          city: "Chonburi",
+          gym: "Phonchimphli Boxing Camp",
+          gymThai: "พร.ฉิมพลี",
+          fbUrl: "https://www.facebook.com/share/1QmKNUgJcH/?mibextid=wwXIfr",
+          mapUrl: "https://maps.app.goo.gl/19ES2pNCbRXwVVhD7",
+          highlightUrl: "https://www.facebook.com/share/r/1SLj1xqB9k/"
+        },
+        {
+          city: "Prachin Buri",
+          gym: "S.Mee-Anan Muay Thai Training",
+          gymThai: "ส.มีอนันต์",
+          fbUrl: "https://www.facebook.com/s.meeanan",
+          mapUrl: "https://maps.app.goo.gl/xnZLXAe1aNsZ3Enn9",
+          highlightUrl: "https://www.facebook.com/share/r/18mVmNMfYK/"
+        },
+        {
+          city: "Rayong",
+          gym: "Sor.Ninthai Muaythai Gym",
+          gymThai: "ส.นิลทัย",
+          fbUrl: "https://www.facebook.com/share/1XkrKXWvNy/?mibextid=wwXIfr",
+          mapUrl: "https://maps.app.goo.gl/vH9dBWH6fJMvKm1C9",
+          highlightUrl: "https://www.facebook.com/share/p/1AYoxZuGSV/"
+        },
+        {
+          city: "Trat",
+          gym: "Sit nong rak gym",
+          gymThai: "ศิษย์น้องรักยิม",
+          fbUrl: "https://www.facebook.com/nongrakgym",
+          mapUrl: "https://maps.app.goo.gl/BK2dKBFYRLJAR5C48",
+          highlightUrl: "https://www.facebook.com/share/p/1B5D5YVJYr/"
+        }
       ]
     },
     {
       title: "NORTHEASTERN (ISAN)",
       camps: [
-        { city: "Buriram", gym: "Phet Nong Ki Muay Thai", gymThai: "เพชรหนองกี่", fbUrl: "https://www.facebook.com/share/1C1iiXmw24/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/SW9hrhnvj56u6F446" },
-        { city: "Buriram", gym: "Por.Mongkolin", gymThai: "ป.มงคลอินทร์", fbUrl: "https://www.facebook.com/khay.mwy.p.mngkhl.xinthr?mibextid=wwXIfr&mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/CS33kzqSTV4HkRNr9?g_st=il" },
-        { city: "Buriram", gym: "Sit Jack MuayThai", gymThai: "ศิษย์แจ๊กมวยไทย", fbUrl: "https://www.facebook.com/share/1AdQqNd2nq/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/6aRnwEvGaM19bdmD7" },
-        { city: "Kalasin", gym: "Sor. Rodjarin Muay Thai", gymThai: "ส.รจนา", mapUrl: "https://maps.app.goo.gl/BC3xtexhSkoFKJNm6" },
-        { city: "Khon Kaen", gym: "Gumpun Muay Thai Khon Kaen", gymThai: "กำปั้นมวยไทย (ขอนแก่น)", mapUrl: "https://maps.app.goo.gl/CXrEdiMnfgZVZzxC6" },
-        { city: "Loei", gym: "Aor.Yutthachai", gymThai: "อ.ยุทธชัย", fbUrl: "https://www.facebook.com/profile.php?id=61588659636876#", mapUrl: "https://maps.app.goo.gl/PEPm9YTWquYqqv8d8" },
-        { city: "Maha Sarakham", gym: "Sit Phananchoeng Muay Thai", gymThai: "ศิษย์พนัญเชิง", fbUrl: "https://www.facebook.com/share/1Dhz9rtpvx/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/hqzVauahhMvoyp8U6" },
-        { city: "Nakhon Ratchasima", gym: "Gumpun Muay Thai Korat", gymThai: "กำปั้นมวยไทย (โคราช)", mapUrl: "https://maps.app.goo.gl/STKT94mZnXZky6sx9" },
-        { city: "Nakhon Ratchasima", gym: "Phimai Phongsathorn", gymThai: "พิมายพงศธร", fbUrl: "https://www.facebook.com/share/17LYdqdLR4/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/xTfXte6jA9LEx3Bg7" },
-        { city: "Nong Khai", gym: "Sor. Sophon Muay Thai", gymThai: "ส.โสภณ", fbUrl: "https://www.facebook.com/share/1ENe4GZGVX/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/duhPJoo3iZDEJCiw8" },
-        { city: "Sakon Nakhon", gym: "Jackie Gyms Muay Thai", gymThai: "แจ็คกี้ยิมส์", fbUrl: "https://www.facebook.com/share/1DMrW8YT2x/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/MpGNeyAvpc5z5JAr9" },
-        { city: "Surin", gym: "Pakorn Porn Muay Thai", gymThai: "ปกรณ์พร", fbUrl: "https://www.facebook.com/share/1DR1EZ1zYg/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/knb6sk62nduuEDdi7" },
-        { city: "Ubon Ratchathani", gym: "Sor. Sak Ubon Muay Thai", gymThai: "ศ.ศักดิ์อุบล", fbUrl: "https://www.facebook.com/share/1JhFzeTt4B/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/Yh5yuUGKQZCgvbAXA" },
-        { city: "Udon Thani", gym: "Kaen Norsing Muay Thai", gymThai: "แก่นนรสิงห์", fbUrl: "https://www.facebook.com/share/1DWLHfYKkP/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/ZarKLaRmSH3cEnkJ6" },
-        { city: "Yasothon", gym: "Aor. Phet Khunsuek Muay Thai", gymThai: "อ.เพชรขุนศึก", mapUrl: "https://maps.app.goo.gl/M8bungkCSg5cfuYv6" },
-        { city: "Yasothon", gym: "Sai Mun Snooker Club", gymThai: "ทรายมูลสนุ๊กเกอร์คลับ", fbUrl: "https://www.facebook.com/share/18LC9xWHqa/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/TPGomz2mH4F7u2929" },
-        { city: "Yasothon", gym: "Sor. Ninthai Muay Thai", gymThai: "ส.นิลไทย", mapUrl: "https://maps.app.goo.gl/Hkxth15Pp7PfjA9X8" }
+        {
+          city: "Buriram",
+          gym: "Phet Nong Ki Muay Thai",
+          gymThai: "เพชรหนองกี่",
+          fbUrl: "https://www.facebook.com/share/1C1iiXmw24/?mibextid=wwXIfr",
+          mapUrl: "https://maps.app.goo.gl/SW9hrhnvj56u6F446",
+          highlightUrl: "https://www.facebook.com/share/r/18pRcqvJ4J/"
+        },
+        {
+          city: "Buriram",
+          gym: "Por.Mongkolin",
+          gymThai: "ป.มงคลอินทร์",
+          fbUrl: "https://www.facebook.com/khay.mwy.p.mngkhl.xinthr?mibextid=wwXIfr&mibextid=wwXIfr",
+          mapUrl: "https://maps.app.goo.gl/CS33kzqSTV4HkRNr9?g_st=il",
+          highlightUrl: ""
+        },
+        {
+          city: "Buriram",
+          gym: "Sit Jack MuayThai",
+          gymThai: "ศิษย์แจ๊กมวยไทย",
+          fbUrl: "https://www.facebook.com/share/1AdQqNd2nq/?mibextid=wwXIfr",
+          mapUrl: "https://maps.app.goo.gl/6aRnwEvGaM19bdmD7",
+          highlightUrl: "https://www.facebook.com/share/p/18iqK8t1h7/"
+        },
+        {
+          city: "Kalasin",
+          gym: "Sor. Rodjarin Muay Thai",
+          gymThai: "ส.รจรินทร์",
+          fbUrl: "https://www.facebook.com/profile.php?id=100066491934335",
+          mapUrl: "https://maps.app.goo.gl/BC3xtexhSkoFKJNm6",
+          highlightUrl: "https://www.facebook.com/share/p/1Cq3NbnC6A/"
+        },
+        {
+          city: "Khon Kaen",
+          gym: "Gumpun Muay Thai Khon Kaen",
+          gymThai: "กำปั้นมวยไทย (ขอนแก่น)",
+          fbUrl: "",
+          mapUrl: "https://maps.app.goo.gl/CXrEdiMnfgZVZzxC6",
+          highlightUrl: ""
+        },
+        {
+          city: "Loei",
+          gym: "Aor.Yutthachai",
+          gymThai: "อ.ยุทธชัย",
+          fbUrl: "https://www.facebook.com/profile.php?id=61588659636876#",
+          mapUrl: "https://maps.app.goo.gl/PEPm9YTWquYqqv8d8",
+          highlightUrl: "https://www.facebook.com/share/p/17WX8yE8n1/"
+        },
+        {
+          city: "Maha Sarakham",
+          gym: "Sit Phananchoeng Muay Thai",
+          gymThai: "ศิษย์พนัญเชิง",
+          fbUrl: "https://www.facebook.com/share/1Dhz9rtpvx/?mibextid=wwXIfr",
+          mapUrl: "https://maps.app.goo.gl/hqzVauahhMvoyp8U6",
+          highlightUrl: "https://www.facebook.com/share/p/18p7eGxTvJ/"
+        },
+        {
+          city: "Nakhon Ratchasima",
+          gym: "Gumpun Muay Thai Korat",
+          gymThai: "กำปั้นมวยไทย (โคราช)",
+          fbUrl: "",
+          mapUrl: "https://maps.app.goo.gl/STKT94mZnXZky6sx9",
+          highlightUrl: ""
+        },
+        {
+          city: "Nakhon Ratchasima",
+          gym: "Phimai Phongsathorn",
+          gymThai: "พิมายพงศธร",
+          fbUrl: "https://www.facebook.com/share/17LYdqdLR4/?mibextid=wwXIfr",
+          mapUrl: "https://maps.app.goo.gl/xTfXte6jA9LEx3Bg7",
+          highlightUrl: ""
+        },
+        {
+          city: "Nong Khai",
+          gym: "Sor. Sophon Muay Thai",
+          gymThai: "ส.โสภณ",
+          fbUrl: "https://www.facebook.com/share/1ENe4GZGVX/?mibextid=wwXIfr",
+          mapUrl: "https://maps.app.goo.gl/duhPJoo3iZDEJCiw8",
+          highlightUrl: "https://www.facebook.com/share/p/1EKupMqfmk/"
+        },
+        {
+          city: "Sakon Nakhon",
+          gym: "Jackie Gyms Muay Thai",
+          gymThai: "แจ็คกี้ยิมส์",
+          fbUrl: "https://www.facebook.com/share/1DMrW8YT2x/?mibextid=wwXIfr",
+          mapUrl: "https://maps.app.goo.gl/MpGNeyAvpc5z5JAr9",
+          highlightUrl: ""
+        },
+        {
+          city: "Sakon Nakhon",
+          gym: "Sith Bon Sakonnakorn",
+          gymThai: "ศิษย์บอลสกลนคร",
+          fbUrl: "https://www.facebook.com/%E0%B8%84%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B8%A1%E0%B8%A7%E0%B8%A2%E0%B8%A8%E0%B8%B4%E0%B8%A9%E0%B8%A2%E0%B9%8C%E0%B8%9A%E0%B8%AD%E0%B8%A5%E0%B8%AA%E0%B8%81%E0%B8%A5-Bonsakon-Muaythai-Gym-100093604656847/",
+          mapUrl: "https://maps.app.goo.gl/7nQ2ms9tiueiQL7H8",
+          highlightUrl: "https://www.facebook.com/share/p/1CudDM7qAj/"
+        },
+        {
+          city: "Surin",
+          gym: "Pakorn Porn Surin Gym",
+          gymThai: "ปกรณ์พรสุรินทร์",
+          fbUrl: "https://www.facebook.com/share/1DR1EZ1zYg/?mibextid=wwXIfr",
+          mapUrl: "https://maps.app.goo.gl/knb6sk62nduuEDdi7",
+          highlightUrl: "https://www.facebook.com/share/p/1PMHm4udBK/"
+        },
+        {
+          city: "Ubon Ratchathani",
+          gym: "Sor. Sak Ubon Muay Thai",
+          gymThai: "ศ.ศักดิ์อุบล",
+          fbUrl: "https://www.facebook.com/share/1JhFzeTt4B/?mibextid=wwXIfr",
+          mapUrl: "https://maps.app.goo.gl/Yh5yuUGKQZCgvbAXA",
+          highlightUrl: "https://www.facebook.com/permalink.php?story_fbid=pfbid0hXknrtZdrYwXDumDKP71ZFaiBH4Bx251NxMW8LJ2irn3pZ9361kDRfHYSnpNgvvsl&id=61588289336687"
+        },
+        {
+          city: "Udon Thani",
+          gym: "Kaennorsing MuayThai Gym",
+          gymThai: "แก่นนรสิงห์",
+          fbUrl: "https://www.facebook.com/share/1DWLHfYKkP/?mibextid=wwXIfr",
+          mapUrl: "https://maps.app.goo.gl/ZarKLaRmSH3cEnkJ6",
+          highlightUrl: "https://www.facebook.com/share/p/1B7WB93jqD/"
+        },
+        {
+          city: "Yasothon",
+          gym: "Aor. Phet Khunsuek Muay Thai",
+          gymThai: "อ.เพชรขุนศึก",
+          fbUrl: "https://www.facebook.com/groups/326793244628082/",
+          mapUrl: "https://maps.app.goo.gl/M8bungkCSg5cfuYv6",
+          highlightUrl: "https://www.facebook.com/share/r/1BkjfcUTwc/"
+        },
+        {
+          city: "Yasothon",
+          gym: "Sai Mun Snooker Club",
+          gymThai: "ทรายมูลสนุ๊กเกอร์คลับ",
+          fbUrl: "https://www.facebook.com/share/18LC9xWHqa/?mibextid=wwXIfr",
+          mapUrl: "https://maps.app.goo.gl/TPGomz2mH4F7u2929",
+          highlightUrl: ""
+        },
+        {
+          city: "Yasothon",
+          gym: "Sor. Ninthai Muay Thai",
+          gymThai: "ส.นิลไทย",
+          fbUrl: "",
+          mapUrl: "https://maps.app.goo.gl/Hkxth15Pp7PfjA9X8",
+          highlightUrl: ""
+        }
       ]
     },
     {
       title: "NORTHERN THAILAND",
       camps: [
-        { city: "Chiang Mai", gym: "Champions GYM", gymThai: "", fbUrl: "https://www.facebook.com/thaiboxingcnx/?locale=th_TH", mapUrl: "https://maps.app.goo.gl/fQepi9L9XSwcdoDK8" },
-        { city: "Chiang Rai", gym: "The Underdog Muay Thai Gym", gymThai: "", fbUrl: "https://www.facebook.com/TheUnderdogMuayThaiGym", mapUrl: "https://maps.app.goo.gl/1pneBRhvHqrjUqUi7" },
-        { city: "Kamphaeng Phet", gym: "Kiat Chatchai", gymThai: "เกียรติฉัตรชัย", fbUrl: "https://www.facebook.com/share/17nrStp76x/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/pt13S7JBUSw8VkVm9" },
-        { city: "Kamphaeng Phet", gym: "Look Thap Ong Dam", gymThai: "ลูกทัพองค์ดำ", fbUrl: "https://www.facebook.com/share/1ASrR8K2yN/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/TU2PGtHTd4zti6Mo6" },
-        { city: "Lamphun", gym: "Aor. Sanitpan", gymThai: "อ.สนิทพันธุ์", fbUrl: "https://www.facebook.com/share/1DCtA3AF1h/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/pcnzdgwemuTD1vB76" },
-        { city: "Nan", gym: "Kiatpichitchai", gymThai: "เกียรติพิชิตชัย", fbUrl: "https://www.facebook.com/share/1Jtr2HYv5H/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/zsZbQzKucU9m7pJ2A" },
-        { city: "Nan", gym: "T20 Sport Complex", gymThai: "T20", fbUrl: "https://www.facebook.com/share/1DQjSTPEr5/", mapUrl: "https://maps.app.goo.gl/qCG6pxQFFxf6F1a18" },
-        { city: "Phitsanulok", gym: "JP Boxing Gym", gymThai: "เจพี บ๊อกซิ่งยิม", fbUrl: "https://www.facebook.com/share/1FisaF6BWB/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/jWx1HQUYJzAEjxSE9" },
-        { city: "Phitsanulok", gym: "Suwanno Muay Thai", gymThai: "สุวรรณโณ (ศ.ไก่เขี่ย)", fbUrl: "https://www.facebook.com/share/1FqFhLX6Lm/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/97q6y8QaSGmqtJ8x7?g_st=ipc" },
-        { city: "Uttaradit", gym: "Tor. Khong-In", gymThai: "ต.คงอินทร์", fbUrl: "https://www.facebook.com/share/18RGuKww3b/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/BBVXsxTVHPwJSurB8" }
+        {
+          city: "Chiang Mai",
+          gym: "Champions GYM",
+          gymThai: "",
+          fbUrl: "https://www.facebook.com/thaiboxingcnx/?locale=th_TH",
+          mapUrl: "https://maps.app.goo.gl/fQepi9L9XSwcdoDK8",
+          highlightUrl: ""
+        },
+        {
+          city: "Chiang Mai",
+          gym: "Aor.Kitjareonchai",
+          gymThai: "ค่ายมวย อ.กิจเจริญชัย",
+          fbUrl: "",
+          mapUrl: "https://maps.app.goo.gl/Z87JtJ96aZ9FWZR19",
+          highlightUrl: "https://www.facebook.com/share/p/1LwRNoRdKw/"
+        },
+        {
+          city: "Chiang Rai",
+          gym: "The Underdog Muay Thai Gym",
+          gymThai: "",
+          fbUrl: "https://www.facebook.com/TheUnderdogMuayThaiGym",
+          mapUrl: "https://maps.app.goo.gl/1pneBRhvHqrjUqUi7",
+          highlightUrl: "https://www.facebook.com/share/p/18zHBdedxv/"
+        },
+        {
+          city: "Kamphaeng Phet",
+          gym: "Kiat Chatchai",
+          gymThai: "เกียรติฉัตรชัย ไทย บ็อกซิ่งแคมป์",
+          fbUrl: "https://www.facebook.com/share/17nrStp76x/?mibextid=wwXIfr",
+          mapUrl: "https://maps.app.goo.gl/pt13S7JBUSw8VkVm9",
+          highlightUrl: "https://www.facebook.com/share/p/17p6VLsoG8/"
+        },
+        {
+          city: "Kamphaeng Phet",
+          gym: "Lookthap Ongdam Muaythai Gym",
+          gymThai: "มวยไทย ลูกทัพองค์ดำยิม",
+          fbUrl: "https://www.facebook.com/share/1ASrR8K2yN/?mibextid=wwXIfr",
+          mapUrl: "https://maps.app.goo.gl/TU2PGtHTd4zti6Mo6",
+          highlightUrl: "https://www.facebook.com/share/p/14fr2oeVkrg/"
+        },
+        {
+          city: "Lamphun",
+          gym: "Aor. Sanitpan",
+          gymThai: "อ.สนิทพันธุ์",
+          fbUrl: "https://www.facebook.com/share/1DCtA3AF1h/?mibextid=wwXIfr",
+          mapUrl: "https://maps.app.goo.gl/pcnzdgwemuTD1vB76",
+          highlightUrl: "https://www.facebook.com/share/p/1AAtibH5hK/"
+        },
+        {
+          city: "Mae Hong Son",
+          gym: "Apple Muaythai Gym",
+          gymThai: "แอปเปิ้ล มวยไทยยิม",
+          fbUrl: "https://www.facebook.com/apple.muay.thai.gym.team/",
+          mapUrl: "https://maps.app.goo.gl/mRm2m5MGCwjS7f1V8",
+          highlightUrl: ""
+        },
+        {
+          city: "Nan",
+          gym: "Kiatpichitchai",
+          gymThai: "เกียรติพิชิตชัย",
+          fbUrl: "https://www.facebook.com/share/1Jtr2HYv5H/?mibextid=wwXIfr",
+          mapUrl: "https://maps.app.goo.gl/zsZbQzKucU9m7pJ2A",
+          highlightUrl: "https://www.facebook.com/share/p/19r8hcMvw6/"
+        },
+        {
+          city: "Nan",
+          gym: "T20 Sport Complex",
+          gymThai: "T20",
+          fbUrl: "https://www.facebook.com/share/1DQjSTPEr5/",
+          mapUrl: "https://maps.app.goo.gl/qCG6pxQFFxf6F1a18",
+          highlightUrl: "https://www.facebook.com/share/p/1HZvwFnc45/"
+        },
+        {
+          city: "Phayao",
+          gym: "Tor.Buates",
+          gymThai: "ต.บัวเทศ",
+          fbUrl: "https://www.facebook.com/profile.php?id=61551708162998",
+          mapUrl: "https://maps.app.goo.gl/z2r2B14pygfdMASE7",
+          highlightUrl: "https://www.facebook.com/share/p/1CQnbwV875/"
+        },
+        {
+          city: "Phitsanulok",
+          gym: "JP Boxing Gym",
+          gymThai: "เจพี บ๊อกซิ่งยิม",
+          fbUrl: "https://www.facebook.com/share/1FisaF6BWB/?mibextid=wwXIfr",
+          mapUrl: "https://maps.app.goo.gl/jWx1HQUYJzAEjxSE9",
+          highlightUrl: "https://www.facebook.com/share/p/1F7ehEj6Ao/"
+        },
+        {
+          city: "Phitsanulok",
+          gym: "Suwanno Muay Thai",
+          gymThai: "สุวรรณโณ (ศ.ไก่เขี่ย)",
+          fbUrl: "https://www.facebook.com/share/1FqFhLX6Lm/?mibextid=wwXIfr",
+          mapUrl: "https://maps.app.goo.gl/97q6y8QaSGmqtJ8x7?g_st=ipc",
+          highlightUrl: "https://www.facebook.com/share/p/14eeym4mTEH/"
+        },
+        {
+          city: "Uttaradit",
+          gym: "Tor. Khong-In",
+          gymThai: "ต.คงอินทร์",
+          fbUrl: "https://www.facebook.com/share/18RGuKww3b/?mibextid=wwXIfr",
+          mapUrl: "https://maps.app.goo.gl/BBVXsxTVHPwJSurB8",
+          highlightUrl: ""
+        }
       ]
     },
     {
       title: "SOUTHERN THAILAND",
       camps: [
-        { city: "Chumphon", gym: "Kiat Yodying", gymThai: "เกียรติยอดยิ่ง", fbUrl: "https://www.facebook.com/share/1CHdJpAbm9/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/cUdo2DC2K4qMKxPN7" },
-        { city: "Krabi", gym: "Kmax gym", gymThai: "", fbUrl: "https://www.facebook.com/kmaxgymTh/?locale=th_TH", mapUrl: "https://maps.app.goo.gl/xVS2wAADAhuEgRom9" },
-        { city: "Nakhon Si Thammarat", gym: "Legend MuayThai", gymThai: "เลเจนมวยไทย", fbUrl: "https://www.facebook.com/Krumeechai/", mapUrl: "https://maps.app.goo.gl/QUCaAxKFEioavaAy9" },
-        { city: "Phuket", gym: "Surakit Gym Phuket", gymThai: "สุรกิตย์", fbUrl: "https://www.facebook.com/masterjayphuket/?locale=th_TH", mapUrl: "https://maps.app.goo.gl/8GP4LZYmN3ELL6Ya9" },
-        { city: "Songkhla", gym: "Saenrak Muay Thai", gymThai: "แสนรักมวยไทย", fbUrl: "https://www.facebook.com/share/1Dqz3nkE9V/?mibextid=wwXIfr", mapUrl: "https://maps.app.goo.gl/krGAJqKrTXwpAQSk8" },
-        { city: "Surat Thani", gym: "Singha Samui Muay Thai", gymThai: "สิงห์สมุยมวยไทย", fbUrl: "https://www.instagram.com/singsamui_muaythai/", mapUrl: "https://maps.app.goo.gl/5wY44PCKKeDDfS9d9" }
+        {
+          city: "Chumphon",
+          gym: "Kiat Yodying",
+          gymThai: "เกียรติยอดยิ่ง",
+          fbUrl: "https://www.facebook.com/share/1CHdJpAbm9/?mibextid=wwXIfr",
+          mapUrl: "https://maps.app.goo.gl/cUdo2DC2K4qMKxPN7",
+          highlightUrl: "https://www.facebook.com/share/p/1Kjkx1Q8Ja/"
+        },
+        {
+          city: "Krabi",
+          gym: "Kmax gym",
+          gymThai: "",
+          fbUrl: "https://www.facebook.com/kmaxgymTh/?locale=th_TH",
+          mapUrl: "https://maps.app.goo.gl/xVS2wAADAhuEgRom9",
+          highlightUrl: "https://www.facebook.com/share/r/1D8n3nJNz5/"
+        },
+        {
+          city: "Nakhon Si Thammarat",
+          gym: "Legend MuayThai",
+          gymThai: "เลเจนมวยไทย",
+          fbUrl: "https://www.facebook.com/Krumeechai/",
+          mapUrl: "https://maps.app.goo.gl/QUCaAxKFEioavaAy9",
+          highlightUrl: "https://www.facebook.com/share/p/1JetKa1Y8P/"
+        },
+        {
+          city: "Prachuap Khiri Khan",
+          gym: "Por Pet Kat Kaew",
+          gymThai: "ป.เพชรไข่แก้ว",
+          fbUrl: "https://www.instagram.com/explore/locations/1026096420/",
+          mapUrl: "https://maps.app.goo.gl/MWwsku1t9YKEGeaS6",
+          highlightUrl: "https://www.facebook.com/share/p/14dqEx3KTC3/"
+        },
+        {
+          city: "Phuket",
+          gym: "Surakit Gym Phuket",
+          gymThai: "สุรกิตย์",
+          fbUrl: "https://www.facebook.com/masterjayphuket/?locale=th_TH",
+          mapUrl: "https://maps.app.goo.gl/8GP4LZYmN3ELL6Ya9",
+          highlightUrl: "https://www.facebook.com/share/p/1BNxkjgMDC/"
+        },
+        {
+          city: "Songkhla",
+          gym: "Saenrak Muay Thai",
+          gymThai: "แสนรักมวยไทย",
+          fbUrl: "https://www.facebook.com/share/1Dqz3nkE9V/?mibextid=wwXIfr",
+          mapUrl: "https://maps.app.goo.gl/krGAJqKrTXwpAQSk8",
+          highlightUrl: ""
+        },
+        {
+          city: "Surat Thani",
+          gym: "Singha Samui Muay Thai",
+          gymThai: "สิงห์สมุยมวยไทย",
+          fbUrl: "https://www.instagram.com/singsamui_muaythai/",
+          mapUrl: "https://maps.app.goo.gl/5wY44PCKKeDDfS9d9",
+          highlightUrl: ""
+        }
+      ]
+    },
+    {
+      title: "WESTERN THAILAND",
+      camps: [
+        {
+          city: "Phetchaburi",
+          gym: "Chok Dee Gym - Muay Thai & Fitness",
+          gymThai: "โชคดีชะอำ",
+          fbUrl: "https://www.facebook.com/chokdeechaam/?locale=th_TH",
+          mapUrl: "https://maps.app.goo.gl/GV7sn4tfUbz7mkuW8",
+          highlightUrl: ""
+        },
       ]
     }
   ];
@@ -536,18 +942,10 @@ const Locations = () => {
           We work with partner Muay Thai camps across all regions of Thailand — from city gyms to authentic provincial training environments. Choose your training location here:
         </p>
 
-        {/* --- Professional Map Section --- */}
         <div className="relative max-w-5xl mx-auto mb-16 group text-left">
-          {/* แสงเงาด้านหลัง (Glow Effect) เพิ่มความพรีเมียม */}
           <div className="absolute -inset-0.5 bg-gradient-to-r from-[#e60000] to-[#e9c349] rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-1000"></div>
 
           <div className="relative bg-[#1a1a1a] p-2 md:p-4 rounded-xl border border-white/10 shadow-2xl">
-
-            {/* 💡 เทคนิคซ่อนแถบเมนูด้านบนของ Google Maps 
-              - ใช้ overflow-hidden เพื่อตัดส่วนที่ล้นออก
-              - ปรับ marginTop ให้ติดลบมากขึ้นเป็น -75px เพื่อดึงแถบหัวสีเทาขึ้นไปซ่อนให้มิดยิ่งขึ้น
-              - (คุณสามารถปรับตัวเลข 75 เป็น 80 หรือ 85 ได้ตามความต้องการครับ)
-            */}
             <div className="w-full h-[350px] md:h-[450px] rounded-lg overflow-hidden bg-[#222] relative border border-white/5">
               <iframe
                 src="https://www.google.com/maps/d/embed?mid=1KUPZa4ZIWSmkGcG4KQPYPqryF5RthqA&ehbc=2E312F"
@@ -557,7 +955,6 @@ const Locations = () => {
               ></iframe>
             </div>
 
-            {/* แถบข้อมูลด้านล่างแผนที่ (Custom Footer) */}
             <div className="flex flex-wrap items-center justify-between pt-4 px-2 pb-1 gap-4">
               <div className="flex items-center gap-3">
                 <span className="relative flex h-2.5 w-2.5">
@@ -577,10 +974,8 @@ const Locations = () => {
                 Open in Google Maps <ChevronRight size={14} />
               </a>
             </div>
-
           </div>
         </div>
-        {/* --- End Professional Map Section --- */}
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
           {regions.map((r, i) => (
@@ -594,29 +989,27 @@ const Locations = () => {
                       <span className="text-white/40 text-[10px] font-bold uppercase tracking-widest flex items-center gap-1 mb-2">
                         <MapIcon size={12} /> {camp.city}
                       </span>
-                      {/* ชื่อภาษาอังกฤษ (ใหญ่และเด่นกว่า) */}
                       <span className="text-white font-black block text-[15px] leading-tight mb-1">{camp.gym}</span>
-                      {/* ชื่อภาษาไทย (เล็กลงมาและสีดรอปนิดหน่อย แสดงเฉพาะค่ายที่มี) */}
                       {camp.gymThai && (
                         <span className="text-white/60 font-medium block text-xs leading-tight mb-3">{camp.gymThai}</span>
                       )}
                     </div>
                     <div className="flex items-center gap-4 mt-auto border-t border-white/5 pt-3">
+
                       {camp.mapUrl && camp.mapUrl !== "#" && (
                         <a href={camp.mapUrl} target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-[#e60000] flex items-center gap-1.5 text-xs font-medium transition-colors">
                           <MapPin size={12} /> Maps
                         </a>
                       )}
 
-                      {/* ส่วนลิงก์ Social: เปลี่ยน Icon และสีตามลิงก์อัตโนมัติ (IG หรือ FB) */}
                       {camp.fbUrl && camp.fbUrl !== "#" && (
                         <a
                           href={camp.fbUrl}
                           target="_blank"
                           rel="noopener noreferrer"
                           className={`flex items-center gap-1.5 text-xs font-medium transition-colors ${camp.fbUrl.includes("instagram.com")
-                            ? "text-white/50 hover:text-[#E1306C]" // สี IG
-                            : "text-white/50 hover:text-[#1877F2]" // สี FB
+                            ? "text-white/50 hover:text-[#E1306C]"
+                            : "text-white/50 hover:text-[#1877F2]"
                             }`}
                         >
                           {camp.fbUrl.includes("instagram.com") ? (
@@ -627,6 +1020,18 @@ const Locations = () => {
                           {camp.fbUrl.includes("instagram.com") ? "Instagram" : "Facebook"}
                         </a>
                       )}
+
+                      {camp.highlightUrl && camp.highlightUrl !== "" && (
+                        <a
+                          href={camp.highlightUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="ml-auto bg-[#e60000] text-white hover:bg-[#e9c349] hover:text-black px-3 py-1.5 rounded text-[10px] font-black uppercase tracking-widest flex items-center gap-1.5 transition-all duration-300 shadow-[0_0_10px_rgba(230,0,0,0.2)] hover:shadow-[0_0_15px_rgba(233,195,73,0.5)] hover:-translate-y-0.5"
+                        >
+                          <Zap size={12} /> HIGHLIGHT
+                        </a>
+                      )}
+
                     </div>
                   </li>
                 ))}
