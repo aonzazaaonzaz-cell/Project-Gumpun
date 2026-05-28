@@ -356,7 +356,7 @@ const VisaComparison = () => {
               <div className="space-y-6">
                 <div className="border-b border-white/10 pb-4">
                   <p className="text-[#e9c349] font-bold mb-2">Can I change from a tourist visa to an ED Muay Thai visa inside Thailand?</p>
-                  <p className="text-white/70 text-sm">No. The ED visa must be applied for outside Thailand.</p>
+                  <p className="text-white/70 text-sm">The ED visa under Muay Thai camps certified by the Sports Authority of Thailand must be applied through a Royal Thai Embassy or Consulate located outside Thailand.</p>
                 </div>
                 <div className="border-b border-white/10 pb-4">
                   <p className="text-[#e9c349] font-bold mb-2">Can I apply for a DTV visa while in Thailand?</p>
@@ -501,7 +501,7 @@ const Locations = () => {
           gymThai: "เจ้าพระยามวยไทย",
           fbUrl: "https://www.facebook.com/share/187zuSVXcJ/?mibextid=wwXIfr",
           mapUrl: "https://maps.app.goo.gl/YvqdAmG4Ge1Ez5cy8",
-          highlightUrl: ""
+          highlightUrl: "https://www.facebook.com/share/p/18dY37pSFW/"
         },
         {
           city: "Nonthaburi",
@@ -541,7 +541,7 @@ const Locations = () => {
           gymThai: "จ.อภิชาติมวยไทยยิม",
           fbUrl: "https://www.facebook.com/share/1HsQB6nLSz/?mibextid=wwXIfr",
           mapUrl: "https://maps.app.goo.gl/RN6aEqP5EpoYuNmB7",
-          highlightUrl: ""
+          highlightUrl: "https://www.facebook.com/share/p/1EL2GSVgfK/"
         },
         {
           city: "Suphan Buri",
@@ -615,7 +615,7 @@ const Locations = () => {
           gymThai: "ป.มงคลอินทร์",
           fbUrl: "https://www.facebook.com/khay.mwy.p.mngkhl.xinthr?mibextid=wwXIfr&mibextid=wwXIfr",
           mapUrl: "https://maps.app.goo.gl/CS33kzqSTV4HkRNr9?g_st=il",
-          highlightUrl: ""
+          highlightUrl: "https://www.facebook.com/share/p/18wa3DTjyw/"
         },
         {
           city: "Buriram",
@@ -637,9 +637,9 @@ const Locations = () => {
           city: "Khon Kaen",
           gym: "Gumpun Muay Thai Khon Kaen",
           gymThai: "กำปั้นมวยไทย (ขอนแก่น)",
-          fbUrl: "",
+          fbUrl: "https://www.facebook.com/gumpunmuaythai",
           mapUrl: "https://maps.app.goo.gl/CXrEdiMnfgZVZzxC6",
-          highlightUrl: ""
+          highlightUrl: "https://www.facebook.com/share/p/1NTm8qfxts/"
         },
         {
           city: "Loei",
@@ -663,7 +663,7 @@ const Locations = () => {
           gymThai: "กำปั้นมวยไทย (โคราช)",
           fbUrl: "",
           mapUrl: "https://maps.app.goo.gl/STKT94mZnXZky6sx9",
-          highlightUrl: ""
+          highlightUrl: "https://www.facebook.com/share/p/1NTm8qfxts/"
         },
         {
           city: "Nakhon Ratchasima",
@@ -671,7 +671,7 @@ const Locations = () => {
           gymThai: "พิมายพงศธร",
           fbUrl: "https://www.facebook.com/share/17LYdqdLR4/?mibextid=wwXIfr",
           mapUrl: "https://maps.app.goo.gl/xTfXte6jA9LEx3Bg7",
-          highlightUrl: ""
+          highlightUrl: "https://www.facebook.com/share/p/1GzobeysnT/"
         },
         {
           city: "Nong Khai",
@@ -687,7 +687,7 @@ const Locations = () => {
           gymThai: "แจ็คกี้ยิมส์",
           fbUrl: "https://www.facebook.com/share/1DMrW8YT2x/?mibextid=wwXIfr",
           mapUrl: "https://maps.app.goo.gl/MpGNeyAvpc5z5JAr9",
-          highlightUrl: ""
+          highlightUrl: "https://www.facebook.com/share/p/18jwXaGXQf/"
         },
         {
           city: "Sakon Nakhon",
@@ -735,7 +735,7 @@ const Locations = () => {
           gymThai: "ทรายมูลสนุ๊กเกอร์คลับ",
           fbUrl: "https://www.facebook.com/share/18LC9xWHqa/?mibextid=wwXIfr",
           mapUrl: "https://maps.app.goo.gl/TPGomz2mH4F7u2929",
-          highlightUrl: ""
+          highlightUrl: "https://www.facebook.com/share/p/1DECVQYqNu/"
         },
         {
           city: "Yasothon",
@@ -804,7 +804,7 @@ const Locations = () => {
           gymThai: "แอปเปิ้ล มวยไทยยิม",
           fbUrl: "https://www.facebook.com/apple.muay.thai.gym.team/",
           mapUrl: "https://maps.app.goo.gl/mRm2m5MGCwjS7f1V8",
-          highlightUrl: ""
+          highlightUrl: "https://www.facebook.com/share/p/14PP7M1dFKN/"
         },
         {
           city: "Nan",
@@ -905,7 +905,7 @@ const Locations = () => {
           gymThai: "แสนรักมวยไทย",
           fbUrl: "https://www.facebook.com/share/1Dqz3nkE9V/?mibextid=wwXIfr",
           mapUrl: "https://maps.app.goo.gl/krGAJqKrTXwpAQSk8",
-          highlightUrl: ""
+          highlightUrl: "https://www.facebook.com/share/p/17pdjYCNR5/"
         },
         {
           city: "Surat Thani",
@@ -1139,6 +1139,19 @@ const ImportantNotice = () => {
 };
 
 const Contact = () => {
+  // 🌟 ฟังก์ชันสำหรับยิงข้อมูล Conversion ไปให้ Google Ads
+  const trackConversion = () => {
+    // เช็คก่อนว่ามี gtag โหลดมาแล้วจริงๆ (ป้องกัน Error ขัดข้องบนหน้าเว็บ)
+    if (typeof window !== 'undefined' && typeof (window as any).gtag !== 'undefined') {
+      (window as any).gtag('event', 'conversion', {
+        'send_to': 'AW-18192699931/CMECCLXMk7QcEJuk-uJD',
+        'value': 1.0,
+        'currency': 'THB'
+      });
+      console.log("Google Ads: Conversion Tracked!"); // พิมพ์เช็คใน Console
+    }
+  };
+
   return (
     <section id="contact" className="py-24 bg-[#e60000] relative overflow-hidden scroll-mt-20">
       <div className="absolute right-0 bottom-0 opacity-10 pointer-events-none select-none">
@@ -1155,7 +1168,13 @@ const Contact = () => {
 
         <div className="grid sm:grid-cols-2 gap-4 max-w-4xl mx-auto">
           {/* LINE */}
-          <a href="https://line.me/R/ti/p/@gumpunmuaythai" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center gap-3 bg-white/10 p-8 rounded-xl backdrop-blur-sm hover:bg-white hover:-translate-y-1 transition-all border border-white/20 group shadow-lg">
+          <a
+            href="https://line.me/R/ti/p/@gumpunmuaythai"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={trackConversion} // 🎯 เพิ่ม onClick ตรงนี้
+            className="flex flex-col items-center justify-center gap-3 bg-white/10 p-8 rounded-xl backdrop-blur-sm hover:bg-white hover:-translate-y-1 transition-all border border-white/20 group shadow-lg"
+          >
             <MessageSquare className="text-white group-hover:text-[#00B900] transition-colors" size={44} />
             <div className="text-center mt-2">
               <p className="text-white/60 group-hover:text-black/50 font-bold text-[10px] uppercase tracking-widest mb-1 transition-colors">LINE OFFICIAL</p>
@@ -1164,7 +1183,11 @@ const Contact = () => {
           </a>
 
           {/* EMAIL */}
-          <a href="mailto:gumpun@gumpunmuaythai.club" className="flex flex-col items-center justify-center gap-3 bg-white/10 p-8 rounded-xl backdrop-blur-sm hover:bg-white hover:-translate-y-1 transition-all border border-white/20 group shadow-lg">
+          <a
+            href="mailto:gumpun@gumpunmuaythai.club"
+            onClick={trackConversion} // 🎯 เพิ่ม onClick ตรงนี้
+            className="flex flex-col items-center justify-center gap-3 bg-white/10 p-8 rounded-xl backdrop-blur-sm hover:bg-white hover:-translate-y-1 transition-all border border-white/20 group shadow-lg"
+          >
             <Mail className="text-white group-hover:text-[#e60000] transition-colors" size={44} />
             <div className="text-center mt-2">
               <p className="text-white/60 group-hover:text-black/50 font-bold text-[10px] uppercase tracking-widest mb-1 transition-colors">EMAIL</p>
@@ -1173,7 +1196,13 @@ const Contact = () => {
           </a>
 
           {/* INSTAGRAM */}
-          <a href="https://www.instagram.com/gumpun_visa" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center gap-3 bg-white/10 p-8 rounded-xl backdrop-blur-sm hover:bg-white hover:-translate-y-1 transition-all border border-white/20 group shadow-lg">
+          <a
+            href="https://www.instagram.com/gumpun_visa"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={trackConversion} // 🎯 เพิ่ม onClick ตรงนี้
+            className="flex flex-col items-center justify-center gap-3 bg-white/10 p-8 rounded-xl backdrop-blur-sm hover:bg-white hover:-translate-y-1 transition-all border border-white/20 group shadow-lg"
+          >
             <Instagram className="text-white group-hover:text-[#E1306C] transition-colors" size={44} />
             <div className="text-center mt-2">
               <p className="text-white/60 group-hover:text-black/50 font-bold text-[10px] uppercase tracking-widest mb-1 transition-colors">INSTAGRAM</p>
@@ -1182,7 +1211,13 @@ const Contact = () => {
           </a>
 
           {/* FACEBOOK */}
-          <a href="https://www.facebook.com/people/Muay-Thai-ED-DTV-Visa-Support/61588289336687/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center gap-3 bg-white/10 p-8 rounded-xl backdrop-blur-sm hover:bg-white hover:-translate-y-1 transition-all border border-white/20 group shadow-lg">
+          <a
+            href="https://www.facebook.com/people/Muay-Thai-ED-DTV-Visa-Support/61588289336687/"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={trackConversion} // 🎯 เพิ่ม onClick ตรงนี้
+            className="flex flex-col items-center justify-center gap-3 bg-white/10 p-8 rounded-xl backdrop-blur-sm hover:bg-white hover:-translate-y-1 transition-all border border-white/20 group shadow-lg"
+          >
             <Facebook className="text-white group-hover:text-[#1877F2] transition-colors" size={44} />
             <div className="text-center mt-2">
               <p className="text-white/60 group-hover:text-black/50 font-bold text-[10px] uppercase tracking-widest mb-1 transition-colors">FACEBOOK</p>
