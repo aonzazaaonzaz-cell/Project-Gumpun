@@ -1352,7 +1352,7 @@ const Footer = ({ setCurrentPage }: PageProps) => {
             className="bg-white/95 p-3 rounded-lg hover:bg-white transition-all shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_25px_rgba(255,255,255,0.2)]"
           >
             <img
-              src="/DBD-L-LOGO-register.jpg"
+              src="/dbd-register.jpg"
               alt="DBD Registered"
               className="h-10 md:h-12 w-auto object-contain"
             />
