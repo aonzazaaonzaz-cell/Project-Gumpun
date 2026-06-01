@@ -1333,7 +1333,7 @@ const Footer = ({ setCurrentPage }: PageProps) => {
           </div>
 
           <p className="text-white/30 text-xs font-bold uppercase tracking-widest text-center">
-            © {new Date().getFullYear()} GUMPUN MUAY THAI. ALL RIGHTS RESERVED.
+            © {new Date().getFullYear()} GUMPUN MUAY THAI. OUR COMPANY IS LEGITIMATE.
           </p>
 
           <div className="flex flex-wrap justify-center gap-6 md:gap-8">
