@@ -22,6 +22,7 @@ import {
   ArrowLeft
 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import dbdLogo from './dbd-badge.jpg';
 
 interface PageProps {
   setCurrentPage: (page: string) => void;
@@ -1352,7 +1353,7 @@ const Footer = ({ setCurrentPage }: PageProps) => {
             className="bg-white/95 p-3 rounded-lg hover:bg-white transition-all shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_25px_rgba(255,255,255,0.2)]"
           >
             <img
-              src="/dbd-register.jpg"
+              src={dbdLogo} /* 👈 เปลี่ยนตรงนี้จุดเดียวครับ */
               alt="DBD Registered"
               className="h-10 md:h-12 w-auto object-contain"
             />
