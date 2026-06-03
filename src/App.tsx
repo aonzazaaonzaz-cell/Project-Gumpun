@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import {
   Menu,
   X,
@@ -29,7 +30,13 @@ interface PageProps {
 }
 
 const Navbar = ({ setCurrentPage }: PageProps) => {
+  const { t, i18n } = useTranslation();
+
   const [isOpen, setIsOpen] = useState(false);
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+  };
 
   const handleNavClick = (e: React.MouseEvent, targetId: string) => {
     e.preventDefault();
@@ -45,6 +52,9 @@ const Navbar = ({ setCurrentPage }: PageProps) => {
       }
     }, 100);
   };
+
+  // ดึงค่าภาษาปัจจุบันมาใช้ (ถ้าพึ่งโหลดเว็บและยังไม่มีค่า ให้ใช้ 'en' เป็นค่าเริ่มต้น)
+  const currentLanguage = i18n.language || 'en';
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-[#131313]/90 backdrop-blur-md border-b border-white/10">
@@ -68,11 +78,44 @@ const Navbar = ({ setCurrentPage }: PageProps) => {
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#home" onClick={(e) => handleNavClick(e, 'home')} className="text-[#e9c349] font-bold uppercase text-sm tracking-widest hover:text-white transition-colors">Home</a>
-            <a href="#visa-comparison" onClick={(e) => handleNavClick(e, 'visa-comparison')} className="text-white/80 hover:text-white transition-colors font-bold uppercase text-sm tracking-widest">ED Visa vs. DTV</a>
-            <a href="#visa-process" onClick={(e) => handleNavClick(e, 'visa-process')} className="text-white/80 hover:text-white transition-colors font-bold uppercase text-sm tracking-widest">Visa Process</a>
-            <a href="#partner-camps" onClick={(e) => handleNavClick(e, 'partner-camps')} className="text-white/80 hover:text-white transition-colors font-bold uppercase text-sm tracking-widest">Partner Camps</a>
-            <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="text-white/80 hover:text-white transition-colors font-bold uppercase text-sm tracking-widest">Contact</a>
+            <a href="#home" onClick={(e) => handleNavClick(e, 'home')} className="text-[#e9c349] font-bold uppercase text-sm tracking-widest hover:text-white transition-colors">
+              {t('navbar.home')}
+            </a>
+            <a href="#visa-comparison" onClick={(e) => handleNavClick(e, 'visa-comparison')} className="text-white/80 hover:text-white transition-colors font-bold uppercase text-sm tracking-widest">
+              {t('navbar.visa_comparison')}
+            </a>
+            <a href="#visa-process" onClick={(e) => handleNavClick(e, 'visa-process')} className="text-white/80 hover:text-white transition-colors font-bold uppercase text-sm tracking-widest">
+              {t('navbar.visa_process')}
+            </a>
+            <a href="#partner-camps" onClick={(e) => handleNavClick(e, 'partner-camps')} className="text-white/80 hover:text-white transition-colors font-bold uppercase text-sm tracking-widest">
+              {t('navbar.partner_camps')}
+            </a>
+            <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="text-white/80 hover:text-white transition-colors font-bold uppercase text-sm tracking-widest">
+              {t('navbar.contact')}
+            </a>
+
+            {/* --- ส่วนที่แก้ไขใหม่: Dropdown สลับภาษา Desktop --- */}
+            <div className="flex items-center border-l border-white/20 pl-6 ml-2">
+              <select
+                value={currentLanguage}
+                onChange={(e) => changeLanguage(e.target.value)}
+                className="bg-[#131313] text-white text-sm font-bold border border-white/30 rounded-md px-2 py-1.5 outline-none cursor-pointer hover:border-[#e9c349] focus:border-[#e9c349] transition-colors"
+              >
+                <option value="en">🇬🇧 English</option>
+                <option value="th">🇹🇭 ไทย</option>
+                <option value="ko">🇰🇷 한국어</option>
+                <option value="ja">🇯🇵 日本語</option>
+                <option value="it">🇮🇹 Italiano</option>
+                <option value="es">🇪🇸 Español</option>
+                <option value="fr">🇫🇷 Français</option>
+                <option value="ru">🇷🇺 Русский</option>
+                <option value="nl">🇳🇱 Nederlands</option>
+                <option value="de">🇩🇪 Deutsch</option>
+                <option value="da">🇩🇰 Dansk</option>
+                <option value="sv">🇸🇪 Svenska</option>
+              </select>
+            </div>
+            {/* -------------------------------------- */}
           </div>
 
           <div className="md:hidden">
@@ -85,11 +128,48 @@ const Navbar = ({ setCurrentPage }: PageProps) => {
 
       {isOpen && (
         <div className="md:hidden bg-[#131313] border-b border-white/10 px-4 py-6 space-y-4">
-          <a href="#home" onClick={(e) => handleNavClick(e, 'home')} className="block text-[#e9c349] font-bold uppercase text-sm">Home</a>
-          <a href="#visa-comparison" onClick={(e) => handleNavClick(e, 'visa-comparison')} className="block text-white/80 font-bold uppercase text-sm">ED Visa vs. DTV</a>
-          <a href="#visa-process" onClick={(e) => handleNavClick(e, 'visa-process')} className="block text-white/80 font-bold uppercase text-sm">Visa Process</a>
-          <a href="#partner-camps" onClick={(e) => handleNavClick(e, 'partner-camps')} className="block text-white/80 font-bold uppercase text-sm">Partner Camps</a>
-          <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="block text-white/80 font-bold uppercase text-sm">Contact</a>
+          <a href="#home" onClick={(e) => handleNavClick(e, 'home')} className="block text-[#e9c349] font-bold uppercase text-sm">
+            {t('navbar.home')}
+          </a>
+          <a href="#visa-comparison" onClick={(e) => handleNavClick(e, 'visa-comparison')} className="block text-white/80 font-bold uppercase text-sm">
+            {t('navbar.visa_comparison')}
+          </a>
+          <a href="#visa-process" onClick={(e) => handleNavClick(e, 'visa-process')} className="block text-white/80 font-bold uppercase text-sm">
+            {t('navbar.visa_process')}
+          </a>
+          <a href="#partner-camps" onClick={(e) => handleNavClick(e, 'partner-camps')} className="block text-white/80 font-bold uppercase text-sm">
+            {t('navbar.partner_camps')}
+          </a>
+          <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="block text-white/80 font-bold uppercase text-sm">
+            {t('navbar.contact')}
+          </a>
+
+          {/* --- ส่วนที่แก้ไขใหม่: Dropdown สลับภาษา Mobile --- */}
+          <div className="pt-6 mt-4 border-t border-white/10 flex flex-col gap-2">
+            <label className="text-white/50 text-xs font-bold uppercase tracking-widest mb-1">Select Language</label>
+            <select
+              value={currentLanguage}
+              onChange={(e) => {
+                changeLanguage(e.target.value);
+                setIsOpen(false); // ปิดเมนูมือถืออัตโนมัติเมื่อเลือกภาษาเสร็จ
+              }}
+              className="w-full bg-[#131313] text-white text-center font-bold border border-white/30 rounded-lg px-4 py-3 outline-none cursor-pointer hover:border-[#e9c349] focus:border-[#e9c349] transition-colors"
+            >
+              <option value="en">🇬🇧 English</option>
+              <option value="th">🇹🇭 ภาษาไทย</option>
+              <option value="ko">🇰🇷 한국어 (Korean)</option>
+              <option value="ja">🇯🇵 日本語 (Japanese)</option>
+              <option value="it">🇮🇹 Italiano</option>
+              <option value="es">🇪🇸 Español</option>
+              <option value="fr">🇫🇷 Français</option>
+              <option value="ru">🇷🇺 Русский (Russian)</option>
+              <option value="nl">🇳🇱 Nederlands</option>
+              <option value="de">🇩🇪 Deutsch</option>
+              <option value="da">🇩🇰 Dansk</option>
+              <option value="sv">🇸🇪 Svenska</option>
+            </select>
+          </div>
+          {/* ------------------------------------- */}
         </div>
       )}
     </nav>
