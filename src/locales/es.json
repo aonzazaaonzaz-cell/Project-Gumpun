@@ -5,5 +5,179 @@
         "visa_process": "Proceso de Visa",
         "partner_camps": "Gimnasios Asociados",
         "contact": "Contacto"
+    },
+    "hero": {
+        "title_1": "Entrena",
+        "title_2": "Muay Thai",
+        "title_3": "En",
+        "title_4": "Tailandia.",
+        "subtitle": "Soporte para visas ED y DTV con campamentos de Muay Thai certificados en toda Tailandia.",
+        "description": "Ahora puedes extender tu estadía en Tailandia entrenando Muay Thai en campamentos certificados por la Autoridad Deportiva de Tailandia (SAT) ubicados en todo el país. Desde Bangkok hasta las montañas del norte y las playas del sur.",
+        "feature_1": "ENTRENA CON ENTRENADORES TAILANDESES EXPERIMENTADOS",
+        "feature_2": "DESCUBRE LA CULTURA AUTÉNTICA DEL MUAY THAI",
+        "feature_3": "CAMPAMENTOS UBICADOS EN TODA TAILANDIA",
+        "btn_choose_city": "Elige tu ciudad de entrenamiento",
+        "btn_check_eligibility": "Verificar Elegibilidad",
+        "video_label": "Entrena Muay Thai en Tailandia"
+    },
+    "whatwedo": {
+        "subtitle": "LOS CIMIENTOS",
+        "title": "QUÉ HACEMOS",
+        "description": "Coordinamos programas de entrenamiento de Muay Thai con campamentos asociados elegibles en toda Tailandia y apoyamos el flujo de trabajo de documentación para las solicitudes de visa ED y DTV.",
+        "srv_1_title": "COORDINACIÓN DE CAMPAMENTOS CERTIFICADOS",
+        "srv_1_desc": "Acceso directo a gimnasios certificados por el SAT que cumplen con todos los requisitos legales para el patrocinio de visas.",
+        "srv_2_title": "DOCUMENTOS DE CONFIRMACIÓN DE ENTRENAMIENTO",
+        "srv_2_desc": "Preparación expedita de cartas de inscripción y certificados del gimnasio para su solicitud.",
+        "srv_3_title": "COORDINACIÓN DE PRESENTACIÓN ANTE EL SAT",
+        "srv_3_desc": "Gestión de la documentación requerida para los sellos de aprobación de la Autoridad Deportiva de Tailandia.",
+        "srv_4_title": "SOPORTE DE EXTREMO A EXTREMO",
+        "srv_4_desc": "Desde la selección de su ciudad de entrenamiento hasta la guía en la preparación de documentos y recordatorios de los plazos de presentación."
+    },
+    "visacomparison": {
+        "title": "¿QUÉ VISA SE ADAPTA A TU VIAJE DE ENTRENAMIENTO?",
+        "ed_title": "VISA ED",
+        "ed_subtitle": "VISA DE EDUCACIÓN",
+        "dtv_title": "VISA DTV",
+        "dtv_subtitle": "VISA DESTINATION THAILAND",
+        "btn_consult": "Consúltanos sobre opciones de visa",
+        "faq_title": "Preguntas Frecuentes",
+        "faq_q1": "¿Puedo cambiar de una visa de turista a una visa ED de Muay Thai dentro de Tailandia?",
+        "faq_a1": "No. La visa ED bajo campamentos de Muay Thai certificados por la Autoridad Deportiva de Tailandia debe solicitarse a través de una Embajada o Consulado Real de Tailandia ubicado fuera de Tailandia.",
+        "faq_q2": "¿Puedo solicitar una visa DTV mientras estoy en Tailandia?",
+        "faq_a2": "No. La solicitud debe enviarse a través del sistema oficial tailandés e-Visa y completarse fuera de Tailandia, donde recogerá su visa.",
+        "faq_q3": "¿Puedo entrenar en múltiples ciudades?",
+        "faq_a3": "Sí, pero debe mantener la asistencia en su gimnasio registrado.",
+        "notice_title": "Aviso Importante",
+        "notice_item1": "La aprobación de la visa la determina únicamente la Embajada o Consulado Real de Tailandia.",
+        "notice_item2": "Los tiempos de procesamiento son estimados y pueden variar.",
+        "notice_item3": "Solo brindamos soporte de coordinación y documentación.",
+        "review_title": "¿Quieres que revisemos tu caso?",
+        "review_desc": "Envíanos tu: Estado de visa actual, Ubicación actual, Embajada/consulado de preferencia, Ciudad de entrenamiento deseada y Fecha de inicio tentativa.",
+        "btn_review": "Contáctanos para una revisión",
+        "labels": {
+            "stay_period": "PERÍODO DE ESTANCIA",
+            "re_application": "RENOVACIÓN",
+            "location": "UBICACIÓN",
+            "training": "ASISTENCIA AL ENTRENAMIENTO",
+            "documents": "DOCUMENTOS",
+            "timeline": "CRONOGRAMA"
+        },
+        "ed": {
+            "stay_period": "90 días",
+            "re_application": "Renovable fuera de Tailandia",
+            "location": "Se recomienda una sola sede",
+            "training": "Estructurado",
+            "doc_1": "Pasaporte, Inscripción,",
+            "doc_2": "Prueba de fondos de al menos $1,000",
+            "timeline": "~30-45 días"
+        },
+        "dtv": {
+            "stay_period": "5 años (180 días por entrada)",
+            "re_application": "Entrada múltiple",
+            "location": "Flexible / Apto para trabajo remoto",
+            "training": "Flexible / Apto para trabajo remoto",
+            "doc_1": "Pasaporte, Inscripción,",
+            "doc_2": "Prueba de fondos de al menos 500,000 THB",
+            "timeline": "~30-45 días"
+        }
+    },
+    "timeline": {
+        "main_title": "PROCESO DE VISA DE MUAY THAI ED / DTV: DESCRIPCIÓN COMPLETA Y CRONOGRAMA",
+        "step_label": "PASO",
+        "total_title": "CRONOGRAMA TOTAL ESTIMADO",
+        "total_days": "30-45 días",
+        "step1_title": "EVALUACIÓN INICIAL",
+        "step1_desc": "Evaluación de su elegibilidad y elección del campamento de entrenamiento.",
+        "step1_time": "TIEMPO: 1-2 DÍAS",
+        "step2_title": "INSCRIPCIÓN AL CAMPAMENTO",
+        "step2_desc": "Pago del depósito y recepción de los documentos oficiales de invitación del gimnasio.",
+        "step2_time": "TIEMPO: 3-5 DÍAS",
+        "step3_title": "CERTIFICACIÓN DEL SAT",
+        "step3_desc": "Presentación ante la Autoridad Deportiva de Tailandia para el respaldo oficial de la visa.",
+        "step3_time": "TIEMPO: 10-14 DÍAS",
+        "step4_title": "PROCESAMIENTO GUBERNAMENTAL",
+        "step4_desc": "La carta de invitación certificada de la Autoridad Deportiva de Tailandia se envía al Departamento de Asuntos Consulares y luego a la Embajada o Consulado Real de Tailandia elegido.",
+        "step4_time": "TIEMPO: ~ 3 SEMANAS",
+        "step5_title": "SOLICITE SU VISA",
+        "step5_desc": "Cargue sus documentos en el Sistema tailandés e-Visa, pague la tarifa y asista a una entrevista si es necesario. Una vez aprobada, su visa se emitirá electrónicamente.\n\nPor favor note: No ingrese a Tailandia mientras su solicitud esté en proceso, ya que esto puede resultar en la cancelación."
+    },
+    "locations": {
+        "subtitle": "CAMPAMENTOS ASOCIADOS",
+        "title": "CAMPAMENTOS DE MUAY THAI CERTIFICADOS EN TODA TAILANDIA",
+        "description": "Trabajamos con campamentos asociados de Muay Thai en todas las regiones de Tailandia, desde gimnasios urbanos hasta auténticos entornos de entrenamiento provinciales. Elija su ubicación de entrenamiento aquí:",
+        "map_live": "Mapa interactivo en vivo",
+        "map_open": "Abrir en Google Maps",
+        "btn_maps": "Mapas",
+        "btn_highlight": "DESTACADOS",
+        "regions": {
+            "central": "TAILANDIA CENTRAL",
+            "eastern": "TAILANDIA ORIENTAL",
+            "northeast": "NORESTE (ISAN)",
+            "northern": "TAILANDIA DEL NORTE",
+            "southern": "TAILANDIA DEL SUR",
+            "western": "TAILANDIA OCCIDENTAL"
+        }
+    },
+    "whychooseus": {
+        "title": "POR QUÉ ELEGIR GUMPUN MUAY THAI",
+        "reason_1": "GIMNASIOS ASOCIADOS VERIFICADOS",
+        "reason_2": "PROCESO ESTRUCTURADO",
+        "reason_3": "ENFOQUE EN EL CUMPLIMIENTO",
+        "reason_4": "PAGO CLARO",
+        "reason_5": "SOPORTE CONTINUO"
+    },
+    "importantnotice": {
+        "main_title": "Información Importante",
+        "item1_title": "SOLO COORDINACIÓN",
+        "item1_desc": "Gumpun Muay Thai brinda únicamente soporte de coordinación y documentación para programas de entrenamiento de Muay Thai en Tailandia.",
+        "item2_title": "DECISIONES DE VISA",
+        "item2_desc": "No brindamos asesoramiento legal o de inmigración, y no tenemos autoridad sobre las decisiones de visa. Todas las aprobaciones de visa son determinadas únicamente por la Embajada o Consulado Real de Tailandia correspondiente.",
+        "item3_title": "TIEMPOS DE PROCESAMIENTO",
+        "item3_desc": "Los plazos de procesamiento provistos son estimados basados en procedimientos típicos y pueden variar según la Autoridad Deportiva de Tailandia (SAT) y la Embajada o Consulado.",
+        "item4_title": "RESPONSABILIDAD DEL SOLICITANTE",
+        "item4_desc": "Los solicitantes son responsables de garantizar que toda la información y los documentos presentados sean precisos y completos."
+    },
+    "contact": {
+        "main_title_1": "COMIENZA TU",
+        "main_title_2": "MUAY THAI",
+        "main_title_3": "VIAJE.",
+        "subtitle": "CONTÁCTANOS DIRECTAMENTE A TRAVÉS DE CUALQUIERA DE NUESTROS CANALES A CONTINUACIÓN PARA COMENZAR.",
+        "line_label": "LINE OFFICIAL",
+        "email_label": "EMAIL",
+        "ig_label": "INSTAGRAM",
+        "fb_label": "FACEBOOK"
+    },
+    "privacy": {
+        "btn_back": "Volver a Inicio",
+        "main_title": "Política de Privacidad",
+        "sec1_title": "1. Recopilación de Información",
+        "sec1_desc": "Recopilamos la información que nos proporciona directamente cuando solicita servicios de coordinación de visas, incluidos, entre otros, su nombre, información de contacto, datos del pasaporte, estado actual de la visa y ubicaciones de entrenamiento preferidas. Esta información se utiliza estrictamente con el propósito de evaluar su elegibilidad y facilitar el proceso de visa Muay Thai ED/DTV.",
+        "sec2_title": "2. Uso de la Información",
+        "sec2_desc": "La información recopilada se utiliza únicamente para coordinar con los campamentos asociados de Muay Thai y preparar la documentación necesaria para la Autoridad Deportiva de Tailandia (SAT) y las respectivas Embajadas o Consulados Reales de Tailandia. No vendemos, alquilamos ni compartimos sus datos personales con terceros no relacionados.",
+        "sec3_title": "3. Seguridad de los Datos",
+        "sec3_desc": "Implementamos medidas de seguridad adecuadas para proteger su información personal contra el acceso, alteración, divulgazione o destrucción no autorizados. Sin embargo, tenga en cuenta que ningún método de transmisión por Internet o almacenamiento electrónico es 100% seguro.",
+        "sec4_title": "4. Contáctenos",
+        "sec4_desc": "Si tiene alguna pregunta sobre esta Política de Privacidad, contáctenos a través de nuestro correo electrónico oficial en gumpun@gumpunmuaythai.club."
+    },
+    "terms": {
+        "btn_back": "Volver a Inicio",
+        "main_title": "Términos de Servicio",
+        "sec1_title": "1. Descripción del Servicio",
+        "sec1_desc": "Gumpun Muay Thai opera estrictamente como una agencia de coordinación y soporte de documentación. Conectamos a los futuros estudiantes con campamentos de Muay Thai certificados por el SAT y asistimos en la recopilación y organización de los documentos requeridos para las solicitudes de visa ED y DTV.",
+        "sec2_title": "2. Limitación de Responsabilidad",
+        "sec2_desc": "No brindamos asesoramiento legal ni de inmigración. Gumpun Muay Thai no tiene autoridad sobre la emisión de visas. Todas las decisiones relativas a aprobaciones, denegaciones o retrasos de visas corresponden enteramente a la Embajada o Consulado Real de Tailandia. No somos responsables de ninguna pérdida financiera, interrupciones de viaje o solicitudes rechazadas.",
+        "sec3_title": "3. Responsabilidades del Solicitante",
+        "sec3_desc": "Es responsabilidad del solicitante asegurarse de que toda la información personal, las pruebas financieras y los documentos presentados sean genuinos, precisos y cumplan con los requisitos específicos de su Embajada de Tailandia local. Los solicitantes también deben cumplir con las normas de asistencia establecidas por el campamento de Muay Thai elegido una vez que se otorgue la visa.",
+        "sec4_title": "4. Pagamientos y Reembolsos",
+        "sec4_desc": "Las tarifas de coordinación y los depósitos del gimnasio están sujetos a las políticas individuales de los campamentos asociados. Revise los términos específicos de pago y reembolso provistos durante su proceso de inscripción antes de realizar cualquier compromiso financiero."
+    },
+    "footer": {
+        "legitimate_notice": "NUESTRA EMPRESA ES LEGÍTIMA.",
+        "faq": "FAQ",
+        "privacy": "Política de Privacidad",
+        "terms": "Términos de Servicio"
+    },
+    "floating_contact": {
+        "text": "Contacto"
     }
 }

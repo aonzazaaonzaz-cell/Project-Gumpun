@@ -5,5 +5,179 @@
         "visa_process": "Procédure de Visa",
         "partner_camps": "Camps Partenaires",
         "contact": "Contact"
+    },
+    "hero": {
+        "title_1": "Entraînez-vous au",
+        "title_2": "Muay Thaï",
+        "title_3": "En",
+        "title_4": "Thaïlande.",
+        "subtitle": "Assistance visa ED & DTV avec des camps de Muay Thaï certifiés dans toute la Thaïlande.",
+        "description": "Vous pouvez désormais prolonger votre séjour en Thaïlande en vous entraînant au Muay Thaï dans des camps certifiés par l'Autorité Sportive de la Thaïlande (SAT) situés dans tutto le pays. De Bangkok aux montagnes du Nord, jusqu'aux plages du Sud.",
+        "feature_1": "ENTRAÎNEZ-VOUS AVEC DES ENTRAÎNEURS THAÏLANDAIS EXPÉRIMENTÉS",
+        "feature_2": "DÉCOUVREZ LA CULTURE AUTHENTIQUE DU MUAY THAÏ",
+        "feature_3": "DES CAMPS SITUÉS DANS TOUTE LA THAÏLANDE",
+        "btn_choose_city": "Choisissez votre ville d'entraînement",
+        "btn_check_eligibility": "Vérifier l'Éligibilité",
+        "video_label": "Entraînez-vous au Muay Thaï en Thaïlande"
+    },
+    "whatwedo": {
+        "subtitle": "LES FONDATIONS",
+        "title": "CE QUE NOUS FAISONS",
+        "description": "Nous coordonnons des programmes d'entraînement de Muay Thaï avec des camps partenaires éligibles dans toute la Thaïlande et soutenons le flux de documents pour les demandes de visa ED et DTV.",
+        "srv_1_title": "COORDINATION DES CAMPS CERTIFIÉS",
+        "srv_1_desc": "Accès direct aux salles certifiées par la SAT qui répondent à toutes les exigences légales pour le parrainage de visa.",
+        "srv_2_title": "DOCUMENTS DE CONFIRMATION D'ENTRAÎNEMENT",
+        "srv_2_desc": "Préparation accélérée des lettres d'inscription et des certificats de salle pour votre demande.",
+        "srv_3_title": "COORDINATION DE LA SOUMISSION À LA SAT",
+        "srv_3_desc": "Gestion de la documentation requise pour les sceaux d'approbation de l'Autorité Sportiva de la Thaïlande.",
+        "srv_4_title": "ASSISTANCE DE BOUT EN BOUT",
+        "srv_4_desc": "De la sélection de votre ville d'entraînement à l'accompagnement dans la préparation des documents et aux rappels des dates limites de soumission."
+    },
+    "visacomparison": {
+        "title": "QUEL VISA CORRESPOND À VOTRE PARCOURS D'ENTRAÎNEMENT ?",
+        "ed_title": "VISA ED",
+        "ed_subtitle": "VISA D'ÉTUDES",
+        "dtv_title": "VISA DTV",
+        "dtv_subtitle": "DESTINATION THAILAND VISA",
+        "btn_consult": "Consultez-nous pour les options de visa",
+        "faq_title": "Foire Aux Questions",
+        "faq_q1": "Puis-je passer d'un visa de tourisme à un visa ED Muay Thaï à l'intérieur de la Thaïlande ?",
+        "faq_a1": "Non. Le visa ED via des camps de Muay Thaï certifiés par l'Autorité Sportive de la Thaïlande doit être demandé auprès d'une Ambassade ou d'un Consulat Royal de Thaïlande situé en dehors de la Thaïlande.",
+        "faq_q2": "Puis-je demander un visa DTV pendant que je suis en Thaïlande ?",
+        "faq_a2": "Non. La demande doit être soumise via le système officiel thaïlandais e-Visa et complétée en dehors de la Thaïlande, où vous récupérerez votre visa.",
+        "faq_q3": "Puis-je m'entraîner dans plusieurs villes ?",
+        "faq_a3": "Oui, mais vous devez maintenir votre assiduité dans la salle où vous êtes inscrit.",
+        "notice_title": "Avis Important",
+        "notice_item1": "L'approbation du visa est déterminée uniquement par l'Ambassade ou le Consulat Royal de Thaïlande.",
+        "notice_item2": "Les délais de traitement sont des estimations et peuvent varier.",
+        "notice_item3": "Nous fournissons uniquement un soutien de coordination et de documentation.",
+        "review_title": "Vous souhaitez que nous examinions votre cas ?",
+        "review_desc": "Envoyez-nous votre : Statut de visa actuel, Localisation actuelle, Ambassade/consulat de préférence, Ville d'entraînement souhaitée et Date de début prévue.",
+        "btn_review": "Contactez-nous pour un examen",
+        "labels": {
+            "stay_period": "DURÉE DU SÉJOUR",
+            "re_application": "RENOUVELLEMENT",
+            "location": "LOCALISATION",
+            "training": "ASSIDUITÉ À L'ENTRAÎNEMENT",
+            "documents": "DOCUMENTS",
+            "timeline": "CALENDRIER"
+        },
+        "ed": {
+            "stay_period": "90 jours",
+            "re_application": "Renouvelable hors de Thaïlande",
+            "location": "Sede unique recommandée",
+            "training": "Structuré",
+            "doc_1": "Passeport, Inscription,",
+            "doc_2": "Preuve de fonds d'au moins 1 000 $",
+            "timeline": "~30-45 jours"
+        },
+        "dtv": {
+            "stay_period": "5 ans (180 jours par entrée)",
+            "re_application": "Entrées multiples",
+            "location": "Flexible / Adapté au travail à distance",
+            "training": "Flexible / Adapté au travail à distance",
+            "doc_1": "Passeport, Inscription,",
+            "doc_2": "Preuve de fonds d'au moins 500 000 THB",
+            "timeline": "~30-45 jours"
+        }
+    },
+    "timeline": {
+        "main_title": "PROCESSUS DE VISA MUAY THAÏ ED / DTV : APERÇU COMPLET & CALENDRIER",
+        "step_label": "ÉTAPE",
+        "total_title": "CALENDRIER TOTAL ESTIMÉ",
+        "total_days": "30-45 jours",
+        "step1_title": "ÉVALUATION INITIALE",
+        "step1_desc": "Évaluation de votre éligibilité et choix du camp d'entraînement.",
+        "step1_time": "DELAI : 1-2 JOURS",
+        "step2_title": "INSCRIPTION AU CAMP",
+        "step2_desc": "Paiement de l'acompte et réception des documents d'invitation officiels de la salle.",
+        "step2_time": "DELAI : 3-5 JOURS",
+        "step3_title": "CERTIFICATION DE LA SAT",
+        "step3_desc": "Soumission à l'Autorité Sportive de la Thaïlande pour l'approbation officielle du visa.",
+        "step3_time": "DELAI : 10-14 JOURS",
+        "step4_title": "TRAITEMENT GOUVERNEMENTAL",
+        "step4_desc": "La lettre d'invitation certifiée de l'Autorité Sportive de la Thaïlande est transmise au Département des Affaires Consulaires, puis à l'Ambassade ou au Consulat de Thaïlande choisi.",
+        "step4_time": "DELAI : ~ 3 SEMAINES",
+        "step5_title": "DEMANDEZ VOTRE VISA",
+        "step5_desc": "Téléchargez vos documents sur le système thaïlandais e-Visa, payez les frais et passez un entretien si nécessaire. Une fois approuvé, votre visa sera délivré par voie électronique.\n\nVeuillez noter : N'entrez pas en Thaïlande pendant que votre demande est en cours de traitement, car cela pourrait entraîner son annulation."
+    },
+    "locations": {
+        "subtitle": "CAMPS PARTENAIRES",
+        "title": "CAMPS DE MUAY THAÏ CERTIFIÉS DANS TOUTE LA THAÏLANDE",
+        "description": "Nous travaillons avec des camps de Muay Thaï partenaires dans toutes les régions de Thaïlande — des salles citadines aux environnements d'entraînement provinciaux authentiques. Choisissez votre lieu d'entraînement ici :",
+        "map_live": "Carte interactive en direct",
+        "map_open": "Ouvrir dans Google Maps",
+        "btn_maps": "Cartes",
+        "btn_highlight": "APERÇU",
+        "regions": {
+            "central": "THAÏLANDE CENTRALE",
+            "eastern": "THAÏLANDE ORIENTALE",
+            "northeast": "NORD-EST (ISAN)",
+            "northern": "THAÏLANDE DU NORD",
+            "southern": "THAÏLANDE DU SUD",
+            "western": "THAÏLANDE OCCIDENTALE"
+        }
+    },
+    "whychooseus": {
+        "title": "POURQUOI CHOISIR GUMPUN MUAY THAI",
+        "reason_1": "SALLES PARTENAIRES VÉRIFIÉES",
+        "reason_2": "PROCESSUS STRUCTURÉ",
+        "reason_3": "CONFORMITÉ ASSURÉE",
+        "reason_4": "PAIEMENT TRANSPARENT",
+        "reason_5": "ASSISTANCE CONTINUE"
+    },
+    "importantnotice": {
+        "main_title": "Informations Importantes",
+        "item1_title": "COORDINATION UNIQUEMENT",
+        "item1_desc": "Gumpun Muay Thai fournit uniquement un soutien de coordination et de documentation pour les programmes d'entraînement de Muay Thaï en Thaïlande.",
+        "item2_title": "DÉCISIONS DE VISA",
+        "item2_desc": "Nous ne fournissons pas de conseils juridiques ou d'immigration, et nous n'avons aucune autorité sur les décisions de visa. Toutes les approbations de visa sont déterminées uniquement par l'Ambassade ou le Consulat Royal de Thaïlande concerné.",
+        "item3_title": "DÉLAIS DE TRAITEMENT",
+        "item3_desc": "Les délais de traitement fournis sont des estimations basées sur des procédures typiques et peuvent varier selon l'Autorité Sportive de la Thaïlande (SAT) et l'Ambassade ou le Consulat.",
+        "item4_title": "RESPONSABILITÉ DU DEMANDEUR",
+        "item4_desc": "Les demandeurs sont responsables de s'assurer que toutes les informations et tous les documents soumis sont exacts et complets."
+    },
+    "contact": {
+        "main_title_1": "COMMENCEZ VOTRE",
+        "main_title_2": "MUAY THAÏ",
+        "main_title_3": "VOYAGE.",
+        "subtitle": "CONTACTEZ-NOUS DIRECTEMENT VIA L'UN DE NOS CANAUX CI-DESSOUS POUR COMMENCER.",
+        "line_label": "LINE OFFICIAL",
+        "email_label": "EMAIL",
+        "ig_label": "INSTAGRAM",
+        "fb_label": "FACEBOOK"
+    },
+    "privacy": {
+        "btn_back": "Retour à l'Accueil",
+        "main_title": "Politique de Confidentialité",
+        "sec1_title": "1. Collecte d'Informations",
+        "sec1_desc": "Nous collectons les informations que vous nous fournissez directement lorsque vous demandez des services de coordination de visa, y compris, mais sans s'y limiter, votre nom, vos coordonnées, les détails de votre passeport, votre statut de visa actuel et vos lieux d'entraînement préférés. Ces informations sont strictement utilisées dans le but d'évaluer votre éligibilité et de faciliter le processus de visa Muay Thaï ED/DTV.",
+        "sec2_title": "2. Utilisation des Informations",
+        "sec2_desc": "Les informations collectées sont utilisées uniquement pour coordonner avec les camps de Muay Thaï partenaires et préparer la documentation nécessaire pour l'Autorité Sportive de la Thaïlande (SAT) et les Ambassades ou Consulats Royaux de Thaïlande respectifs. Nous ne vendons, ne louons ni ne partageons vos données personnelles svec des tiers non liés.",
+        "sec3_title": "3. Sécurité des Données",
+        "sec3_desc": "Nous mettons en œuvre des mesures de sécurité appropriées pour protéger vos informations personnelles contre tout accès, modification, divulgation ou destruction non autorisés. Cependant, sachez qu'aucune méthode de transmission sur Internet ou de stockage électronique n'est sûre à 100 %.",
+        "sec4_title": "4. Contactez-Nous",
+        "sec4_desc": "Si vous avez des questions sur cette Politique de Confidentialité, veuillez nous contacter via notre e-mail officiel à gumpun@gumpunmuaythai.club."
+    },
+    "terms": {
+        "btn_back": "Retour à l'Accueil",
+        "main_title": "Conditions Générales d'Utilisation",
+        "sec1_title": "1. Description du Service",
+        "sec1_desc": "Gumpun Muay Thai opère strictement en tant qu'agence de coordination et d'assistance documentaire. Nous mettons en relation les futurs étudiants avec des camps de Muay Thaï certifiés par la SAT et aidons à rassembler et organiser les documents requis pour les demandes de visa ED and DTV.",
+        "sec2_title": "2. Limitation de Responsabilité",
+        "sec2_desc": "Nous ne fournissons pas de conseils juridiques ou d'immigration. Gumpun Muay Thai n'a aucune autorité sur la délivrance des visas. Toutes les décisions concernant les approbations, les refus ou les retards de visa relèvent entièrement de l'Ambassade ou du Consulat Royal de Thaïlande. Nous ne sommes pas responsables des pertes financières, des perturbations de voyage ou des demandes rejetées.",
+        "sec3_title": "3. Responsabilités du Demandeur",
+        "sec3_desc": "Il incombe au demandeur de s'assurer que toutes les informations personnelles, les preuves financières et les documents soumis sont authentiques, exacts et répondent aux exigences spécifiques de leur ambassade de Thaïlande locale. Les demandeurs doivent également respecter les règles d'assiduité fixées par le camp de Muay Thaï choisi une fois le visa accordé.",
+        "sec4_title": "4. Paiements et Remboursements",
+        "sec4_desc": "Les frais de coordination et les acomptes pour les salles sont soumis aux politiques individuelles des camps partenaires. Veuillez consulter les conditions spécifiques de paiement et de remboursement fournies lors de votre processus d'inscription avant de prendre tout engagement financier."
+    },
+    "footer": {
+        "legitimate_notice": "NOTRE ENTREPRISE EST LÉGITIME.",
+        "faq": "FAQ",
+        "privacy": "Politique de Confidentialité",
+        "terms": "Conditions d'Utilisation"
+    },
+    "floating_contact": {
+        "text": "Contact"
     }
 }

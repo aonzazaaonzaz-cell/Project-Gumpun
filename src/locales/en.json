@@ -5,5 +5,179 @@
         "visa_process": "Visa Process",
         "partner_camps": "Partner Camps",
         "contact": "Contact"
+    },
+    "hero": {
+        "title_1": "Train",
+        "title_2": "Muay Thai",
+        "title_3": "In",
+        "title_4": "Thailand.",
+        "subtitle": "ED & DTV VISA TRAINING SUPPORT WITH CERTIFIED MUAY THAI CAMPS ACROSS THAILAND.",
+        "description": "Now you can extend your stay in Thailand by training Muay Thai at Sports Authority of Thailand (SAT) certified camps located across the country. From Bangkok to the mountains of the North and the beaches of the South.",
+        "feature_1": "TRAIN WITH EXPERIENCED THAI TRAINERS",
+        "feature_2": "DISCOVER MUAY THAI CULTURE",
+        "feature_3": "CAMPS LOCATED ACROSS THAILAND",
+        "btn_choose_city": "Choose Your Training City",
+        "btn_check_eligibility": "Check Eligibility",
+        "video_label": "Train Muay Thai in Thailand"
+    },
+    "whatwedo": {
+        "subtitle": "THE FOUNDATION",
+        "title": "WHAT WE DO",
+        "description": "We coordinate Muay Thai training programs with eligible partner camps across Thailand and support the documentation workflow for ED and DTV visa applications.",
+        "srv_1_title": "CERTIFIED CAMP COORDINATION",
+        "srv_1_desc": "Direct access to SAT-certified gyms that meet all legal requirements for visa sponsorship.",
+        "srv_2_title": "TRAINING CONFIRMATION DOCUMENTS",
+        "srv_2_desc": "Expedited preparation of enrollment letters and gym certificates for your application.",
+        "srv_3_title": "SAT SUBMISSION COORDINATION",
+        "srv_3_desc": "Management of documentation required for Sports Authority of Thailand approval seals.",
+        "srv_4_title": "END-TO-END SUPPORT",
+        "srv_4_desc": "From selecting your training city to guiding your document preparation and reminding you of submission timelines."
+    },
+    "visacomparison": {
+        "title": "WHICH VISA SUITS YOUR TRAINING JOURNEY?",
+        "ed_title": "ED VISA",
+        "ed_subtitle": "EDUCATION VISA",
+        "dtv_title": "DTV VISA",
+        "dtv_subtitle": "DESTINATION THAILAND VISA",
+        "btn_consult": "Consult Us For Visa Options",
+        "faq_title": "Frequently Asked Questions",
+        "faq_q1": "Can I change from a tourist visa to an ED Muay Thai visa inside Thailand?",
+        "faq_a1": "The ED visa under Muay Thai camps certified by the Sports Authority of Thailand must be applied through a Royal Thai Embassy or Consulate located outside Thailand.",
+        "faq_q2": "Can I apply for a DTV visa while in Thailand?",
+        "faq_a2": "No. The application must be submitted through the Thai e-Visa system and completed outside Thailand, where you will collect your visa.",
+        "faq_q3": "Can I train in multiple cities?",
+        "faq_a3": "Yes, but you must maintain attendance with your registered gym.",
+        "notice_title": "Important Notice",
+        "notice_item1": "Visa approval is determined solely by the Royal Thai Embassy or Consulate.",
+        "notice_item2": "Processing times are estimates and may vary.",
+        "notice_item3": "We provide coordination and documentation support only.",
+        "review_title": "Want us to review your case?",
+        "review_desc": "Send us your: Current visa status, Current location, Preferred embassy/consulate, Desired training city, and Target start date.",
+        "btn_review": "Contact Us For Review",
+        "labels": {
+            "stay_period": "STAY PERIOD",
+            "re_application": "RE-APPLICATION",
+            "location": "LOCATION",
+            "training": "TRAINING ATTENDANCE",
+            "documents": "DOCUMENTS",
+            "timeline": "TIMELINE"
+        },
+        "ed": {
+            "stay_period": "90 days",
+            "re_application": "Renewable Outside Thailand",
+            "location": "Single Base Recommended",
+            "training": "Structured",
+            "doc_1": "Passport, Enrollment,",
+            "doc_2": "Proof of Funds at least $1,000",
+            "timeline": "~30-45 days"
+        },
+        "dtv": {
+            "stay_period": "5 Years (180 days/entry)",
+            "re_application": "Multiple-Entry",
+            "location": "Flexible / Remote Work Friendly",
+            "training": "Flexible / Remote Work Friendly",
+            "doc_1": "Passport, Enrollment,",
+            "doc_2": "Proof of Funds at least 500,000 THB",
+            "timeline": "~30-45 days"
+        }
+    },
+    "timeline": {
+        "main_title": "MUAY THAI ED / DTV VISA PROCESS: COMPLETE OVERVIEW & TIMELINE",
+        "step_label": "STEP",
+        "total_title": "ESTIMATED TOTAL TIMELINE",
+        "total_days": "30-45 days",
+        "step1_title": "INITIAL SCREENING",
+        "step1_desc": "Evaluation of your eligibility and choice of training camp.",
+        "step1_time": "TIME: 1-2 DAYS",
+        "step2_title": "CAMP ENROLLMENT",
+        "step2_desc": "Deposit payment and receipt of official invitation documents from gym.",
+        "step2_time": "TIME: 3-5 DAYS",
+        "step3_title": "SAT CERTIFICATION",
+        "step3_desc": "Submission to the Sports Authority of Thailand for official visa endorsement.",
+        "step3_time": "TIME: 10-14 DAYS",
+        "step4_title": "GOVERNMENT PROCESSING",
+        "step4_desc": "The certified invitation letter from the Sports Authority of Thailand is forwarded to the Department of Consular Affairs, and then to your chosen Royal Thai Embassy or Consulate.",
+        "step4_time": "TIME: ~ 3 WEEKS",
+        "step5_title": "APPLY FOR YOUR VISA",
+        "step5_desc": "Upload your documents to the Thai e-Visa System, pay the fee, and attend an interview if required. Once approved, your visa will be issued electronically.\n\nPlease note: Do not enter Thailand while your application is in process, as this may lead to cancellation."
+    },
+    "locations": {
+        "subtitle": "PARTNER CAMPS",
+        "title": "CERTIFIED MUAY THAI CAMPS ACROSS THAILAND",
+        "description": "We work with partner Muay Thai camps across all regions of Thailand — from city gyms to authentic provincial training environments. Choose your training location here:",
+        "map_live": "Interactive Live Map",
+        "map_open": "Open in Google Maps",
+        "btn_maps": "Maps",
+        "btn_highlight": "HIGHLIGHT",
+        "regions": {
+            "central": "CENTRAL THAILAND",
+            "eastern": "EASTERN THAILAND",
+            "northeast": "NORTHEASTERN (ISAN)",
+            "northern": "NORTHERN THAILAND",
+            "southern": "SOUTHERN THAILAND",
+            "western": "WESTERN THAILAND"
+        }
+    },
+    "whychooseus": {
+        "title": "WHY CHOOSE GUMPUN MUAY THAI",
+        "reason_1": "VERIFIED PARTNER GYMS",
+        "reason_2": "STRUCTURED PROCESS",
+        "reason_3": "COMPLIANCE-FOCUSED",
+        "reason_4": "CLEAR PAYMENT",
+        "reason_5": "ONGOING SUPPORT"
+    },
+    "importantnotice": {
+        "main_title": "Important Information",
+        "item1_title": "COORDINATION ONLY",
+        "item1_desc": "Gumpun Muay Thai provides coordination and documentation support for Muay Thai training programs in Thailand.",
+        "item2_title": "VISA DECISIONS",
+        "item2_desc": "We do not provide legal or immigration advice, and we do not have authority over visa decisions. All visa approvals are determined solely by the Royal Thai Embassy or Consulate where the application is submitted.",
+        "item3_title": "PROCESSING TIMELINES",
+        "item3_desc": "Processing timelines provided are estimates based on typical procedures and may vary depending on the Sports Authority of Thailand (SAT) and the Royal Thai Embassy or Consulate.",
+        "item4_title": "APPLICANT RESPONSIBILITY",
+        "item4_desc": "Applicants are responsible for ensuring that all submitted information and documents are accurate and complete."
+    },
+    "contact": {
+        "main_title_1": "START YOUR",
+        "main_title_2": "MUAY THAI",
+        "main_title_3": "JOURNEY.",
+        "subtitle": "REACH OUT TO US DIRECTLY VIA ANY OF OUR CHANNELS BELOW TO GET STARTED.",
+        "line_label": "LINE OFFICIAL",
+        "email_label": "EMAIL",
+        "ig_label": "INSTAGRAM",
+        "fb_label": "FACEBOOK"
+    },
+    "privacy": {
+        "btn_back": "Back to Home",
+        "main_title": "Privacy Policy",
+        "sec1_title": "1. Information Collection",
+        "sec1_desc": "We collect information you provide directly to us when you request visa coordination services, including but not limited to your name, contact information, passport details, current visa status, and preferred training locations. This information is strictly used for the purpose of assessing your eligibility and facilitating the Muay Thai ED/DTV visa process.",
+        "sec2_title": "2. Use of Information",
+        "sec2_desc": "The information collected is used solely to coordinate with partner Muay Thai camps and prepare necessary documentation for the Sports Authority of Thailand (SAT) and respective Royal Thai Embassies or Consulates. We do not sell, rent, or share your personal data with unrelated third parties.",
+        "sec3_title": "3. Data Security",
+        "sec3_desc": "We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, please be aware that no method of transmission over the internet or electronic storage is 100% secure.",
+        "sec4_title": "4. Contact Us",
+        "sec4_desc": "If you have any questions about this Privacy Policy, please contact us via our official email at gumpun@gumpunmuaythai.club."
+    },
+    "terms": {
+        "btn_back": "Back to Home",
+        "main_title": "Terms of Service",
+        "sec1_title": "1. Service Description",
+        "sec1_desc": "Gumpun Muay Thai operates strictly as a coordination and documentation support agency. We connect prospective trainees with SAT-certified Muay Thai camps and assist in gathering and organizing the paperwork required for ED and DTV visa applications.",
+        "sec2_title": "2. Limitation of Liability",
+        "sec2_desc": "We do not provide legal or immigration advice. Gumpun Muay Thai has no authority over visa issuance. All decisions regarding visa approvals, denials, or delays rest entirely with the Royal Thai Embassy or Consulate. We are not liable for any financial loss, travel disruptions, or rejected applications.",
+        "sec3_title": "3. Applicant Responsibilities",
+        "sec3_desc": "It is the applicant's responsibility to ensure that all personal information, financial proofs, and submitted documents are genuine, accurate, and meet the specific requirements of their local Thai Embassy. Applicants must also adhere to the attendance rules and regulations set by their chosen Muay Thai camp once the visa is granted.",
+        "sec4_title": "4. Payments and Refunds",
+        "sec4_desc": "Coordination fees and gym deposits are subject to the individual policies of the partner camps. Please review the specific payment and refund terms provided during your enrollment process before making any financial commitments."
+    },
+    "footer": {
+        "legitimate_notice": "OUR COMPANY IS LEGITIMATE.",
+        "faq": "FAQ",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service"
+    },
+    "floating_contact": {
+        "text": "Contact Us"
     }
 }

@@ -5,5 +5,179 @@
         "visa_process": "Visumprocedure",
         "partner_camps": "Partnerkampen",
         "contact": "Contact"
+    },
+    "hero": {
+        "title_1": "Train",
+        "title_2": "Muay Thai",
+        "title_3": "In",
+        "title_4": "Thailand.",
+        "subtitle": "ED & DTV visumondersteuning met gecertificeerde Muay Thai-kampen in heel Thailand.",
+        "description": "Nu kun je je verblijf in Thailand verlengen door Muay Thai te trainen in kampen die zijn gecertificeerd door de Sports Authority of Thailand (SAT), verspreid over het hele land. Van Bangkok tot de bergen van het noorden en de stranden van het zuiden.",
+        "feature_1": "TRAIN MET ERVAREN THAISE TRAINERS",
+        "feature_2": "ONTDEK DE AUTHENTIEKE MUAY THAI-CULTUUR",
+        "feature_3": "KAMPEN GELEGEN DOOR HEEL THAILAND",
+        "btn_choose_city": "Kies je trainingsstad",
+        "btn_check_eligibility": "Controleer geschiktheid",
+        "video_label": "Train Muay Thai in Thailand"
+    },
+    "whatwedo": {
+        "subtitle": "DE BASIS",
+        "title": "WAT WE DOEN",
+        "description": "Wij coördineren Muay Thai-trainingsprogramma's met in aanmerking komende partnerkampen in heel Thailand en ondersteunen de documentenworkflow voor ED- en DTV-visumaanvragen.",
+        "srv_1_title": "GECERTIFICEERDE KAMPCOÖRDINATIE",
+        "srv_1_desc": "Directe toegang tot SAT-gecertificeerde sportscholen die voldoen aan alle wettelijke vereisten voor visumsponsoring.",
+        "srv_2_title": "TRAININGSBEVESTIGINGSDOCUMENTEN",
+        "srv_2_desc": "Versnelde voorbereiding van inschrijvingsbrieven en sportschoolcertificaten voor je aanvraag.",
+        "srv_3_title": "SAT-INDIENING COÖRDINATIE",
+        "srv_3_desc": "Beheer van documentatie die vereist is voor goedkeuringsstempels van de Sports Authority of Thailand.",
+        "srv_4_title": "END-TO-END ONDERSTEUNING",
+        "srv_4_desc": "Van het selecteren van je trainingsstad tot het begeleiden van je documentenvoorbereiding en het herinneren aan indieningstermijnen."
+    },
+    "visacomparison": {
+        "title": "WELK VISUM PAST BIJ JOUW TRAININGSREIS?",
+        "ed_title": "ED VISUM",
+        "ed_subtitle": "STUDENTENVISUM (EDUCATION VISA)",
+        "dtv_title": "DTV VISUM",
+        "dtv_subtitle": "DESTINATION THAILAND VISA",
+        "btn_consult": "Raadpleeg ons voor visumopties",
+        "faq_title": "Veelgestelde Vragen",
+        "faq_q1": "Kan ik in Thailand overstappen van een toeristenvisum naar een ED Muay Thai-visum?",
+        "faq_a1": "Nee. Het ED-visum voor Muay Thai-kampen die zijn gecertificeerd door de Sports Authority of Thailand moet worden aangevraagd via een Koninklijke Thaise Ambassade of Consulaat buiten Thailand.",
+        "faq_q2": "Kan ik een DTV-visum aanvragen terwijl ik in Thailand ben?",
+        "faq_a2": "Nee. De aanvraag moet worden ingediend via het Thaise e-Visumsysteem en worden voltooid buiten Thailand, waar je je visum ophaalt.",
+        "faq_q3": "Kan ik in meerdere steden trainen?",
+        "faq_a3": "Ja, maar je moet wel blijven deelnemen bij de sportschool waar je geregistreerd staat.",
+        "notice_title": "Belangrijke Mededeling",
+        "notice_item1": "Visumgoedkeuring wordt uitsluitend bepaald door de Koninklijke Thaise Ambassade of het Consulaat.",
+        "notice_item2": "Verwerkingstijden zijn schattingen en kunnen variëren.",
+        "notice_item3": "Wij bieden uitsluitend coördinatie en documentatieondersteuning.",
+        "review_title": "Wil je dat we jouw situatie beoordelen?",
+        "review_desc": "Stuur ons je: Huidige visumstatus, Huidige locatie, Voorkeursambassade/-consulaat, Gewenste trainingsstad en Geplande startdatum.",
+        "btn_review": "Neem contact op voor beoordeling",
+        "labels": {
+            "stay_period": "VERBLIJFSPERIODE",
+            "re_application": "VERLENGING",
+            "location": "LOCATIE",
+            "training": "TRAININGSDEELNAME",
+            "documents": "DOCUMENTEN",
+            "timeline": "TIJDSLIJN"
+        },
+        "ed": {
+            "stay_period": "90 dagen",
+            "re_application": "Verlengbaar buiten Thailand",
+            "location": "Enkele trainingsbasis aanbevolen",
+            "training": "Gestructureerd",
+            "doc_1": "Paspoort, Inschrijving,",
+            "doc_2": "Bewijs van financiële middelen van minimaal $1.000",
+            "timeline": "~30-45 dagen"
+        },
+        "dtv": {
+            "stay_period": "5 jaar (180 dagen per binnenkomst)",
+            "re_application": "Multiple-Entry (meerdere binnenkomsten)",
+            "location": "Flexibel / Geschikt voor werken op afstand",
+            "training": "Flexibel / Geschikt voor werken op afstand",
+            "doc_1": "Paspoort, Inschrijving,",
+            "doc_2": "Bewijs van financiële middelen van minimaal 500.000 THB",
+            "timeline": "~30-45 dagen"
+        }
+    },
+    "timeline": {
+        "main_title": "MUAY THAI ED / DTV VISUMPROCES: COMPLEET OVERZICHT & TIJDSLIJN",
+        "step_label": "STAP",
+        "total_title": "GESCHATTE TOTALE TIJDSLIJN",
+        "total_days": "30-45 dagen",
+        "step1_title": "INITIALE SCREENING",
+        "step1_desc": "Beoordeling van je geschiktheid en keuze van het trainingskamp.",
+        "step1_time": "TIJD: 1-2 DAGEN",
+        "step2_title": "KAMP INSCHRIJVING",
+        "step2_desc": "Betaling van de aanbetaling en ontvangst van officiële uitnodigingsdocumenten van de sportschool.",
+        "step2_time": "TIJD: 3-5 DAGEN",
+        "step3_title": "SAT CERTIFICERING",
+        "step3_desc": "Indiening bij de Sports Authority of Thailand voor officiële visumgoedkeuring.",
+        "step3_time": "TIJD: 10-14 DAGEN",
+        "step4_title": "OVERHEIDSVERWERKING",
+        "step4_desc": "De gecertificeerde uitnodigingsbrief van de Sports Authority of Thailand wordt doorgestuurd naar het Departement van Consulaire Zaken en vervolgens naar de door jou gekozen Thaise ambassade of consulaat.",
+        "step4_time": "TIJD: ~ 3 WEKEN",
+        "step5_title": "VRAAG JE VISUM AAN",
+        "step5_desc": "Upload je documenten naar het Thaise e-Visumsysteem, betaal de kosten en woon indien nodig een gesprek bij. Na goedkeuring wordt je visum elektronisch afgegeven.\n\nLet op: Reis Thailand niet in terwijl je aanvraag in behandeling is, dit kan leiden tot annulering."
+    },
+    "locations": {
+        "subtitle": "PARTNERKAMPEN",
+        "title": "GECERTIFICEERDE MUAY THAI-KAMPEN DOOR HEEL THAILAND",
+        "description": "We werken samen met partner Muay Thai-kampen in alle regio's van Thailand — van stadssportscholen tot authentieke provinciale trainingsomgevingen. Kies hier je trainingslocatie:",
+        "map_live": "Interactieve Live Kaart",
+        "map_open": "Open in Google Maps",
+        "btn_maps": "Kaarten",
+        "btn_highlight": "UITGELICHT",
+        "regions": {
+            "central": "CENTRAAL-THAILAND",
+            "eastern": "OOST-THAILAND",
+            "northeast": "NOORDOOSTEN (ISAN)",
+            "northern": "NOORD-THAILAND",
+            "southern": "ZUID-THAILAND",
+            "western": "WEST-THAILAND"
+        }
+    },
+    "whychooseus": {
+        "title": "WAAROM KIEZEN VOOR GUMPUN MUAY THAI",
+        "reason_1": "GEVERIFIEERDE PARTNERSPORTSCHOLEN",
+        "reason_2": "GESTRUCTUREERD PROCES",
+        "reason_3": "GERICHT OP NALEVING",
+        "reason_4": "HELDERE BETALING",
+        "reason_5": "DOORLOPENDE ONDERSTEUNING"
+    },
+    "importantnotice": {
+        "main_title": "Belangrijke Informatie",
+        "item1_title": "UITSLUITEND COÖRDINATIE",
+        "item1_desc": "Gumpun Muay Thai biedt uitsluitend coördinatie- en documentatieondersteuning voor Muay Thai-trainingsprogramma's in Thailand.",
+        "item2_title": "VISUMBESLISSINGEN",
+        "item2_desc": "Wij geven geen juridisch of immigratieadvies en hebben geen zeggenschap over visumbeslissingen. Alle visumgoedkeuringen worden uitsluitend bepaald door de betreffende Koninklijke Thaise Ambassade of het Consulaat.",
+        "item3_title": "VERWERKINGSTIJDEN",
+        "item3_desc": "De vermelde verwerkingstijden zijn schattingen op basis van typische procedures en kunnen variëren afhankelijk van de Sports Authority of Thailand (SAT) en de ambassade of het consulaat.",
+        "item4_title": "VERANTWOORDELIJKHEID AANVRAGER",
+        "item4_desc": "Aanvragers zijn er zelf verantwoordelijk voor dat alle ingediende informatie en documenten juist en volledig zijn."
+    },
+    "contact": {
+        "main_title_1": "START JOUW",
+        "main_title_2": "MUAY THAI",
+        "main_title_3": "REIS.",
+        "subtitle": "NEEM DIRECT CONTACT MET ONS OP VIA EEN VAN ONZE ONDERSTAANDE KANALEN OM TE STARTEN.",
+        "line_label": "LINE OFFICIAL",
+        "email_label": "EMAIL",
+        "ig_label": "INSTAGRAM",
+        "fb_label": "FACEBOOK"
+    },
+    "privacy": {
+        "btn_back": "Terug naar Home",
+        "main_title": "Privacybeleid",
+        "sec1_title": "1. Informatieverzameling",
+        "sec1_desc": "Wij verzamelen informatie die je rechtstreeks aan ons verstrekt wanneer je visumcoördinatiediensten aanvraagt, inclusief maar niet beperkt tot je naam, contactgegevens, paspoortgegevens, huidige visumstatus en voorkeurstrainingslocaties. Deze informatie wordt strikt gebruikt om je geschiktheid te beoordelen en het Muay Thai ED/DTV-visumproces te vergemakkelijken.",
+        "sec2_title": "2. Gebruik van Informatie",
+        "sec2_desc": "De verzamelde informatie wordt uitsluitend gebruikt om af te stemmen met partner Muay Thai-kampen en om de nodige documentatie voor te bereiden voor de Sports Authority of Thailand (SAT) and respectievelijke Koninklijke Thaise ambassades of consulaten. Wij verkopen, verhuren of delen jouw persoonlijke gegevens niet met ongerelateerde derden.",
+        "sec3_title": "3. Dataveiligheid",
+        "sec3_desc": "Wij implementeren passende veiligheidsmaatregelen om je persoonlijke gegevens te beschermen tegen ongeoorloofde toegang, wijziging, openbaarmaking of vernietiging. Houd er echter rekening mee dat geen enkele methode van overdracht via internet of elektronische opslag 100% veilig is.",
+        "sec4_title": "4. Neem contact op",
+        "sec4_desc": "Als je vragen hebt over dit Privacybeleid, neem dan contact met ons op via ons officiële e-mailadres gumpun@gumpunmuaythai.club."
+    },
+    "terms": {
+        "btn_back": "Terug naar Home",
+        "main_title": "Algemene Voorwaarden",
+        "sec1_title": "1. Dienstomschrijving",
+        "sec1_desc": "Gumpun Muay Thai opereert strikt als een coördinatie- en documentatiebureau. Wij brengen toekomstige cursisten in contact met SAT-gecertificeerde Muay Thai-kampen en helpen bij het verzamelen en organiseren van de papierwinkel die nodig is voor ED- en DTV-visumaanvragen.",
+        "sec2_title": "2. Beperking van Aansprakelijkheid",
+        "sec2_desc": "Wij geven geen juridisch of immigratieadvies. Gumpun Muay Thai heeft geen zeggenschap over visumverstrekking. Alle beslissingen omtrent visumgoedkeuringen, -afwijzingen of -vertragingen liggen volledig bij de Koninklijke Thaise Ambassade of het Consulaat. Wij zijn niet aansprakelijk voor financieel verlies, reisonderbrekingen of afgewezen aanvragen.",
+        "sec3_title": "3. Verantwoordelijkheden Aanvrager",
+        "sec3_desc": "Het is de verantwoordelijkheid van de aanvrager om ervoor te zorgen dat alle persoonlijke informatie, financiële bewijzen en ingediende documenten authentiek en juist zijn, en voldoen aan de specifieke vereisten van hun lokale Thaise ambassade. Cursisten dienen zich na toekenning van het visum ook te houden aan de aanwezigheidsregels van het gekozen Muay Thai-kamp.",
+        "sec4_title": "4. Betalingen en Restituties",
+        "sec4_desc": "Coördinatiekosten en aanbetalingen voor sportscholen zijn onderhevig aan het individuele beleid van de partnerkampen. Neem de specifieke betalings- en restitutievoorwaarden door die tijdens het inschrijfproces zijn verstrekt voordat u financiële verplichtingen aangaat."
+    },
+    "footer": {
+        "legitimate_notice": "ONS BEDRIJF IS LEGITIEM.",
+        "faq": "FAQ",
+        "privacy": "Privacybeleid",
+        "terms": "Algemene Voorwaarden"
+    },
+    "floating_contact": {
+        "text": "Contact"
     }
 }

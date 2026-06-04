@@ -5,5 +5,179 @@
         "visa_process": "Visumproces",
         "partner_camps": "Partnerlejre",
         "contact": "Kontakt"
+    },
+    "hero": {
+        "title_1": "Træn",
+        "title_2": "Muay Thai",
+        "title_3": "I",
+        "title_4": "Thailand.",
+        "subtitle": "ED & DTV visumsupport med certificerede Muay Thai-lejre i hele Thailand.",
+        "description": "Nu kan du forlænge dit ophold i Thailand ved at træne Muay Thai i lejre, der er certificeret af Sports Authority of Thailand (SAT) over hele landet. Fra Bangkok til bjergene i nord og strandene i syd.",
+        "feature_1": "TRÆN MED ERFARNE THAILANDGERSKE TRÆNERE",
+        "feature_2": "OPDAG DEN AUTENTISKE MUAY THAI-KULTUR",
+        "feature_3": "LEJRE PLACERET OVER HELE THAILAND",
+        "btn_choose_city": "Vælg din træningsby",
+        "btn_check_eligibility": "Tjek berettigelse",
+        "video_label": "Træn Muay Thai i Thailand"
+    },
+    "whatwedo": {
+        "subtitle": "FUNDAMENTET",
+        "title": "HVAD VI GØR",
+        "description": "Vi koordinerer Muay Thai-træningsprogrammer med kvalificerede partnerlejre i hele Thailand og støtter dokumentationsarbejdet i forbindelse med ED- og DTV-visumansøgninger.",
+        "srv_1_title": "KOORDINERING AF CERTIFICEREDE LEJRE",
+        "srv_1_desc": "Direkte adgang til SAT-certificerede centre, der opfylder alle juridiske krav til visumsponsorat.",
+        "srv_2_title": "DOKUMENTER FOR TRÆNINGSBEKRÆFTELSE",
+        "srv_2_desc": "Hurtig forberedelse af optagelsesbreve og certificeringer fra centret til din ansøgning.",
+        "srv_3_title": "KOORDINERING AF SAT-INDLEVELSE",
+        "srv_3_desc": "Håndtering af dokumentation, der kræves for godkendelsesstempler fra Sports Authority of Thailand.",
+        "srv_4_title": "END-TO-END SUPPORT",
+        "srv_4_desc": "Fra valg af din træningsby til vejledning i dokumentforberedelse og påmindelser om indsendelsesfrister."
+    },
+    "visacomparison": {
+        "title": "HVILKET VISUM PASSER TIL DIN TRÆNINGSREJSE?",
+        "ed_title": "ED VISUM",
+        "ed_subtitle": "STUDIEVISUM (EDUCATION VISA)",
+        "dtv_title": "DTV VISUM",
+        "dtv_subtitle": "DESTINATION THAILAND VISA",
+        "btn_consult": "Kontakt os for visummueligheder",
+        "faq_title": "Ofte Stillede Spørgsmål",
+        "faq_q1": "Kan jeg ændre fra et turistvisum til et ED Muay Thai-visum i Thailand?",
+        "faq_a1": "Nej. ED-visummet under Muay Thai-lejre, der er certificeret af Sports Authority of Thailand, skal søges gennem en kongelig thailandsk ambassade eller et konsulat uden for Thailand.",
+        "faq_q2": "Kan jeg søge om et DTV-visum, mens jeg er i Thailand?",
+        "faq_a2": "Nej. Ansøgningen skal indsendes via det thailandske e-visumsystem og færdiggøres uden for Thailand, hvor du vil afhente dit visum.",
+        "faq_q3": "Kan jeg træne i flere byer?",
+        "faq_a3": "Ja, men du skal opretholde fremmøde i det center, hvor du er registreret.",
+        "notice_title": "Vigtig Meddelelse",
+        "notice_item1": "Visumgodkendelse afgøres udelukkende af den kongelige thailandske ambassade eller konsulat.",
+        "notice_item2": "Behandlingstider er estimater og kan variere.",
+        "notice_item3": "Vi leverer kun koordinering og dokumentationssupport.",
+        "review_title": "Vil du have os til at gennemgå din sag?",
+        "review_desc": "Send os din: Nuværende visumstatus, Nuværende placering, Foretrukne ambassade/konsulat, Ønskede træningsby og Forventede startdato.",
+        "btn_review": "Kontakt os for en gennemgang",
+        "labels": {
+            "stay_period": "OPHOLDSPERIODE",
+            "re_application": "FORNYELSE",
+            "location": "PLACERING",
+            "training": "TRÆNINGSFREMMØDE",
+            "documents": "DOKUMENTER",
+            "timeline": "TIDSLINJE"
+        },
+        "ed": {
+            "stay_period": "90 dage",
+            "re_application": "Kan fornyes uden for Thailand",
+            "location": "Enkelt træningsbase anbefales",
+            "training": "Struktureret",
+            "doc_1": "Pas, Optagelse,",
+            "doc_2": "Bevis for midler på mindst $1.000",
+            "timeline": "~30-45 dage"
+        },
+        "dtv": {
+            "stay_period": "5 år (180 dage pr. indrejse)",
+            "re_application": "Multiple-Entry",
+            "location": "Fleksibel / Velegnet til fjernarbejde",
+            "training": "Fleksibel / Velegnet til fjernarbejde",
+            "doc_1": "Pas, Optagelse,",
+            "doc_2": "Bevis for midler på mindst 500.000 THB",
+            "timeline": "~30-45 dage"
+        }
+    },
+    "timeline": {
+        "main_title": "MUAY THAI ED / DTV VISUMPROCES: KOMPLET OVERBLIK & TIDSLINJE",
+        "step_label": "TRIN",
+        "total_title": "ESTIMERET SAMLET TIDSLINJE",
+        "total_days": "30-45 dage",
+        "step1_title": "INDLEDENDE SCREENING",
+        "step1_desc": "Vurdering af din berettigelse og valg af træningslejr.",
+        "step1_time": "TID: 1-2 DAGE",
+        "step2_title": "LEJR TILMELDING",
+        "step2_desc": "Betaling af depositum og modtagelse af officielle invitationsdokumenter fra centret.",
+        "step2_time": "TID: 3-5 DAGE",
+        "step3_title": "SAT CERTIFICERING",
+        "step3_desc": "Indsendelse til Sports Authority of Thailand for officiel visumgodkendelse.",
+        "step3_time": "TID: 10-14 DAGE",
+        "step4_title": "MYNDIGHEDSBEHANDLING",
+        "step4_desc": "Det certificerede invitationsbrev fra Sports Authority of Thailand videresendes til Department of Consular Affairs og derefter til din valgte thailandske ambassade eller konsulat.",
+        "step4_time": "TID: ~ 3 UGER",
+        "step5_title": "SØG OM DIT VISUM",
+        "step5_desc": "Upload dine dokumenter til det thailandske e-visumsystem, betal gebyret og deltag i et interview, hvis det kræves. Når det er godkendt, vil dit visum blive udstedt elektronisk.\n\nBemærk venligst: Gå ikke ind i Thailand, mens din ansøgning behandles, da dette kan føre til aflysning."
+    },
+    "locations": {
+        "subtitle": "PARTNERLEJRE",
+        "title": "CERTIFICEREDE MUAY THAI-LEJRE I HELE THAILAND",
+        "description": "Vi samarbejder med partner Muay Thai-lejre i alle regioner af Thailand — fra bycentre til autentiske provinsielle træningsmiljøer. Vælg din træningsplacering her:",
+        "map_live": "Interaktivt Live Kort",
+        "map_open": "Åbn i Google Maps",
+        "btn_maps": "Kort",
+        "btn_highlight": "HØJDEPUNKTER",
+        "regions": {
+            "central": "CENTRALE THAILAND",
+            "eastern": "ØSTLIGE THAILAND",
+            "northeast": "NORDØST (ISAN)",
+            "northern": "NORDLIGE THAILAND",
+            "southern": "SYDLIGE THAILAND",
+            "western": "VESTLIGE THAILAND"
+        }
+    },
+    "whychooseus": {
+        "title": "HVORFOR VÆLGE GUMPUN MUAY THAI",
+        "reason_1": "VERIFICEREDE PARTNERCENTRE",
+        "reason_2": "STRUKTURERET PROCES",
+        "reason_3": "OVERHOLDESESFOKUSERET",
+        "reason_4": "TYDELIG BETALING",
+        "reason_5": "LØBENDE SUPPORT"
+    },
+    "importantnotice": {
+        "main_title": "Vigtig Information",
+        "item1_title": "KUN KOORDINERING",
+        "item1_desc": "Gumpun Muay Thai yder kun koordinering og dokumentationssupport til Muay Thai træningsprogrammer i Thailand.",
+        "item2_title": "VISUMAFGØRELSER",
+        "item2_desc": "Vi yder ikke juridisk rådgivning eller immigrationsrådgivning, og vi har ingen myndighed over visumafgørelser. Alle visumgodkendelser afgøres udelukkende af den relevante kongelige thailandske ambassade eller konsulat.",
+        "item3_title": "BEHANDLINGSTIDER",
+        "item3_desc": "De angivne behandlingstider er estimater baseret på typiske procedurer og kan variere afhængigt af Sports Authority of Thailand (SAT) og den thailandske ambassade eller konsulat.",
+        "item4_title": "ANSØGERS ANSVAR",
+        "item4_desc": "Ansøgere er ansvarlige for at sikre, at alle indsendte oplysninger og dokumenter er nøjagtige og fuldstændige."
+    },
+    "contact": {
+        "main_title_1": "START DIN",
+        "main_title_2": "MUAY THAI",
+        "main_title_3": "REJSE.",
+        "subtitle": "KONTAKT OS DIREKTE VIA EN AF VORES KANALER NEDENFOR FOR AT KOMME I GANG.",
+        "line_label": "LINE OFFICIAL",
+        "email_label": "EMAIL",
+        "ig_label": "INSTAGRAM",
+        "fb_label": "FACEBOOK"
+    },
+    "privacy": {
+        "btn_back": "Tilbage til Hjem",
+        "main_title": "Fortrolighedspolitik",
+        "sec1_title": "1. Informationsindsamling",
+        "sec1_desc": "Vi indsamler oplysninger, du giver direkte til os, når du anmoder om visumkoordineringstjenester, herunder, men ikke begrænset til, dit navn, kontaktoplysninger, pasoplysninger, nuværende visumstatus og foretrukne træningssteder. Disse oplysninger bruges strengt med det formål at vurdere din berettigelse og lette Muay Thai ED/DTV-visumprocessen.",
+        "sec2_title": "2. Brug af Oplysninger",
+        "sec2_desc": "De indsamlede oplysninger bruges udelukkende til at koordinere med partner Muay Thai-lejre og udarbejde nødvendig dokumentation til Sports Authority of Thailand (SAT) og de respektive kongelige thailandske ambassader eller konsulater. Vi sælger, udlejer eller deler ikke dine personlige data med urelaterede tredjeparter.",
+        "sec3_title": "3. Datasikkerhed",
+        "sec3_desc": "Vi implementerer passende sikkerhedsforanstaltninger for at beskytte dine personlige oplysninger mod uautoriseret adgang, ændring, offentliggørelse eller ødelæggelse. Vær dog opmærksom på, at ingen metode til transmission over internettet eller elektronisk lagring er 100 % sikker.",
+        "sec4_title": "4. Kontakt Os",
+        "sec4_desc": "Hvis du har spørgsmål om denne fortrolighedspolitik, bedes du kontakte os via vores officielle e-mail på gumpun@gumpunmuaythai.club."
+    },
+    "terms": {
+        "btn_back": "Tilbage til Hjem",
+        "main_title": "Betingelser for Service",
+        "sec1_title": "1. Servicebeskrivelse",
+        "sec1_desc": "Gumpun Muay Thai fungerer udelukkende som et koordinerings- og dokumentationsbureau. Vi forbinder potentielle praktikanter med SAT-certificerede Muay Thai-lejre og hjælper med at indsamle og organisere det papirarbejde, der kræves til ED- og DTV-visumansøgninger.",
+        "sec2_title": "2. Ansvarsbegrænsning",
+        "sec2_desc": "Vi yder ikke juridisk rådgivning eller immigrationsrådgivning. Gumpun Muay Thai har ingen myndighed over visumudstedelse. Alle afgørelser vedrørende visumgodkendelser, afslag eller forsinkelser påhviler udelukkende den thailandske ambassade eller konsulat. Vi er ikke ansvarlige for økonomiske tab, rejseforstyrrelser eller afviste ansøgninger.",
+        "sec3_title": "3. Ansøgers Ansvar",
+        "sec3_desc": "Det er ansøgerens ansvar at sikre, at alle personlige oplysninger, økonomiske beviser og indsendte dokumenter er ægte, nøjagtige og opfylder de specifikke krav fra deres lokale thailandske ambassade. Ansøgere skal også overholde de fremmøderegler, der er fastsat af deres valgte Muay Thai-lejr, når visummet er givet.",
+        "sec4_title": "4. Betalinger og Refusioner",
+        "sec4_desc": "Koordinationsgebyrer og lejrindskud er underlagt de enkelte partnerlejres individuelle politikker. Gennemgå venligst de specifikke betalings- og refusionsbetingelser, der blev givet under din tilmeldingsproces, før du indgår økonomiske forpligtelser."
+    },
+    "footer": {
+        "legitimate_notice": "VORES VIRKSOMHED ER LEGITIM.",
+        "faq": "FAQ",
+        "privacy": "Fortrolighedspolitik",
+        "terms": "Betingelser for Service"
+    },
+    "floating_contact": {
+        "text": "Kontakt"
     }
 }
